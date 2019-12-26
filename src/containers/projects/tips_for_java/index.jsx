@@ -34,11 +34,40 @@ export default function TipsForJava() {
         </ul>
       </div>
 
+        <div>
+            <h3> 3. Primary type ? </h3>
+            <p> Java has 8 primary types: </p>
+            <ul>
+                <li>Integer : byte, char, short, int, long </li>
+                <li>Floating point: float, double</li>
+                <li>Others: boolean, void</li>
+            </ul>
+            <p>Note: string is NOT a primary type</p>
+            <b>3.1 int and Integer ?</b>
+            <ul>
+                <li>int is a primary type while Integer is wrapped class.</li>
+                <li>int can only store the binary value of an integer, Integer has much wider muliputation access than int: storing, converting, casting.</li>
+
+            </ul>
+            <b>3.2 Float nad double ?</b>
+            <p>Both float and double are floating point type which means they are used for storing "fractional numbers" like 3.1415, 1/3, 10.0000. The difference is that float takes 4 bytes and double takes 8 bytes, which leads them to different precision.</p>
+        </div>
+
+        <div>
+            <h3>4. Primary type and wrapped type?</h3>
+            <p>a ) </p>
+            <p>Wrapped type can be used for random type.</p>
+            <div>
+                <p>!--some codes that will conflicts html</p>
+            </div>
+
+        </div>
 
 
 
 
 
-    </div>
+
+        </div>
   )
 }
