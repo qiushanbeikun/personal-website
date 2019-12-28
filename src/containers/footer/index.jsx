@@ -9,8 +9,11 @@ import Bilibili from './bilibili-logo.svg';
 import Avatar from "@material-ui/core/Avatar";
 
 const StyledFooter = styled.div`
+&& {
   background-color: ${({theme}) => theme.palette.grey["300"]};
   height: 60px;
+  box-shadow: 0 35px 15px 38px rgba(0,0,0,0.30), 0 6px 6px rgba(0,0,0,0.22);
+}
 `;
 
 const StyledIconButton = styled(IconButton)`
