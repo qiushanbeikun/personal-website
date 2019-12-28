@@ -9,6 +9,7 @@ import styled from "styled-components";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+import WebsiteImages from "./jscsshtml.png"
 
 const ProjectSummaryMedia = styled.div`
   height: 300px;
@@ -70,9 +71,9 @@ export function Projects() {
         </Grid>
         <Grid item sm={6}>
           <ProjectSummary
-            description="This app offers two basic functions: Quadratic equation solver:  solve basic quadratic equation in the form of aX^2+bX+c=0, graph of this equation can be drawn on a bi-dimensional plane.3D plain drawer: draw basic 3D plains in form of Z=aX+bY+c"
-            title="SRE's magic calculator"
-            image={Calculator}
+            description="This website is build upon JS/CSS/HTML, using React and Material-UI"
+            title="This website"
+            image={WebsiteImages}
             to="https://github.com/qiushanbeikun/SREsMagicCalculator"
           />
         </Grid>
