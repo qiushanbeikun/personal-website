@@ -77,7 +77,6 @@ export function Projects() {
           />
         </Grid>
       </Grid>
-
     </Box>
   );
 }
