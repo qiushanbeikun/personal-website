@@ -13,6 +13,9 @@ const StyledAppBar = styled(Toolbar)`
 const AppBarLinks = styled(MDLink)`
   && {
     margin: 0 1em;
+    &:hover {
+      color: ${({ theme }) => theme.palette.primary.main}
+    }
   }
 `;
 

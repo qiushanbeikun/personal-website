@@ -12,13 +12,13 @@ export default function TipsForJava() {
                 <h3> If there is any error in this page, please contact me for correction. Thanks. </h3>
                 <p> Reference list:</p>
                 <a href="https://mp.weixin.qq.com/s/IBbD3CmVWsTL9ymHg6gGGA"
-                   target="_blank">https://mp.weixin.qq.com/s/IBbD3CmVWsTL9ymHg6gGGA</a>
+                   target="_blank" rel="noopener noreferrer">https://mp.weixin.qq.com/s/IBbD3CmVWsTL9ymHg6gGGA</a>
                 <a href="https://en.wikibooks.org/wiki/Java_Programming"
-                   target="_blank">https://en.wikibooks.org/wiki/Java_Programming</a>
+                   target="_blank" rel="noopener noreferrer">https://en.wikibooks.org/wiki/Java_Programming</a>
                 <a href="https://en.wikipedia.org/wiki/Thread_safety"
-                   target="_blank">https://en.wikipedia.org/wiki/Thread_safety</a>
+                   target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Thread_safety</a>
                 <a href="https://www.cnblogs.com/NeilZhang/p/8623207.html"
-                   target="_blank">https://www.cnblogs.com/NeilZhang/p/8623207.html</a>
+                   target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/NeilZhang/p/8623207.html</a>
             </div>
 
             <div>

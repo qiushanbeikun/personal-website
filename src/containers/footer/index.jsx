@@ -21,14 +21,14 @@ const Footer = () => {
               <p>Follow me on</p>
               <IconButton href="https://github.com/qiushanbeikun" target="_blank"><GitHubIcon /></IconButton>
               <IconButton href="https://www.youtube.com/channel/UCB01XZsudptPaZz2bm66mJQ" target="_blank"><YouTubeIcon /></IconButton>
-              <IconButton href="https://space.bilibili.com/87137436" target="_blank"><img width={25} src={Bilibili} /></IconButton>
+              <IconButton href="https://space.bilibili.com/87137436" target="_blank"><img alt="bilibili" width={25} src={Bilibili} /></IconButton>
             </Grid>
           </Grid>
           <Grid item sm={6}>
             <Grid container alignItems="center" justify="center">
               <p>
                 Contact@
-                <a href="mailto:beikuncanada@gmail.com?Subject=Hello%20again" target="_top">beikuncanada@gmail.com</a>
+                <a href="mailto:beikuncanada@gmail.com" target="_top">beikuncanada@gmail.com</a>
               </p>
             </Grid>
           </Grid>
