@@ -1,12 +1,14 @@
 import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 export function Home() {
   return (
-    <div>
+    <Box my={2}>
       <div>
-        <h1>Home</h1>
+        <Typography variant="h5">Home</Typography>
       </div>
-      <h2>Transferring from previous website </h2>
-    </div>
+      <Typography>Transferring from previous website </Typography>
+    </Box>
   );
 }

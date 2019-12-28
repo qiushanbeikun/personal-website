@@ -4,9 +4,9 @@ import React from "react";
 
 export default function TipsForJava() {
     return (
-        <div>
+        <>
             <h1> JAVA Tips? </h1>
-            <div>
+            <div className = "referenceList">
                 <h3> JAVA is the first programming language I learn, by my limited experience on JAVA, here are some
                     tips u might need to know in an interview. </h3>
                 <h3> If there is any error in this page, please contact me for correction. Thanks. </h3>
@@ -202,6 +202,6 @@ export default function TipsForJava() {
                 <p>d) access field: Interface: public by default / Abstract: can be any</p>
             </div>
 
-        </div>
+        </>
     )
 }

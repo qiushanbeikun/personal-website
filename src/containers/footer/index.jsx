@@ -1,44 +1,41 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import styled from 'styled-components';
+import {Container} from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
+import IconButton from '@material-ui/core/IconButton';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import Bilibili from './bilibili-logo.svg';
 
-const FooterPage = () => {
-    return (
-        <MDBFooter color="blue" className="font-small pt-4 mt-4">
-            <MDBContainer fluid className="text-center text-md-left">
-                <MDBRow>
-                    <MDBCol md="6">
-                        <h5 className="title">----------------------------------Footer Content-----------------------------------------</h5>
-                        <p>
-                            Contact me:
-                            <a href="mailto:beikuncanada@gmail.com?Subject=Hello%20again" target="_top">beikuncanada@gmail.com</a>
-                        </p>
-                    </MDBCol>
-                    <MDBCol md="6">
-                        <h5 className="title">Links</h5>
-                        <p> Follow me on: </p>
-                        <ul>
-                            <li className="list-unstyled">
-                                <a href="https://github.com/qiushanbeikun" target="_blank">Github</a>
-                            </li>
-                            <li className="list-unstyled">
-                                <a href="https://www.youtube.com/channel/UCB01XZsudptPaZz2bm66mJQ" target="_blank">Youtube</a>
-                            </li>
-                            <li className="list-unstyled">
-                                <a href="https://space.bilibili.com/87137436" target="_blank">BiliBili</a>
-                            </li>
-                            <li className="list-unstyled">
-                                <a href="#!" target="_blank">Unused link</a>
-                            </li>
-                        </ul>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
-            <div className="footer-copyright text-center py-3">
-                <MDBContainer fluid>
-                </MDBContainer>
-            </div>
-        </MDBFooter>
-    );
+const StyledFooter = styled.div`
+  background-color: ${({ theme }) => theme.palette.grey["300"]};
+`;
+
+const Footer = () => {
+  return (
+    <StyledFooter>
+      <Container maxWidth="md">
+        <Grid container>
+          <Grid item sm={6}>
+            <Grid container alignItems="center" justify="center">
+              <p>Follow me on</p>
+              <IconButton href="https://github.com/qiushanbeikun" target="_blank"><GitHubIcon /></IconButton>
+              <IconButton href="https://www.youtube.com/channel/UCB01XZsudptPaZz2bm66mJQ" target="_blank"><YouTubeIcon /></IconButton>
+              <IconButton href="https://space.bilibili.com/87137436" target="_blank"><img width={25} src={Bilibili} /></IconButton>
+            </Grid>
+          </Grid>
+          <Grid item sm={6}>
+            <Grid container alignItems="center" justify="center">
+              <p>
+                Contact@
+                <a href="mailto:beikuncanada@gmail.com?Subject=Hello%20again" target="_top">beikuncanada@gmail.com</a>
+              </p>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+    </StyledFooter>
+  );
 };
 
-export default FooterPage;
+export default Footer;

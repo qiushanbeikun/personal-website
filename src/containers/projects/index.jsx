@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 export function Projects() {
   return (
-    <div>
+    <>
       <h1>Projects</h1>
       <div>
         <div>
@@ -53,6 +53,6 @@ export function Projects() {
 
         </div>
       </div>
-    </div>
+    </>
   );
 }
