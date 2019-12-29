@@ -5,6 +5,7 @@ import {Projects} from "../projects";
 import {Resume} from "../resume";
 import TipsForJava from "../projects/tips_for_java";
 import MikuTouch from "../mikuTouch";
+import CanvasOnTry from "../canvasTryOut";
 
 export default function Routes() {
   return (
@@ -23,6 +24,10 @@ export default function Routes() {
       </Route>
       <Route path="/mikutouch">
         <MikuTouch/>
+      </Route>
+
+      <Route path="/canvasOnTry">
+        <CanvasOnTry />
       </Route>
     </Switch>
   );

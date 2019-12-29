@@ -2,40 +2,140 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import FakeProfilePhoto from "./unnamed.png"
+import {Parallax} from "react-parallax";
+import styled from "styled-components";
+import BackGround from "./1579461169_preview_Recent Best.jpg"
+import {Container} from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import PropTypes from 'prop-types'
+
+
+const StyledBigName = styled(Typography)`
+  padding: 1em 0;
+`;
+
+const StyledText = styled(Typography)`
+  padding: 10px 0;
+`;
+
+
+const StyledCard = styled(Card)`
+  &:hover img {
+    transform: scale(1.1);
+    transition: all .5s;
+  }
+`;
+
+const ProjectSummaryMedia = styled.div`
+  height: 250px;
+  overflow: hidden;
+  & img {
+    height: 300px;
+    width: 100%;
+  }
+`;
+
+function ReadCard ({text, image, link}) {
+  return (
+    <StyledCard>
+      <CardActionArea href={link} target="_blank" rel="noopener noreferrer">
+        <ProjectSummaryMedia><img alt="project" src={image} /></ProjectSummaryMedia>
+        <CardContent>
+          <StyledText>{text}</StyledText>
+        </CardContent>
+      </CardActionArea>
+    </StyledCard>
+  )
+}
+
+ReadCard.propTypes = {
+  text: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  link: PropTypes.string,
+}
+
 
 export function Home() {
+
+  const styles = {
+    fontFamily: "sans-serif",
+    textAlign: "center"
+  };
+
   return (
     <Box my={2}>
 
-      <Grid container>
-        <Grid sm={4}>
-          <img src={FakeProfilePhoto}/>
-        </Grid>
-        <Grid sm={8}>
-          <div>
-            <Box my={5}>
-              <Typography variant="h3">Yuekun Feng</Typography>
-            </Box>
-            <Box my={1}>
-              <Typography> Third year student and University of British Columbia (graduate at 2021).</Typography>
-            </Box>
-            <Box my={1}>
-              <Typography>Majors in computer science.</Typography>
-            </Box>
-            <Box my={1}>
-              <Typography> アニメ fun, tech fun, entry level "auto-tune remix-themed content" editor.</Typography>
-            </Box>
-            <Box my={1}>
-              <Typography> QiushanBeikun, 丘山北鲲 is a pen name, but will be accepted for official contacts.</Typography>
-            </Box>
-            <Box my={1}>
-              <Typography> ⬅ // i dont want to put a Linkedin profile photo here. [wasted emoji]</Typography>
-            </Box>
+      <div style={styles}>
+        <Parallax bgImage={BackGround} strength={500}>
+          <div style={{height: 500}}>
           </div>
-        </Grid>
+        </Parallax>
 
-      </Grid>
+        <Box my={8}>
+          <StyledBigName variant="h2">Yuekun Feng</StyledBigName>
+          <StyledText variant="h5">Third year student at University of British Columbia (graduate at 2021).</StyledText>
+          <StyledText variant="h5">Majors in computer science.</StyledText>
+        </Box>
+
+        <Parallax bgImage={BackGround} strength={500}>
+          <div style={{height: 500}}>
+          </div>
+        </Parallax>
+
+        <Box my={8}>
+          <StyledBigName variant={"h4"}>アニメ fun</StyledBigName>
+        </Box>
+
+        <Parallax bgImage={BackGround} strength={500}>
+          <div style={{height: 500}}>
+          </div>
+        </Parallax>
+
+        <Box my={8}>
+          <StyledBigName variant={"h4"}>Tech fun</StyledBigName>
+        </Box>
+
+        <Parallax bgImage={BackGround} strength={500}>
+          <div style={{height: 500}}>
+          </div>
+        </Parallax>
+
+        <Box my={8}>
+          <StyledBigName variant={"h4"}>"Auto-tune remix-themed content" editor.</StyledBigName>
+        </Box>
+
+        <Parallax bgImage={BackGround} strength={500}>
+          <div style={{height: 500}}>
+          </div>
+        </Parallax>
+
+        <Box my={6}>
+
+          <StyledBigName variant={"h4"}>Read more</StyledBigName>
+
+          <Container maxWidth={"lg"}>
+            <Grid container spacing={2}>
+              <Grid item sm={4}>
+                <ReadCard text="Projects" image={BackGround} link="/projects" />
+              </Grid>
+
+              <Grid item sm={4}>
+                <ReadCard text="Resume" image={BackGround} link="/resume" />
+              </Grid>
+
+              <Grid item sm={4}>
+                <ReadCard text="More about me" image={BackGround} link="/idea" />
+              </Grid>
+
+            </Grid>
+          </Container>
+        </Box>
+
+      </div>
+
+
     </Box>
   );
 }

@@ -4,9 +4,9 @@ import NavBar from "./containers/navbar";
 import {BrowserRouter} from "react-router-dom";
 import Footer from "./containers/footer";
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { theme } from "./theme";
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
-import { ThemeProvider } from '@material-ui/core/styles';
+import {theme} from "./theme";
+import {ThemeProvider as StyledThemeProvider} from 'styled-components';
+import {ThemeProvider} from '@material-ui/core/styles';
 import styled from 'styled-components';
 import {Container} from "@material-ui/core";
 
@@ -20,15 +20,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <StyledThemeProvider theme={theme}>
         <div className="App">
-          <CssBaseline />
+          <CssBaseline/>
           <BrowserRouter>
             <PageContainer>
-              <NavBar />
-              <Container maxWidth="md">
-                <Routes />
-              </Container>
+              <NavBar/>
+              <Routes/>
             </PageContainer>
-            <Footer />
+            <Footer/>
           </BrowserRouter>
         </div>
       </StyledThemeProvider>
