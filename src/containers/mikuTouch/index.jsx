@@ -12,16 +12,16 @@ const StyledButton = styled(Button)`
     padding-top: 100%;
   }
   && {
-    background-color: #00ffff77;
-    color: #fff;
+    // background-color: #00ffff77;
+    color: #00ffff66;
     width: 100%;
     border-radius: 0;
     animation: all 2s;
     font-size: 2em;
     font-weight: 800;
     &:hover {
-      color: ${({theme}) => theme.palette.grey["700"]}
-      background-color: #00ffff;
+      color: #00bbbb; 
+      background-color: #00ffff66;
     }
   }
 `;
@@ -49,16 +49,16 @@ VoiceKey.propTypes = {
 
 
 const inputMap = [
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
-  [{ label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}, { label: 'ア', sound: DefaultSound}],
+  [{ label: 'ア', sound: DefaultSound}, { label: 'イ', sound: DefaultSound}, { label: 'ウ', sound: DefaultSound}, { label: 'エ', sound: DefaultSound}, { label: 'オ', sound: DefaultSound}],
+  [{ label: 'カ', sound: DefaultSound}, { label: 'キ', sound: DefaultSound}, { label: 'ク', sound: DefaultSound}, { label: 'ケ', sound: DefaultSound}, { label: 'コ', sound: DefaultSound}],
+  [{ label: 'サ', sound: DefaultSound}, { label: 'シ', sound: DefaultSound}, { label: 'ス', sound: DefaultSound}, { label: 'セ', sound: DefaultSound}, { label: 'ソ', sound: DefaultSound}],
+  [{ label: 'タ', sound: DefaultSound}, { label: 'チ', sound: DefaultSound}, { label: 'ツ', sound: DefaultSound}, { label: 'テ', sound: DefaultSound}, { label: 'ト', sound: DefaultSound}],
+  [{ label: 'ナ', sound: DefaultSound}, { label: 'ニ', sound: DefaultSound}, { label: 'ヌ', sound: DefaultSound}, { label: 'ネ', sound: DefaultSound}, { label: 'ノ', sound: DefaultSound}],
+  [{ label: 'ハ', sound: DefaultSound}, { label: 'ヒ', sound: DefaultSound}, { label: 'フ', sound: DefaultSound}, { label: 'ヘ', sound: DefaultSound}, { label: 'ホ', sound: DefaultSound}],
+  [{ label: 'マ', sound: DefaultSound}, { label: 'ミ', sound: DefaultSound}, { label: 'ム', sound: DefaultSound}, { label: 'メ', sound: DefaultSound}, { label: 'モ', sound: DefaultSound}],
+  [{ label: 'ヤ', sound: DefaultSound}, { label: '?', sound: DefaultSound}, { label: 'ユ', sound: DefaultSound}, { label: '?', sound: DefaultSound}, { label: 'ヨ', sound: DefaultSound}],
+  [{ label: 'ラ', sound: DefaultSound}, { label: 'リ', sound: DefaultSound}, { label: 'ル', sound: DefaultSound}, { label: 'レ', sound: DefaultSound}, { label: 'ロ', sound: DefaultSound}],
+  [{ label: 'ワ', sound: DefaultSound}, { label: '?', sound: DefaultSound}, { label: '?', sound: DefaultSound}, { label: '?', sound: DefaultSound}, { label: 'ヲ', sound: DefaultSound}],
 
 ];
 
