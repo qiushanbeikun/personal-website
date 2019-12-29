@@ -4,6 +4,7 @@ import {Home} from "../home";
 import {Projects} from "../projects";
 import {Resume} from "../resume";
 import TipsForJava from "../projects/tips_for_java";
+import MikuTouch from "../mikuTouch";
 
 export default function Routes() {
   return (
@@ -19,6 +20,9 @@ export default function Routes() {
       </Route>
       <Route path="/resume">
         <Resume/>
+      </Route>
+      <Route path="/mikutouch">
+        <MikuTouch/>
       </Route>
     </Switch>
   );
