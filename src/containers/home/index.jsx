@@ -4,7 +4,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import {Parallax} from "react-parallax";
 import styled from "styled-components";
-import BackGround from "./1579461169_preview_Recent Best.jpg"
+import BackGround from "../../backg.jpg"
 import {Container} from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -31,7 +31,7 @@ const StyledCard = styled(Card)`
 `;
 
 const ProjectSummaryMedia = styled.div`
-  height: 250px;
+  height: 300px;
   overflow: hidden;
   & img {
     height: 300px;

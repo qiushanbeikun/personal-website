@@ -62,7 +62,7 @@ export function Projects() {
         <Grid container spacing={4}>
           <Grid item sm={6}>
             <ProjectSummary
-              description="This app offers two basic functions: Quadratic equation solver:  solve basic quadratic equation in the form of aX^2+bX+c=0, graph of this equation can be drawn on a bi-dimensional plane.3D plain drawer: draw basic 3D plains in form of Z=aX+bY+c"
+              description="This app offers two basic functions: Quadratic equation solver: 1 solve basic quadratic equation in the form of aX^2+bX+c=0, graph of this equation can be drawn on a bi-dimensional plane.3D plain drawer: draw basic 3D plains in form of Z=aX+bY+c"
               title="SRE's magic calculator"
               image={Calculator}
               to="https://github.com/qiushanbeikun/SREsMagicCalculator"
@@ -83,6 +83,7 @@ export function Projects() {
               image={WebsiteImages}
               to="https://github.com/qiushanbeikun/SREsMagicCalculator"
             />
+
           </Grid>
         </Grid>
       </Box>

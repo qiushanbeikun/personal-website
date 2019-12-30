@@ -74,6 +74,10 @@ export default function Index() {
 
           <Grid item sm={6}>
             <ReadCard text="Ideas" image={DefaultImage} link={"/idea"}/>
+            <div>
+              <StyledText variant={"h5"}>Painting</StyledText>
+              <StyledText variant={"h5"}>MADムービー</StyledText>
+            </div>
           </Grid>
         </Grid>
       </Box>
