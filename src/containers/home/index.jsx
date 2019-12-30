@@ -135,7 +135,7 @@ export function Home() {
               </Grid>
 
               <Grid item sm={4}>
-                <ReadCard text="More about me" image={BackGround} link="/idea" />
+                <ReadCard text="More about me" image={BackGround} link="/moreInfo" />
               </Grid>
 
             </Grid>
