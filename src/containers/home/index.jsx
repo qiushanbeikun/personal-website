@@ -14,10 +14,12 @@ import PropTypes from 'prop-types'
 
 const StyledBigName = styled(Typography)`
   padding: 1em 0;
+  color: #eeeeee;
 `;
 
 const StyledText = styled(Typography)`
   padding: 10px 0;
+  color: #eeeeee;
 `;
 
 
@@ -37,13 +39,15 @@ const ProjectSummaryMedia = styled.div`
   }
 `;
 
+
+
 function ReadCard ({text, image, link}) {
   return (
     <StyledCard>
       <CardActionArea href={link} target="_blank" rel="noopener noreferrer">
         <ProjectSummaryMedia><img alt="project" src={image} /></ProjectSummaryMedia>
         <CardContent>
-          <StyledText>{text}</StyledText>
+          <Typography variant={"h6"}>{text}</Typography>
         </CardContent>
       </CardActionArea>
     </StyledCard>
@@ -54,7 +58,7 @@ ReadCard.propTypes = {
   text: PropTypes.string.isRequired,
   image: PropTypes.string,
   link: PropTypes.string,
-}
+};
 
 
 export function Home() {
@@ -68,13 +72,18 @@ export function Home() {
     <Box my={2}>
 
       <div style={styles}>
-        <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 500}}>
-          </div>
-        </Parallax>
+
 
         <Box my={8}>
           <StyledBigName variant="h2">Yuekun Feng</StyledBigName>
+        </Box>
+
+        <Parallax bgImage={BackGround} strength={500}>
+          <div style={{height: 600}}>
+          </div>
+        </Parallax>
+
+        <Box my={12}>
           <StyledText variant="h5">Third year student at University of British Columbia (graduate at 2021).</StyledText>
           <StyledText variant="h5">Majors in computer science.</StyledText>
         </Box>

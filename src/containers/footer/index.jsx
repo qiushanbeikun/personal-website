@@ -13,6 +13,7 @@ const StyledFooter = styled.div`
 && {
   background-color: ${({theme}) => theme.palette.grey["300"]};
   box-shadow: 0 35px 15px 38px rgba(0,0,0,0.30), 0 6px 6px rgba(0,0,0,0.22);
+  opacity: 0.7;
 }
 `;
 

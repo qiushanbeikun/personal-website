@@ -49,11 +49,16 @@ ProjectSummary.propTypes = {
   description: PropTypes.string.isRequired,
 };
 
+const StyledTitle = styled(Typography)`
+  padding: 0.5em 0.2em;
+  color: #dddddd
+`;
+
 export function Projects() {
   return (
     <Container maxWidth={"md"}>
       <Box my={2}>
-        <h1>Projects</h1>
+        <StyledTitle variant={"h3"}>Projects</StyledTitle>
         <Grid container spacing={4}>
           <Grid item sm={6}>
             <ProjectSummary

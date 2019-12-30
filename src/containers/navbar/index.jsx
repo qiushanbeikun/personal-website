@@ -10,15 +10,19 @@ const StyledAppBar = styled(Toolbar)`
   height: 75px;
 `;
 
+const StyledBar = styled(AppBar)`
+  opacity: 0.65;
+`;
+
 export default function NavBar() {
   return (
-    <AppBar position="static" color="default">
+    <StyledBar position="static" color="default">
       <StyledAppBar>
         <Link color='inherit' to="/"><Typography variant="h6">Home</Typography></Link>
         <Link color='inherit' to="/projects"><Typography variant="h6">Project</Typography></Link>
         <Link color='inherit' to="/resume"><Typography variant="h6">Resume</Typography></Link>
       </StyledAppBar>
-    </AppBar>
+    </StyledBar>
   );
 }
 

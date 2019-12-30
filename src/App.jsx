@@ -8,11 +8,19 @@ import {theme} from "./theme";
 import {ThemeProvider as StyledThemeProvider} from 'styled-components';
 import {ThemeProvider} from '@material-ui/core/styles';
 import styled from 'styled-components';
-import {Container} from "@material-ui/core";
+import DefaultBackground from "./backg.jpg"
+
+import "./appStyles.css"
+
+
 
 const PageContainer = styled.div`
   min-height: 100vh;
 `;
+
+/*document.body.style.backgroundImage = DefaultBackground;
+document.body.style.backgroundPosition = "center";
+document.body.style.backgroundAttachment = "fixed";*/
 
 
 function App() {

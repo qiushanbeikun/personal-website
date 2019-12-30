@@ -6,6 +6,7 @@ import {Resume} from "../resume";
 import TipsForJava from "../projects/tips_for_java";
 import MikuTouch from "../mikuTouch";
 import CanvasOnTry from "../canvasTryOut";
+import Index from "../MoreInfo";
 
 export default function Routes() {
   return (
@@ -13,21 +14,29 @@ export default function Routes() {
       <Route exact path="/">
         <Home/>
       </Route>
+
       <Route path="/projects" exact>
         <Projects/>
       </Route>
+
       <Route path="/projects/tips_for_java">
         <TipsForJava/>
       </Route>
+
       <Route path="/resume">
         <Resume/>
       </Route>
-      <Route path="/mikutouch">
+
+      <Route path="/mikuTouch">
         <MikuTouch/>
       </Route>
 
       <Route path="/canvasOnTry">
         <CanvasOnTry />
+      </Route>
+
+      <Route path="/moreInfo">
+        <Index />
       </Route>
     </Switch>
   );
