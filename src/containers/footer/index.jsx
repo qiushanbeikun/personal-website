@@ -24,15 +24,19 @@ const StyledIconButton = styled(IconButton)`
   }
 `;
 
+const StyledText = styled.p`
+  padding: 0em 0.5em;
+`;
+
 const Footer = () => {
   return (
     <StyledFooter>
-      <Box py={1.5} clone>
+      <Box py={1.7} clone>
         <Container maxWidth="md">
           <Grid container>
             <Grid item sm={6}>
               <Grid container alignItems="center" justify="center">
-                <p>More links</p>
+                <StyledText>More links</StyledText>
                 <StyledIconButton href="https://github.com/qiushanbeikun" target="_blank"><GitHubIcon/></StyledIconButton>
                 <StyledIconButton href="https://www.youtube.com/channel/UCB01XZsudptPaZz2bm66mJQ"
                                   target="_blank"><YouTubeIcon/></StyledIconButton>

@@ -7,6 +7,7 @@ import TipsForJava from "../projects/tips_for_java";
 import MikuTouch from "../mikuTouch";
 import CanvasOnTry from "../canvasTryOut";
 import Index from "../MoreInfo";
+import Idea from "../idea";
 
 export default function Routes() {
   return (
@@ -38,6 +39,11 @@ export default function Routes() {
       <Route path="/moreInfo">
         <Index />
       </Route>
+
+      <Route path="/idea">
+        <Idea />
+      </Route>
+
     </Switch>
   );
 }

@@ -83,7 +83,6 @@ export function Projects() {
               image={WebsiteImages}
               to="https://github.com/qiushanbeikun/SREsMagicCalculator"
             />
-
           </Grid>
         </Grid>
       </Box>
