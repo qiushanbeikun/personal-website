@@ -142,6 +142,7 @@ export function Home() {
                 <ReadCard text="More about me" image={BackGround} link="/moreInfo" />
               </Grid>
 
+
             </Grid>
           </Container>
         </Box>
