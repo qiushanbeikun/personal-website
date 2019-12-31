@@ -84,6 +84,15 @@ export function Projects() {
               to="https://github.com/qiushanbeikun/SREsMagicCalculator"
             />
           </Grid>
+
+          <Grid item sm={6}>
+            <ProjectSummary
+              description="A simulator to let Hatsune Miku sing"
+              title="Miku Touch"
+              image={WebsiteImages}
+              to="/mikuTouch"
+            />
+          </Grid>
         </Grid>
       </Box>
     </Container>

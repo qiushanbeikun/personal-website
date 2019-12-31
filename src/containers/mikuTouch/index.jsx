@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import DefaultSound from "./sampleSound.wav"
 import Button from "@material-ui/core/Button";
-import Background from "../../backg.jpg"
+
 
 const StyledButton = styled(Button)`
   &:before {

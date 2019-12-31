@@ -10,6 +10,10 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import PropTypes from 'prop-types'
+import Guichu from "../../imageCache/guichu.png"
+import Anime from "../../imageCache/anime.JPG"
+import Tech from "../../imageCache/TECH.jpg"
+import Coding from "../../imageCache/coding.png"
 
 
 const StyledBigName = styled(Typography)`
@@ -79,7 +83,7 @@ export function Home() {
         </Box>
 
         <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 600}}>
+          <div style={{height: 700}}>
           </div>
         </Parallax>
 
@@ -88,8 +92,8 @@ export function Home() {
           <StyledText variant="h5">Majors in computer science.</StyledText>
         </Box>
 
-        <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 500}}>
+        <Parallax bgImage={Coding} strength={500}>
+          <div style={{height: 700}}>
           </div>
         </Parallax>
 
@@ -97,8 +101,8 @@ export function Home() {
           <StyledBigName variant={"h4"}>アニメ fun</StyledBigName>
         </Box>
 
-        <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 500}}>
+        <Parallax bgImage={Anime} strength={500}>
+          <div style={{height: 700}}>
           </div>
         </Parallax>
 
@@ -106,17 +110,17 @@ export function Home() {
           <StyledBigName variant={"h4"}>Tech fun</StyledBigName>
         </Box>
 
-        <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 500}}>
+        <Parallax bgImage={Tech} strength={500}>
+          <div style={{height: 700}}>
           </div>
         </Parallax>
 
         <Box my={8}>
-          <StyledBigName variant={"h4"}>"Auto-tune remix-themed content" editor.</StyledBigName>
+          <StyledBigName variant={"h4"}>"OTO MAD content" editor.</StyledBigName>
         </Box>
 
-        <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 500}}>
+        <Parallax bgImage={Guichu} strength={500}>
+          <div style={{height: 800}}>
           </div>
         </Parallax>
 
