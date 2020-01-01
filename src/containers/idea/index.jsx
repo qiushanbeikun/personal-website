@@ -179,13 +179,7 @@ export default function Idea() {
           <EachCard title="title"
                     date="date"
                     subtitle="subtitle"
-                    longDescription={"f f ef qwf ew fafef afaw feaf afeaf af aesf " +
-                    "f f ef qwf ew fafef afaw feaf afeaf af aesf ea fef aef awef aewf aqef af aef aef aef ae faefa faef ae" +
-                    "f f ef qwf ew fafef afaw feaf afeaf af aesf ea fef aef awef aewf aqef af aef aef aef ae faefa faef ae" +
-                    "f f ef qwf ew fafef afaw feaf afeaf af aesf ea fef aef awef aewf aqef af aef aef aef ae faefa faef ae" +
-                    "f f ef qwf ew fafef afaw feaf afeaf af aesf ea fef aef awef aewf aqef af aef aef aef ae faefa faef ae" +
-                    "f f ef qwf ew fafef afaw feaf afeaf af aesf ea fef aef awef aewf aqef af aef aef aef ae faefa faef ae" +
-                    "ea fef aef awef aewf aqef af aef aef aef ae faefa faef ae"}
+                    longDescription={"change something to tets"}
                     shortDescription=" aef aef aef aef aesf aef eaf aef aef ae fae faefaefaef
                  f f ef qwf ew fafef afaw feaf afeaf af aesf ea fef aef awef aewf aqef af aef aef aef ae faefa faef aeaef aef aef aesf aesf aef aef aef ae"/>
 
