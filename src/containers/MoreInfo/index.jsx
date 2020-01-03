@@ -65,7 +65,7 @@ export default function Index() {
         <StyledTitle variant={"h3"}>More About Me</StyledTitle>
         <Grid container spacing={2}>
           <Grid item sm={6}>
-            <ReadCard text="Interests" image={DefaultImage} link={"/idea"}/>
+            <ReadCard text="Interests" image={DefaultImage} link={"/interest"}/>
             <div>
               <StyledText variant={"h5"}>Painting</StyledText>
               <StyledText variant={"h5"}>MADムービー</StyledText>

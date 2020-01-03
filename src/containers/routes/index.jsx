@@ -8,6 +8,7 @@ import MikuTouch from "../mikuTouch";
 import CanvasOnTry from "../canvasTryOut";
 import Index from "../MoreInfo";
 import Idea from "../idea";
+import Interest from "../interests";
 
 export default function Routes() {
   return (
@@ -44,6 +45,9 @@ export default function Routes() {
         <Idea />
       </Route>
 
+      <Route path="/interest">
+        <Interest />
+      </Route>
     </Switch>
   );
 }
