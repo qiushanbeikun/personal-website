@@ -21,7 +21,7 @@ const PageContainer = styled.div`
 /*document.body.style.backgroundImage = DefaultBackground;
 document.body.style.backgroundPosition = "center";
 document.body.style.backgroundAttachment = "fixed";*/
-
+document.title = "Yuekun Feng -- MZFC";
 
 function App() {
   return (
