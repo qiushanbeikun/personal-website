@@ -4,14 +4,15 @@ import Container from "@material-ui/core/Container";
 import styled from "styled-components";
 
 const StyledTitle = styled(Typography)`
-  color: #dddddd
+  color: aqua;
+  padding: 1em 0;
 `;
 
 const StyledText = styled(Typography)`
   color: #eeeeee;
 `;
 
-const StyledeItalicText = styled(Typography)`
+const StyledItalicText = styled(Typography)`
   color: #eeeeee;
   font-style: italic;
 `;
@@ -70,58 +71,58 @@ export default function YUTUMainPage() {
         <StyledText paragraph variant={"h5"}>
           我给出一个粗浅的证明，首先介绍我最近由巴黎圣母院大火想到的人类的无限化的信息量。当时随便写在了朋友圈：
         </StyledText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        <StyledItalicText paragraph variant={"h5"}>
           巴黎圣母院倒下
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           让我想起来了不久前九寨沟的地震
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           我们心痛是因为这两个被人类赋予了意义。
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           那么其他被赋予意义的东西呢？
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           我一年会产生多少的数据？
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           我写的程序，写的小说，做的视频，记的笔记，拍的照片……我该怎样保存这些资料？
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           电子版的内容比纸质的安全，至少我还有云储存这条后路可选。
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           以我一年产生上百GB的数据，硬盘总有满的时候，那么对于旧硬盘数据的保护需要很多的财力人力。
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           但硬盘总有坏的可能，即使是磁盘阵列也不能完全规避数据丢失的可能。
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           那么，问题来了，我们无法规避自己想要保存的内容意外丢失的风险。
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           那么费心保存这些内容的意义是否值得我们去投资，
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           应该如何调整丢失内容后的心态
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           举个简单的例子，假如我去欧洲玩了一圈，旅游的照片被我放在了一个1TB的机械硬盘里。
           然后有一天我把硬盘摔了，厂商给出的数据恢复价格为8元/GB，并且不保证能够恢复全部数据。
           我该不该去做数据恢复？问的更深一些，我一开始就把照片储存下来的意义究竟是什么？
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           忘了在哪看到的：“那个作家临死前疯狂地把他的作品寄向世界各地的图书馆，
           生怕他的家人在他死后把他的作品一把火烧掉。然而收到的却是无数的拒绝：
           我们的图书馆已经很满了，实在放不下您的作品。”尽力在这个世界留下一些自己存在过的见证，这应该是人类本性了。
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           无论是圣母院到了，还是九寨沟塌了。人们会惋惜，人们会讨论修复，因为这是全人类的财产，但是我每天硬盘摔坏，纸张水浸造成的损失该如何处理？
-        </StyledeItalicText>
-        <StyledeItalicText paragraph variant={"h5"}>
+        </StyledItalicText>
+        <StyledItalicText paragraph variant={"h5"}>
           我不知道我不知道我不知道。
-        </StyledeItalicText>
+        </StyledItalicText>
         <StyledText paragraph variant={"h5"}>
           我把每个人都想象成一台计算机，每个人都有一颗运算速度为天河二号四分之一的处理器，有着容量为上百G的物理内存，容量为上百T的内置存。
           每秒，两颗像素为10000*10000的高清摄像头会拍出八张照片并写入物理内存，CPU在读取物理内存后会在小于等于1/8秒的时间中对这两张照片进行上下翻转，

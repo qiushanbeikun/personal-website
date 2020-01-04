@@ -10,6 +10,7 @@ import Index from "../MoreInfo";
 import Idea from "../idea";
 import Interest from "../interests";
 import YUTUMainPage from "../idea/yutu";
+import TalkAboutTech from "../idea/talkAboutTeck";
 
 export default function Routes() {
   return (
@@ -52,6 +53,10 @@ export default function Routes() {
 
       <Route path="/idea/yutuMain">
         <YUTUMainPage />
+      </Route>
+
+      <Route path="/idea/talkAboutTech">
+        <TalkAboutTech />
       </Route>
     </Switch>
   );
