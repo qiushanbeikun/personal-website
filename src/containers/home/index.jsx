@@ -125,24 +125,18 @@ export function Home() {
         </Parallax>
 
         <Box my={6}>
-
           <StyledBigName variant={"h4"}>Read more</StyledBigName>
-
           <Container maxWidth={"lg"}>
             <Grid container spacing={2}>
               <Grid item sm={4}>
                 <ReadCard text="Projects" image={BackGround} link="/projects" />
               </Grid>
-
               <Grid item sm={4}>
                 <ReadCard text="Resume" image={BackGround} link="/resume" />
               </Grid>
-
               <Grid item sm={4}>
                 <ReadCard text="More about me" image={BackGround} link="/moreInfo" />
               </Grid>
-
-
             </Grid>
           </Container>
         </Box>

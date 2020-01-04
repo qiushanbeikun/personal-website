@@ -9,6 +9,7 @@ import CanvasOnTry from "../canvasTryOut";
 import Index from "../MoreInfo";
 import Idea from "../idea";
 import Interest from "../interests";
+import YUTUMainPage from "../idea/yutu";
 
 export default function Routes() {
   return (
@@ -41,12 +42,16 @@ export default function Routes() {
         <Index />
       </Route>
 
-      <Route path="/idea">
+      <Route path="/idea" exact>
         <Idea />
       </Route>
 
       <Route path="/interest">
         <Interest />
+      </Route>
+
+      <Route path="/idea/yutuMain">
+        <YUTUMainPage />
       </Route>
     </Switch>
   );
