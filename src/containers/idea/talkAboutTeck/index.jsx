@@ -54,7 +54,7 @@ export default function TalkAboutTech() {
           它没有选择让用户转动眼球或是转动脖子，而是用“手”，这个人类最灵巧的器官。
         </StyledText>
 
-        <StyledSubtitle variant={"h4"}>
+        <StyledSubtitle variant={"h4"} paragraph>
           “信息流动的同步性”
         </StyledSubtitle>
         <StyledText paragraph variant={"h6"}>
@@ -75,13 +75,13 @@ export default function TalkAboutTech() {
         <StyledText paragraph variant={"h5"}>
           所以，MIX Alpha可能会成为”花瓶“，它可以证明小米的技术实力，可以用来装B，但是很难成为改变人类生活的一代产品。恐怕配不上“概念机”这个词。
         </StyledText>
-        <StyledSubtitle variant={"h4"}>
+        <StyledSubtitle variant={"h4"} paragraph>
           ”性能过剩“？
         </StyledSubtitle>
         <StyledText paragraph variant={"h5"}>
           个问题我觉得不只是针对MIX，我是说在座的各位科技产品都是……
         </StyledText>
-        <StyledSubtitle variant={"h4"}>
+        <StyledSubtitle variant={"h4"} paragraph>
           ”有没有性能过剩“
         </StyledSubtitle>
         <StyledText paragraph variant={"h5"}>
@@ -96,7 +96,7 @@ export default function TalkAboutTech() {
         <StyledText paragraph variant={"h5"}>
           性能会过剩，但是前提是用户能够高效率地使用软硬件资源，不会给9900k+2080Ti弄个机械硬盘做系统盘，也不会在电脑里养蛊。
         </StyledText>
-        <StyledSubtitle variant={"h4"}>
+        <StyledSubtitle variant={"h4"} paragraph>
           ”需要什么样的性能“
         </StyledSubtitle>
         <StyledText paragraph variant={"h5"}>
@@ -128,7 +128,7 @@ export default function TalkAboutTech() {
           所以，我希望计算机的普通用户能够明白计算机的作用是什么，以及计算机能够带来什么。
         </StyledText>
 
-        <StyledSubtitle variant={"h4"}>
+        <StyledSubtitle variant={"h4"} paragraph>
           “科技进步”
         </StyledSubtitle>
 
@@ -149,7 +149,7 @@ export default function TalkAboutTech() {
           现在又买了一个，那么工作效率确识会提升，但是这种提升不是飞跃。
         </StyledText>
 
-        <StyledSubtitle variant={"h4"}>
+        <StyledSubtitle variant={"h4"} paragraph>
           我的猜想？
         </StyledSubtitle>
 

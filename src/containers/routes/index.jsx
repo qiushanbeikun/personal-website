@@ -11,6 +11,7 @@ import Idea from "../idea";
 import Interest from "../interests";
 import YUTUMainPage from "../idea/yutu";
 import TalkAboutTech from "../idea/talkAboutTeck";
+import BaiduYun from "../idea/baiduYun";
 
 export default function Routes() {
   return (
@@ -36,28 +37,34 @@ export default function Routes() {
       </Route>
 
       <Route path="/canvasOnTry">
-        <CanvasOnTry />
+        <CanvasOnTry/>
       </Route>
 
       <Route path="/moreInfo">
-        <Index />
+        <Index/>
       </Route>
 
       <Route path="/idea" exact>
-        <Idea />
+        <Idea/>
       </Route>
 
       <Route path="/interest">
-        <Interest />
+        <Interest/>
       </Route>
 
       <Route path="/idea/yutuMain">
-        <YUTUMainPage />
+        <YUTUMainPage/>
       </Route>
 
       <Route path="/idea/talkAboutTech">
-        <TalkAboutTech />
+        <TalkAboutTech/>
       </Route>
+
+      <Route path="/idea/baiduYun">
+        <BaiduYun/>
+      </Route>
+
+
     </Switch>
   );
 }
