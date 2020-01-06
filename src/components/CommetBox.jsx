@@ -143,6 +143,7 @@ export default function CommentBox() {
           variant="outlined"
           margin="normal"
           value={name}
+          color="#eeeeee"
           onChange={NameChangeHandler}/>
         <TextField
           label="Email"
