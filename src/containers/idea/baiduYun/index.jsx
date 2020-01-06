@@ -2,6 +2,7 @@ import Container from "@material-ui/core/Container";
 import React from "react";
 import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
+import CommentBox from "../../../components/CommetBox";
 
 const StyledTitle = styled(Typography)`
   color: aqua;
@@ -78,6 +79,8 @@ export default function BaiduYun() {
           如果你想用云储存，可以参考我之前提到的“三件套”，免费版足够。对于内容创作者，你需要的是一个NAS/DataServer，而不是网盘。如果你还是想GKD，事关盗版，我无话可说。
         </StyledText>
       </div>
+
+      <CommentBox />
     </Container>
   )
 }
