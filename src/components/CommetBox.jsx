@@ -7,6 +7,7 @@ import Box from "@material-ui/core/Box";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
 import withStyles from "@material-ui/core/styles/withStyles";
+import Container from "@material-ui/core/Container";
 
 
 const StyledTitle = styled(Typography)`
@@ -30,10 +31,9 @@ const StyledButton = styled(Button)`
     display: block;
   }
   && {
-    // background-color: #00ffff77;
     color: #00ffff66;
     width: 100%;
-    border-radius: 0;
+    border-radius: 5px;
     animation: all 2s;
     font-size: 2em;
     font-weight: 800;
@@ -44,21 +44,45 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const StyledCommentContainer = styled(Container)`
+  border: 2px solid aqua;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`;
 
-function AutomaticEmailReply(emailAddress, replyContent) {
-
+function DisplayReply(props) {
+  console.log(props.input);
+  return (
+    <StyledCommentContainer>
+      <StyledText variant={"h5"}>Reply:</StyledText>
+      <DisplayComments input={props.input}/>
+    </StyledCommentContainer>
+  )
 }
 
 function DisplayComments(props) {
+  console.log(props.input);
+
+  const SizeReducer = (accumulator, currentValue) => (currentValue === {}) ? accumulator + 0 : accumulator + 1;
+
   return (
     <div>
       {props.input.map(each => {
         return (
-          <Box my={2}>
+          <Box my={1}>
             <StyledLabel variant={"h5"}>Name --- {each.name} ---</StyledLabel>
             <StyledLabel variant={"h5"}>
-              Email --- {(each.email !== "")? each.email : "Anonymous"} ---</StyledLabel>
+              Email --- {(each.email !== "") ? each.email : "Anonymous"} ---</StyledLabel>
             <StyledText variant={"h5"}>{each.comment}</StyledText>
+            <Box my={1}>
+              {
+                (each.reply.size !== 0 && each.reply.reduce(SizeReducer, 0) !== 0) ?
+                  <DisplayReply input={each.reply}/>
+                  :
+                  <StyledText variant={"h6"}> No comments yet</StyledText>
+              }
+            </Box>
           </Box>
         )
       })}
@@ -102,23 +126,69 @@ export default function CommentBox() {
 
   const classes = useStyle();
 
-
+  // the initial state of the comment system should be independent on each page
+  /*
+  @param each comment = {string: name, string: email, string: comment, comment: reply}
+   */
   const [comments, setComments] = useState(
     [
       {
         name: "testestest",
         email: "test1@gmail.com",
-        comment: "This is my first comment on this forum so don't be a dick"
+        comment: "This is my first comment on this forum so don't be a dick",
+        reply: [
+          {
+            name: "testest",
+            email: "test1@gmail.com",
+            comment: "That's a mighty fine comment you've got there my good looking fellow...",
+            reply: [
+              {
+                name: "testest",
+                email: "test1@gmail.com",
+                comment: "That's a mighty fine comment you've got there my good looking fellow...",
+                reply: [
+                  {
+                    name: "testest",
+                    email: "test1@gmail.com",
+                    comment: "That's a mighty fine comment you've got there my good looking fellow...",
+                    reply: [],
+                  }
+                ],
+              }
+            ],
+          },
+          {
+            name: "testest",
+            email: "test1@gmail.com",
+            comment: "That's a mighty fine comment you've got there my good looking fellow...",
+            reply: [],
+          },
+          {
+            name: "testest",
+            email: "test1@gmail.com",
+            comment: "That's a mighty fine comment you've got there my good looking fellow...",
+            reply: [],
+          }
+        ]
       },
       {
         name: "testest",
         email: "test1@gmail.com",
-        comment: "That's a mighty fine comment you've got there my good looking fellow..."
+        comment: "That's a mighty fine comment you've got there my good looking fellow...",
+        reply: [
+          {
+            name: "testest",
+            email: "test1@gmail.com",
+            comment: "That's a mighty fine comment you've got there my good looking fellow...",
+            reply: [],
+          }
+        ]
       },
       {
         name: "test",
         email: "test1@gmail.com",
-        comment: "What is the meaning of all of this 'React' mumbo-jumbo?"
+        comment: "What is the meaning of all of this 'React' mumbo-jumbo?",
+        reply: []
       }]);
 
   const [showComments, setShowComments] = useState(false);
@@ -152,35 +222,14 @@ export default function CommentBox() {
       {
         name: name,
         email: email,
-        comment: newComment
+        comment: newComment,
+        reply: [],
       };
     setComments([...comments, aNewComment]);
     setName("");
     setEmail("");
     setNewComment("");
   };
-
-  const CssTextField = withStyles({
-    root: {
-      '& label.Mui-focused': {
-        color: 'green',
-      },
-      '& .MuiInput-underline:after': {
-        borderBottomColor: 'green',
-      },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: 'white',
-        },
-        '&:hover fieldset': {
-          borderColor: 'aqua',
-        },
-        '&.Mui-focused fieldset': {
-          borderColor: 'aqua',
-        },
-      },
-    },
-  })(TextField);
 
   return (
     <div>
