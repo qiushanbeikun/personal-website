@@ -6,7 +6,6 @@ import styled from "styled-components";
 import Box from "@material-ui/core/Box";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
-import withStyles from "@material-ui/core/styles/withStyles";
 import Container from "@material-ui/core/Container";
 
 
@@ -44,7 +43,8 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledCommentContainer = styled(Container)`
+const StyledCommentContainer = styled.div`
+  padding: 0.5em;
   border: 2px solid aqua;
   border-radius: 10px;
   margin-top: 15px;
@@ -54,10 +54,12 @@ const StyledCommentContainer = styled(Container)`
 function DisplayReply(props) {
   console.log(props.input);
   return (
-    <StyledCommentContainer>
-      <StyledText variant={"h5"}>Reply:</StyledText>
-      <DisplayComments input={props.input}/>
-    </StyledCommentContainer>
+    <Container>
+      <StyledCommentContainer>
+        <StyledText variant={"h5"}>Reply:</StyledText>
+        <DisplayComments input={props.input}/>
+      </StyledCommentContainer>
+    </Container>
   )
 }
 
@@ -80,7 +82,7 @@ function DisplayComments(props) {
                 (each.reply.size !== 0 && each.reply.reduce(SizeReducer, 0) !== 0) ?
                   <DisplayReply input={each.reply}/>
                   :
-                  <StyledText variant={"h6"}> No comments yet</StyledText>
+                  <StyledText variant={"h7"}>No reply</StyledText>
               }
             </Box>
           </Box>
@@ -130,6 +132,9 @@ export default function CommentBox() {
   /*
   @param each comment = {string: name, string: email, string: comment, comment: reply}
    */
+
+  // this is the test initial case
+
   const [comments, setComments] = useState(
     [
       {
