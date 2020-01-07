@@ -43,7 +43,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const StyledCommentContainer = styled.div`
+const StyledCommentDiv = styled.div`
   padding: 0.5em;
   border: 2px solid aqua;
   border-radius: 10px;
@@ -55,10 +55,10 @@ function DisplayReply(props) {
   console.log(props.input);
   return (
     <Container>
-      <StyledCommentContainer>
+      <StyledCommentDiv>
         <StyledText variant={"h5"}>Reply:</StyledText>
         <DisplayComments input={props.input}/>
-      </StyledCommentContainer>
+      </StyledCommentDiv>
     </Container>
   )
 }
