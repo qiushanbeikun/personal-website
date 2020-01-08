@@ -110,20 +110,22 @@ function EachCard(props) {
 
   return (
     <Card className={classes.card}>
-      <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon/>
-          </IconButton>
-        }
-        title={props.title}
-        subheader={props.date}
-      />
-      <CardMedia
-        className={classes.media}
-        image={DefaultImage}
-        title={props.subtitle}
-      />
+      <CardActionArea href={props.to} target="_blank" rel="noopener noreferrer">
+        <CardHeader
+          action={
+            <IconButton aria-label="settings">
+              <MoreVertIcon/>
+            </IconButton>
+          }
+          title={props.title}
+          subheader={props.date}
+        />
+        <CardMedia
+          className={classes.media}
+          image={DefaultImage}
+          title={props.subtitle}
+        />
+      </CardActionArea>
       <CardContent>
         <Typography variant="h6" color="textSecondary" component="p">
           {props.shortDescription}
@@ -153,6 +155,7 @@ function EachCard(props) {
           </Typography>
         </CardContent>
       </Collapse>
+
     </Card>
   )
 }
@@ -197,7 +200,8 @@ export default function Idea() {
 
       <Grid container spacing={4}>
         <Grid item sm={6}>
-          <EachCard title="谈科技？"
+          <EachCard to="/idea/talkAboutTech"
+                    title="谈科技？"
                     date="2019/OCT/20 北鲲"
                     subtitle="谈科技"
                     longDescription={"None"}
@@ -208,6 +212,7 @@ export default function Idea() {
 
         <Grid item sm={6}>
           <EachCard title="你的网盘无法再GKD"
+                    to="/idea/baiduYun"
                     date="2019/NOV/19 北鲲"
                     subtitle="你的网盘无法再GKD"
                     longDescription={"百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"}
@@ -219,7 +224,7 @@ export default function Idea() {
         <Grid item sm={6}>
           <EachCard title="盗版用户的未来？"
                     date="2019/NOV/26 北鲲"
-                    subtitle="你的网盘无法再GKD"
+                    subtitle="盗版用户的未来"
                     longDescription={"Click in"}
                     shortDescription="为什么种子让我们欲罢不能。"/>
 
@@ -228,20 +233,22 @@ export default function Idea() {
 
         <Grid item sm={6}>
           <Card className={classes.card}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon/>
-                </IconButton>
-              }
-              title={"《雨图》大纲     The synopsis of YUTU"}
-              subheader={"持续更新"}
-            />
-            <CardMedia
-              className={classes.media}
-              image={DefaultImage}
-              title={"wtf"}
-            />
+            <CardActionArea href="/idea/yutuMain" target="_blank" rel="noopener noreferrer">
+              <CardHeader
+                action={
+                  <IconButton aria-label="settings">
+                    <MoreVertIcon/>
+                  </IconButton>
+                }
+                title={"《雨图》大纲     The synopsis of YUTU"}
+                subheader={"持续更新"}
+              />
+              <CardMedia
+                className={classes.media}
+                image={DefaultImage}
+                title={"《雨图》大纲"}
+              />
+            </CardActionArea>
             <CardContent>
               <Typography variant="h6" color="textSecondary" component="p">
                 {"YUTU is a novel and the correspond world worldview based on web-fantasy novel ZHIMO"}
@@ -285,7 +292,8 @@ export default function Idea() {
                   The novel YUTU is based on the following three themes:
                 </Typography>
                 <Typography paragraph>
-                  Nakedness: By the instinct fear to the unknown, human are not brave enough to both known-in-circle and
+                  Nakedness: By the instinct fear to the unknown, human are not brave enough to both known-in-circle
+                  and
                   unknown-exo-circle. Abandoning the excessive curiosity to the exo-circle, how to protect the content
                   in-circle are reality.
                 </Typography>
@@ -297,7 +305,8 @@ export default function Idea() {
                   exploring the above mentioned themes through the story of the leading role.
                 </Typography>
                 <Typography paragraph>
-                  Please note that only Chinese version of this article is available at the moment, translation will be
+                  Please note that only Chinese version of this article is available at the moment, translation will
+                  be
                   scheduled.
                 </Typography>
                 <Typography paragraph>
@@ -312,20 +321,22 @@ export default function Idea() {
 
         <Grid item sm={6}>
           <Card className={classes2.card}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon/>
-                </IconButton>
-              }
-              title={"《紫图》大纲   The synopsis of ZITU"}
-              subheader={"持续更新"}
-            />
-            <CardMedia
-              className={classes2.media}
-              image={DefaultImage}
-              title={"wtf"}
-            />
+            <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
+              <CardHeader
+                action={
+                  <IconButton aria-label="settings">
+                    <MoreVertIcon/>
+                  </IconButton>
+                }
+                title={"《紫图》大纲   The synopsis of ZITU"}
+                subheader={"持续更新"}
+              />
+              <CardMedia
+                className={classes2.media}
+                image={DefaultImage}
+                title={"《紫图》大纲"}
+              />
+            </CardActionArea>
             <CardContent>
               <Typography variant="h6" color="textSecondary" component="p">
                 {"ZITU is the novel and a more complex worldview based on ZHIMO and YUTU"}
@@ -361,7 +372,8 @@ export default function Idea() {
                   appropriate to demonstrate inside YUTU. However, the story itself can still be independent.
                 </Typography>
                 <Typography paragraph>
-                  ZITU is more story orientated, but focuses on the same topic with YUTU, the discovery of the theme has
+                  ZITU is more story orientated, but focuses on the same topic with YUTU, the discovery of the theme
+                  has
                   been finished in YUTU, the designed functions of this novel is to show-off, DLC give away.
                 </Typography>
                 <Typography paragraph>
@@ -376,20 +388,22 @@ export default function Idea() {
 
         <Grid item sm={6}>
           <Card className={classes3.card}>
-            <CardHeader
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon/>
-                </IconButton>
-              }
-              title={"《星雨图》 "}
-              subheader={"很难更新"}
-            />
-            <CardMedia
-              className={classes3.media}
-              image={DefaultImage}
-              title={"wtf"}
-            />
+            <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
+              <CardHeader
+                action={
+                  <IconButton aria-label="settings">
+                    <MoreVertIcon/>
+                  </IconButton>
+                }
+                title={"《星雨图》 "}
+                subheader={"很难更新"}
+              />
+              <CardMedia
+                className={classes3.media}
+                image={DefaultImage}
+                title={"《星雨图》"}
+              />
+            </CardActionArea>
             <CardContent>
               <Typography variant="h6" color="textSecondary" component="p">
                 {"XINGYUTU is a novel during created during my high school"}
@@ -427,13 +441,21 @@ export default function Idea() {
                   High school works, happened in a overhead swordplay world.
                 </Typography>
                 <Typography paragraph>
-                  Anything of everything began with a catastrophe happened 10 years age, all the institutions in the "wuxiajie" suffered great lost. However, the truth of the catastrophe was hided because the one that know the truth passed away consecutively. In the past 10 years, hostiles hostile. As the publicly recognized "hazardous", Beichen decided to retire from wuxiajie and left his institution, however, wuxiajie does not want Beichen to just retire as he will. Beichen is force to start his journey again to find the truth behind the truth.
+                  Anything of everything began with a catastrophe happened 10 years age, all the institutions in the
+                  "wuxiajie" suffered great lost. However, the truth of the catastrophe was hided because the one that
+                  know the truth passed away consecutively. In the past 10 years, hostiles hostile. As the publicly
+                  recognized "hazardous", Beichen decided to retire from wuxiajie and left his institution, however,
+                  wuxiajie does not want Beichen to just retire as he will. Beichen is force to start his journey
+                  again
+                  to find the truth behind the truth.
                 </Typography>
                 <Typography paragraph>
-                  Please note that the English version of this novel is neither translated nor scheduled to be translate.
+                  Please note that the English version of this novel is neither translated nor scheduled to be
+                  translate.
                 </Typography>
                 <Typography paragraph>
-                  Please note that the English version of this novel is neither translated nor scheduled to be translate.
+                  Please note that the English version of this novel is neither translated nor scheduled to be
+                  translate.
                 </Typography>
               </CardContent>
             </Collapse>
