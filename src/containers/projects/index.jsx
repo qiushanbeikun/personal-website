@@ -81,7 +81,7 @@ export function Projects() {
               description="This website is build upon JS/CSS/HTML, using React and Material-UI"
               title="This website"
               image={WebsiteImages}
-              to="https://github.com/qiushanbeikun/SREsMagicCalculator"
+              to="https://github.com/qiushanbeikun/personal-website"
             />
           </Grid>
 
