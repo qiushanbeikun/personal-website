@@ -18,11 +18,9 @@ const StyledLabel = styled(Typography)`
   color: #eeeeee;
 `;
 
-
 const StyledText = styled(Typography)`
   color: #eeeeee;
 `;
-
 
 const StyledButton = styled(Button)`
   &:before {
@@ -62,35 +60,170 @@ function DisplayReply(props) {
   )
 }
 
-// TODO change this function such that each comment itself will be rendered in a separate component
+function DisplayEachComment(props){
 
-function DisplayComments(props) {
+  const [showReplyBoxVisible, setShowReplyBoxVisible] = useState(true);
+
+  const ShowReplyBoxHandler = event => {
+    event.preventDefault();
+    setShowReplyBoxVisible(!showReplyBoxVisible);
+  };
+
 
   const SizeReducer = (accumulator, currentValue) => (currentValue === {}) ? accumulator + 0 : accumulator + 1;
+
+  const each = props.each;
+
+  const classes = useStyle();
+
+  const [replyName, setReplyName] = useState("");
+
+  const ReplyNameHandler = event => {
+    event.preventDefault();
+    setReplyName(event.target.value);
+  };
+
+  const [replyEmail, setReplyEmail] = useState("");
+
+  const ReplyEmailHandler = event => {
+    event.preventDefault();
+    setReplyEmail(event.target.value);
+  };
+
+  const [replyComment, setReplyComment] = useState("");
+
+  const ReplyCommentHandler = event => {
+    event.preventDefault();
+    setReplyComment(event.target.value);
+  };
+
+  const ReplySubmitHandler = event => {
+    event.preventDefault();
+    const aNewReply = {
+      name: replyName,
+      email: replyEmail,
+      comment: replyComment,
+      reply: [],
+    };
+
+    setShowReplyBoxVisible(!showReplyBoxVisible);
+    setReplyName("");
+    setReplyEmail("");
+    setReplyComment("");
+  };
+
+  const FoldHandler = event => {
+    setShowReplyBoxVisible(!showReplyBoxVisible);
+    setReplyName("");
+    setReplyEmail("");
+    setReplyComment("");
+  };
+
+  return (
+    <Box my={1}>
+      <StyledLabel variant={"h5"}>Name --- {each.name} ---</StyledLabel>
+      <StyledLabel variant={"h5"}>
+        Email --- {(each.email !== "") ? each.email : "Anonymous"} ---</StyledLabel>
+      <StyledText variant={"h5"}>{each.comment}</StyledText>
+
+      {
+        (showReplyBoxVisible) ?
+          <div>
+            <Button onClick={ShowReplyBoxHandler}>
+              Reply
+            </Button>
+          </div>
+          :
+          <Container>
+            <form onSubmit={ReplySubmitHandler}>
+              <Grid container spacing={3}>
+                <Grid item sm={6}>
+                  <TextField
+                    InputProps={{
+                      className: classes.input
+                    }}
+                    InputLabelProps={{
+                      className: classes.input
+                    }}
+                    className={classes.root}
+                    required
+                    label="Name"
+                    variant="outlined"
+                    margin="normal"
+                    value={replyName}
+                    color="#eeeeee"
+                    onChange={ReplyNameHandler}/>
+                </Grid>
+                <Grid item sm={6}>
+                  <TextField
+                    InputLabelProps={{
+                      className: classes.input
+                    }}
+                    InputProps={{
+                      className: classes.input
+                    }}
+                    className={classes.root}
+                    label="Email (optional)"
+                    variant="outlined"
+                    margin="normal"
+                    value={replyEmail}
+                    onChange={ReplyEmailHandler}/>
+                </Grid>
+              </Grid>
+
+              <TextField
+                InputLabelProps={{
+                  className: classes.input
+                }}
+                className={classes.root}
+                InputProps={{
+                  className: classes.input
+                }}
+                required
+                label="Leave a comment here"
+                margin="normal"
+                multiline
+                value={replyComment}
+                variant="outlined"
+                onChange={ReplyCommentHandler}/>
+              <div>
+                <Grid container spacing={4}>
+                  <Grid item sm={6}>
+                    <StyledButton onClick={FoldHandler}>
+                      Cancel
+                    </StyledButton>
+                  </Grid>
+                  <Grid item sm={6}>
+                    <StyledButton type="submit">
+                      Reply
+                    </StyledButton>
+                  </Grid>
+                </Grid>
+              </div>
+            </form>
+          </Container>
+      }
+      <Box my={1}>
+        {
+          (each.reply.size !== 0 && each.reply.reduce(SizeReducer, 0) !== 0) ?
+            <DisplayReply input={each.reply}/>
+            :
+            <StyledText>No reply</StyledText>
+        }
+      </Box>
+    </Box>
+  )
+
+}
+
+
+function DisplayComments(props) {
 
   return (
     <div>
       {props.input.map(each => {
         return (
-          <Box my={1}>
-            <StyledLabel variant={"h5"}>Name --- {each.name} ---</StyledLabel>
-            <StyledLabel variant={"h5"}>
-              Email --- {(each.email !== "") ? each.email : "Anonymous"} ---</StyledLabel>
-            <StyledText variant={"h5"}>{each.comment}</StyledText>
-            <div>
-              <StyledButton>
-                Reply
-              </StyledButton>
-            </div>
-            <Box my={1}>
-              {
-                (each.reply.size !== 0 && each.reply.reduce(SizeReducer, 0) !== 0) ?
-                  <DisplayReply input={each.reply}/>
-                  :
-                  <StyledText>No reply</StyledText>
-              }
-            </Box>
-          </Box>
+          <DisplayEachComment each={each} />
         )
       })}
 
@@ -133,15 +266,7 @@ const useStyle = makeStyles(theme => ({
 export default function CommentBox(props) {
 
 
-
   const classes = useStyle();
-
-  // todo the initial state of the comment system should be independent on each page
-  /*
-  @param each comment = {string: name, string: email, string: comment, comment: reply}
-   */
-
-  // this is the test initial case
 
   const [comments, setComments] = useState(
     [
@@ -204,13 +329,6 @@ export default function CommentBox(props) {
         comment: "What is the meaning of all of this 'React' mumbo-jumbo?",
         reply: []
       }]);
-
-  const [showComments, setShowComments] = useState(false);
-
-  const ShowCommentHandler = event => {
-    event.preventDefault();
-    setShowComments(!showComments);
-  };
 
   const [name, setName] = useState("");
 
