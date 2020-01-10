@@ -12,6 +12,7 @@ import Interest from "../interests";
 import YUTUMainPage from "../idea/yutu";
 import TalkAboutTech from "../idea/talkAboutTeck";
 import BaiduYun from "../idea/baiduYun";
+import TestPage from "../test";
 
 export default function Routes() {
   return (
@@ -62,6 +63,10 @@ export default function Routes() {
 
       <Route path="/idea/baiduYun">
         <BaiduYun/>
+      </Route>
+
+      <Route path="/test">
+        <TestPage/>
       </Route>
 
 
