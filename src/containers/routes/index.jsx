@@ -13,6 +13,7 @@ import YUTUMainPage from "../idea/yutu";
 import TalkAboutTech from "../idea/talkAboutTeck";
 import BaiduYun from "../idea/baiduYun";
 import TestPage from "../test";
+import TorrentSearch from "../torrentSearch";
 
 export default function Routes() {
   return (
@@ -69,6 +70,9 @@ export default function Routes() {
         <TestPage/>
       </Route>
 
+      <Route path="/torrentSearchTool">
+        <TorrentSearch/>
+      </Route>
 
     </Switch>
   );
