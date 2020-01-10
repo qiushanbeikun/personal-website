@@ -36,7 +36,6 @@ const StyledButton = styled(Button)`
     font-weight: 800;
     &:hover {
       color: aqua; 
-      
     }
   }
 `;
@@ -68,7 +67,6 @@ function DisplayEachComment(props){
     event.preventDefault();
     setShowReplyBoxVisible(!showReplyBoxVisible);
   };
-
 
   const SizeReducer = (accumulator, currentValue) => (currentValue === {}) ? accumulator + 0 : accumulator + 1;
 
@@ -213,7 +211,6 @@ function DisplayEachComment(props){
       </Box>
     </Box>
   )
-
 }
 
 
@@ -226,7 +223,6 @@ function DisplayComments(props) {
           <DisplayEachComment each={each} />
         )
       })}
-
     </div>
   )
 }
@@ -260,11 +256,9 @@ const useStyle = makeStyles(theme => ({
   input: {
     color: "#eeeeee",
   },
-
 }));
 
 export default function CommentBox(props) {
-
 
   const classes = useStyle();
 
