@@ -80,7 +80,28 @@ export default function BaiduYun() {
         </StyledText>
       </div>
 
-      <CommentBox />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <CommentBox existingComments={[]} />
     </Container>
   )
 }

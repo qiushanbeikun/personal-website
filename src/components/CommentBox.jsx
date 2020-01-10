@@ -62,6 +62,8 @@ function DisplayReply(props) {
   )
 }
 
+// TODO change this function such that each comment itself will be rendered in a separate component
+
 function DisplayComments(props) {
 
   const SizeReducer = (accumulator, currentValue) => (currentValue === {}) ? accumulator + 0 : accumulator + 1;
@@ -75,6 +77,11 @@ function DisplayComments(props) {
             <StyledLabel variant={"h5"}>
               Email --- {(each.email !== "") ? each.email : "Anonymous"} ---</StyledLabel>
             <StyledText variant={"h5"}>{each.comment}</StyledText>
+            <div>
+              <StyledButton>
+                Reply
+              </StyledButton>
+            </div>
             <Box my={1}>
               {
                 (each.reply.size !== 0 && each.reply.reduce(SizeReducer, 0) !== 0) ?
@@ -86,6 +93,7 @@ function DisplayComments(props) {
           </Box>
         )
       })}
+
     </div>
   )
 }
