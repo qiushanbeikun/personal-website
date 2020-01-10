@@ -2,7 +2,7 @@ import Container from "@material-ui/core/Container";
 import React from "react";
 import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
-import CommentBox from "../../../components/CommetBox";
+import CommentBox from "../../../components/CommentBox";
 
 const StyledTitle = styled(Typography)`
   color: aqua;

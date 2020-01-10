@@ -52,7 +52,6 @@ const StyledCommentDiv = styled.div`
 `;
 
 function DisplayReply(props) {
-  console.log(props.input);
   return (
     <Container>
       <StyledCommentDiv>
@@ -64,7 +63,6 @@ function DisplayReply(props) {
 }
 
 function DisplayComments(props) {
-  console.log(props.input);
 
   const SizeReducer = (accumulator, currentValue) => (currentValue === {}) ? accumulator + 0 : accumulator + 1;
 
@@ -82,7 +80,7 @@ function DisplayComments(props) {
                 (each.reply.size !== 0 && each.reply.reduce(SizeReducer, 0) !== 0) ?
                   <DisplayReply input={each.reply}/>
                   :
-                  <StyledText variant={"h7"}>No reply</StyledText>
+                  <StyledText>No reply</StyledText>
               }
             </Box>
           </Box>
@@ -124,11 +122,13 @@ const useStyle = makeStyles(theme => ({
 
 }));
 
-export default function CommentBox() {
+export default function CommentBox(props) {
+
+
 
   const classes = useStyle();
 
-  // the initial state of the comment system should be independent on each page
+  // todo the initial state of the comment system should be independent on each page
   /*
   @param each comment = {string: name, string: email, string: comment, comment: reply}
    */
@@ -137,6 +137,7 @@ export default function CommentBox() {
 
   const [comments, setComments] = useState(
     [
+      ...props.existingComments,
       {
         name: "testestest",
         email: "test1@gmail.com",
