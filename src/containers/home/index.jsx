@@ -26,7 +26,6 @@ const StyledText = styled(Typography)`
   color: #eeeeee;
 `;
 
-
 const StyledCard = styled(Card)`
   &:hover img {
     transform: scale(1.1);
@@ -75,7 +74,9 @@ export function Home() {
         <Parallax pages={5.8}>
 
           <ParallaxLayer offset={0.2} speed={0.2}>
-            <StyledBigName variant="h2">Yuekun Feng</StyledBigName>
+            <StyledBigName variant="h2">
+              Yuekun Feng
+            </StyledBigName>
           </ParallaxLayer>
 
           <ParallaxLayer offset={0.5} speed={1}>
@@ -83,8 +84,12 @@ export function Home() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={1.2} speed={0.2}>
-            <StyledText variant="h4">Third year student at University of British Columbia (graduate at 2021).</StyledText>
-            <StyledText variant="h4">Majors in computer science.</StyledText>
+            <StyledText variant="h4">
+              Third year student at University of British Columbia (graduate at 2021).
+            </StyledText>
+            <StyledText variant="h4">
+              Majors in computer science.
+            </StyledText>
           </ParallaxLayer>
 
           <ParallaxLayer offset={1.5} speed={1}>
@@ -92,7 +97,9 @@ export function Home() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={2.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>アニメ fun</StyledBigName>
+            <StyledBigName variant={"h3"}>
+              アニメ fun
+            </StyledBigName>
           </ParallaxLayer>
 
           <ParallaxLayer offset={2.5} speed={1}>
@@ -100,7 +107,9 @@ export function Home() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={3.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>Tech fun</StyledBigName>
+            <StyledBigName variant={"h3"}>
+              Tech fun
+            </StyledBigName>
           </ParallaxLayer>
 
           <ParallaxLayer offset={3.5} speed={1}>
@@ -108,7 +117,9 @@ export function Home() {
           </ParallaxLayer>
 
           <ParallaxLayer offset={4.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>"OTO MAD content" editor</StyledBigName>
+            <StyledBigName variant={"h3"}>
+              "OTO MAD content" editor
+            </StyledBigName>
           </ParallaxLayer>
 
           <ParallaxLayer offset={4.5} speed={1}>
@@ -117,17 +128,28 @@ export function Home() {
 
           <ParallaxLayer offset={5} speed={0.2}>
             <Box my={6}>
-              <StyledBigName variant={"h4"}>Read more</StyledBigName>
+              <StyledBigName variant={"h4"}>
+                Read more
+              </StyledBigName>
               <Container maxWidth={"lg"}>
                 <Grid container spacing={2}>
                   <Grid item sm={4}>
-                    <ReadCard text="Projects" image={BackGround} link="/projects" />
+                    <ReadCard
+                      text="Projects"
+                      image={BackGround}
+                      link="/projects" />
                   </Grid>
                   <Grid item sm={4}>
-                    <ReadCard text="Resume" image={BackGround} link="/resume" />
+                    <ReadCard
+                      text="Resume"
+                      image={BackGround}
+                      link="/resume" />
                   </Grid>
                   <Grid item sm={4}>
-                    <ReadCard text="More about me" image={BackGround} link="/moreInfo" />
+                    <ReadCard
+                      text="More about me"
+                      image={BackGround}
+                      link="/moreInfo" />
                   </Grid>
                 </Grid>
               </Container>
