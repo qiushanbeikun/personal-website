@@ -2,7 +2,6 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import {Parallax} from "react-parallax";
 import styled from "styled-components";
 import BackGround from "../../backg.jpg"
 import {Container} from "@material-ui/core";
@@ -14,6 +13,7 @@ import Guichu from "../../imageCache/guichu.png"
 import Anime from "../../imageCache/anime.JPG"
 import Tech from "../../imageCache/TECH.jpg"
 import Coding from "../../imageCache/coding.png"
+import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 
 
 const StyledBigName = styled(Typography)`
@@ -43,8 +43,6 @@ const ProjectSummaryMedia = styled.div`
   }
 `;
 
-
-
 function ReadCard ({text, image, link}) {
   return (
     <StyledCard>
@@ -64,7 +62,6 @@ ReadCard.propTypes = {
   link: PropTypes.string,
 };
 
-
 export function Home() {
 
   const styles = {
@@ -73,77 +70,72 @@ export function Home() {
   };
 
   return (
-    <Box my={2}>
-
+    <div>
       <div style={styles}>
+        <Parallax pages={5.8}>
 
+          <ParallaxLayer offset={0.2} speed={0.2}>
+            <StyledBigName variant="h2">Yuekun Feng</StyledBigName>
+          </ParallaxLayer>
 
-        <Box my={8}>
-          <StyledBigName variant="h2">Yuekun Feng</StyledBigName>
-        </Box>
+          <ParallaxLayer offset={0.5} speed={1}>
+            <img src={BackGround} alt="op" style={{width: '100%', }}/>
+          </ParallaxLayer>
 
-        <Parallax bgImage={BackGround} strength={500}>
-          <div style={{height: 700}}>
-          </div>
+          <ParallaxLayer offset={1.2} speed={0.2}>
+            <StyledText variant="h4">Third year student at University of British Columbia (graduate at 2021).</StyledText>
+            <StyledText variant="h4">Majors in computer science.</StyledText>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={1.5} speed={1}>
+            <img src={Coding} alt="op" style={{width: '100%', }}/>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={2.2} speed={0.2}>
+            <StyledBigName variant={"h3"}>アニメ fun</StyledBigName>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={2.5} speed={1}>
+            <img src={Anime} alt="op" style={{width: '100%', }}/>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={3.2} speed={0.2}>
+            <StyledBigName variant={"h3"}>Tech fun</StyledBigName>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={3.5} speed={1}>
+            <img src={Tech} alt="op" style={{width: '100%', }}/>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={4.2} speed={0.2}>
+            <StyledBigName variant={"h3"}>"OTO MAD content" editor</StyledBigName>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={4.5} speed={1}>
+            <img src={Guichu} alt="op" style={{width: '100%', }}/>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5} speed={0.2}>
+            <Box my={6}>
+              <StyledBigName variant={"h4"}>Read more</StyledBigName>
+              <Container maxWidth={"lg"}>
+                <Grid container spacing={2}>
+                  <Grid item sm={4}>
+                    <ReadCard text="Projects" image={BackGround} link="/projects" />
+                  </Grid>
+                  <Grid item sm={4}>
+                    <ReadCard text="Resume" image={BackGround} link="/resume" />
+                  </Grid>
+                  <Grid item sm={4}>
+                    <ReadCard text="More about me" image={BackGround} link="/moreInfo" />
+                  </Grid>
+                </Grid>
+              </Container>
+            </Box>
+          </ParallaxLayer>
+
         </Parallax>
-
-        <Box my={12}>
-          <StyledText variant="h5">Third year student at University of British Columbia (graduate at 2021).</StyledText>
-          <StyledText variant="h5">Majors in computer science.</StyledText>
-        </Box>
-
-        <Parallax bgImage={Coding} strength={500}>
-          <div style={{height: 700}}>
-          </div>
-        </Parallax>
-
-        <Box my={8}>
-          <StyledBigName variant={"h4"}>アニメ fun</StyledBigName>
-        </Box>
-
-        <Parallax bgImage={Anime} strength={500}>
-          <div style={{height: 700}}>
-          </div>
-        </Parallax>
-
-        <Box my={8}>
-          <StyledBigName variant={"h4"}>Tech fun</StyledBigName>
-        </Box>
-
-        <Parallax bgImage={Tech} strength={500}>
-          <div style={{height: 700}}>
-          </div>
-        </Parallax>
-
-        <Box my={8}>
-          <StyledBigName variant={"h4"}>"OTO MAD content" editor.</StyledBigName>
-        </Box>
-
-        <Parallax bgImage={Guichu} strength={500}>
-          <div style={{height: 800}}>
-          </div>
-        </Parallax>
-
-        <Box my={6}>
-          <StyledBigName variant={"h4"}>Read more</StyledBigName>
-          <Container maxWidth={"lg"}>
-            <Grid container spacing={2}>
-              <Grid item sm={4}>
-                <ReadCard text="Projects" image={BackGround} link="/projects" />
-              </Grid>
-              <Grid item sm={4}>
-                <ReadCard text="Resume" image={BackGround} link="/resume" />
-              </Grid>
-              <Grid item sm={4}>
-                <ReadCard text="More about me" image={BackGround} link="/moreInfo" />
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
-
       </div>
-
-
-    </Box>
+    </div>
   );
 }

@@ -15,7 +15,7 @@ import "./appStyles.css"
 
 
 const PageContainer = styled.div`
-  min-height: 100vh;
+  min-height: 106vh;
 `;
 
 /*document.body.style.backgroundImage = DefaultBackground;
