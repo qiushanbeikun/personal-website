@@ -14,6 +14,7 @@ import TalkAboutTech from "../idea/talkAboutTeck";
 import BaiduYun from "../idea/baiduYun";
 import TestPage from "../test";
 import TorrentSearch from "../torrentSearch";
+import CPSC110 from "../tutor/cpsc110";
 
 export default function Routes() {
   return (
@@ -72,6 +73,10 @@ export default function Routes() {
 
       <Route path="/torrentSearchTool">
         <TorrentSearch/>
+      </Route>
+
+      <Route path="/tutor/cpsc110">
+        <CPSC110 />
       </Route>
 
     </Switch>

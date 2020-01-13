@@ -7,7 +7,7 @@ import Box from "@material-ui/core/Box";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import {getJson} from "../apiHelper";
+import {getJson} from "../../apiHelper";
 
 const StyledTitle = styled(Typography)`
   color: #eeeeee;

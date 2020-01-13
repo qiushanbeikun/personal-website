@@ -2,7 +2,7 @@ import Container from "@material-ui/core/Container";
 import React from "react";
 import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
-import CommentBox from "../../../components/CommentBox";
+import CommentBox from "../../../components/CommentSystem/CommentBox";
 
 const StyledTitle = styled(Typography)`
   color: aqua;
@@ -80,7 +80,7 @@ export default function BaiduYun() {
         </StyledText>
       </div>
 
-      <CommentBox postId="baiduYun" />
+      <CommentBox postId="baiduYun" existingComments={[]}/>
     </Container>
   )
 }

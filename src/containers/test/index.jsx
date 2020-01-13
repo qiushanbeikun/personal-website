@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Container from "@material-ui/core/Container";
-import CommentBox from "../../components/CommentBox";
+import CommentBox from "../../components/CommentSystem/CommentBox";
 
 export default function TestPage() {
 
