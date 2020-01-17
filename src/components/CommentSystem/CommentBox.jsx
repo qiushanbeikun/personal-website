@@ -258,6 +258,21 @@ const useStyle = makeStyles(theme => ({
   },
 }));
 
+// the helper function to parse the sql result to package readable format
+
+
+function ParseSQLResult (props) {
+  const result = [];
+  const unsolvedComments = props.valueOf();
+  while (!unsolvedComments.isEmpty) {
+    for (const each of result) {
+
+    }
+  }
+}
+
+
+
 export default function CommentBox(props) {
   const classes = useStyle();
   const [result, setResult] = useState({ loading: false, result: null, error: null });
@@ -278,65 +293,8 @@ export default function CommentBox(props) {
 
   const [comments, setComments] = useState(
     [
-      ...props.existingComments,
-      {
-        name: "testestest",
-        email: "test1@gmail.com",
-        comment: "This is my first comment on this forum so don't be a dick",
-        reply: [
-          {
-            name: "testest",
-            email: "test1@gmail.com",
-            comment: "That's a mighty fine comment you've got there my good looking fellow...",
-            reply: [
-              {
-                name: "testest",
-                email: "test1@gmail.com",
-                comment: "That's a mighty fine comment you've got there my good looking fellow...",
-                reply: [
-                  {
-                    name: "testest",
-                    email: "test1@gmail.com",
-                    comment: "That's a mighty fine comment you've got there my good looking fellow...",
-                    reply: [],
-                  }
-                ],
-              }
-            ],
-          },
-          {
-            name: "testest",
-            email: "test1@gmail.com",
-            comment: "That's a mighty fine comment you've got there my good looking fellow...",
-            reply: [],
-          },
-          {
-            name: "testest",
-            email: "test1@gmail.com",
-            comment: "That's a mighty fine comment you've got there my good looking fellow...",
-            reply: [],
-          }
-        ]
-      },
-      {
-        name: "testest",
-        email: "test1@gmail.com",
-        comment: "That's a mighty fine comment you've got there my good looking fellow...",
-        reply: [
-          {
-            name: "testest",
-            email: "test1@gmail.com",
-            comment: "That's a mighty fine comment you've got there my good looking fellow...",
-            reply: [],
-          }
-        ]
-      },
-      {
-        name: "test",
-        email: "test1@gmail.com",
-        comment: "What is the meaning of all of this 'React' mumbo-jumbo?",
-        reply: []
-      }]);
+        ...ParseSQLResult(result)
+      ]);
 
   const [name, setName] = useState("");
 
