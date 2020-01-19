@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import PropTypes from 'prop-types'
 import {TextField} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
@@ -53,40 +54,47 @@ const useStyle = makeStyles(theme => ({
 // the helper function to parse the sql result to package readable format
 
 
-function ParseSQLResult (props) {
+/*
+* [{ id: 1, parentId: null, ... }, { id: 2, parentId: 1, ... }] -> [{ id: 1, children: [{ id: 2, ... }] }]
+*
+* */
+function parseApiResult (props) {
   const result = [];
-  const unsolvedComments = props.valueOf();
-  while (!unsolvedComments.isEmpty) {
-    for (const each of result) {
-
-    }
-  }
+  return result;
+  // const unsolvedComments = props.valueOf();
+  // while (!unsolvedComments.isEmpty) {
+  //   for (const each of result) {
+  //
+  //   }
+  // }
 }
 
-
+CommentBox.propType = {
+  postId: PropTypes.string.isRequired,
+};
 
 export default function CommentBox(props) {
   const classes = useStyle();
   const [result, setResult] = useState({ loading: false, result: null, error: null });
+  const postId = props.postId || '2';
+
+  const getComments = async () => {
+    setResult({ loading: true });
+    try {
+      const res = await getJson(`post/${postId}/comment`);
+      setResult({ loading: false, result: res });
+    } catch (e) {
+      setResult({ loading: false, result: null, error: 'Failed to fetch comments' });
+    }
+  };
 
   useEffect(() => {
-    (async () => {
-      setResult({ loading: true });
-      try {
-        const res = await getJson('post');
-        setResult({ loading: false, result: res });
-      } catch (e) {
-        setResult({ loading: false, result: null, error: 'Failed to fetch comments' });
-      }
-    })();
+    getComments();
   }, [props.postId]);
 
-  // console.log(result);
+  console.log(result);
 
-  const [comments, setComments] = useState(
-    [
-        // ...ParseSQLResult(result)
-      ]);
+  const processedResult = parseApiResult(result);
 
   const [name, setName] = useState("");
 
@@ -106,19 +114,21 @@ export default function CommentBox(props) {
     setNewComment(event.target.value);
   };
 
-  const submitHandler = event => {
+  const submitHandler = async (event) => {
     event.preventDefault();
-    const aNewComment =
-      {
-        name: name,
-        email: email,
-        comment: newComment,
-        reply: [],
-      };
-    setComments([...comments, aNewComment]);
-    setName("");
-    setEmail("");
-    setNewComment("");
+    await postJson('/comment', {});
+    // await getComments();
+    // const aNewComment =
+    //   {
+    //     name: name,
+    //     email: email,
+    //     comment: newComment,
+    //     reply: [],
+    //   };
+    // setComments([...comments, aNewComment]);
+    // setName("");
+    // setEmail("");
+    // setNewComment("");
   };
 
   return (
