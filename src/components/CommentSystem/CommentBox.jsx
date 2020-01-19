@@ -3,22 +3,13 @@ import PropTypes from 'prop-types'
 import {TextField} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
-import {getJson} from "../../apiHelper";
+import {getJson, postJson} from "../../apiHelper";
 import DisplayEachComment from './replySystem'
-import {StyledButton, StyledText} from './commonStyles'
+import {StyledButton, StyledLabel, StyledText} from './commonStyles'
+import Box from "@material-ui/core/Box";
 
 
-export function DisplayComments(props) {
-  return (
-    <div>
-      {props.input.map(each => {
-        return (
-          <DisplayEachComment each={each} />
-        )
-      })}
-    </div>
-  )
-}
+
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -76,7 +67,7 @@ CommentBox.propType = {
 export default function CommentBox(props) {
   const classes = useStyle();
   const [result, setResult] = useState({ loading: false, result: null, error: null });
-  const postId = props.postId || '2';
+  const postId = props.postId || '3';
 
   const getComments = async () => {
     setResult({ loading: true });
@@ -91,8 +82,6 @@ export default function CommentBox(props) {
   useEffect(() => {
     getComments();
   }, [props.postId]);
-
-  console.log(result);
 
   const processedResult = parseApiResult(result);
 
@@ -116,19 +105,18 @@ export default function CommentBox(props) {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    await postJson('/comment', {});
+    await postJson('comment',
+      {
+        "postId": postId,
+        "nickname": name,
+        "email": email,
+        "content": newComment,
+      });
+
     // await getComments();
-    // const aNewComment =
-    //   {
-    //     name: name,
-    //     email: email,
-    //     comment: newComment,
-    //     reply: [],
-    //   };
-    // setComments([...comments, aNewComment]);
-    // setName("");
-    // setEmail("");
-    // setNewComment("");
+    setName("");
+    setEmail("");
+    setNewComment("");
   };
 
   return (
@@ -190,8 +178,30 @@ export default function CommentBox(props) {
         </StyledButton>
       </form>
       <div>
-        <DisplayComments input={comments}/>
+        <DisplayComments input={result}/>
       </div>
+    </div>
+  )
+}
+
+export function DisplayComments(props) {
+  const existingComments = props.input.result;
+  return (
+    <div>
+      {
+        (existingComments == null)? <StyledText variant={"h5"}>no comments</StyledText>
+          :
+          existingComments.map(each => {
+            return (
+              <div>
+                <StyledLabel variant={"h5"}>Name --- {each.nickname} ---</StyledLabel>
+                <StyledLabel variant={"h5"}>
+                  Email --- {(each.email !== "") ? each.email : "Anonymous"} ---</StyledLabel>
+                <StyledText variant={"h5"}>{each.content}</StyledText>
+              </div>
+            )
+          })
+      }
     </div>
   )
 }
