@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import {TextField} from "@material-ui/core";
 import styled from "styled-components";
 import DisplayComments from './CommentBox';
-import {StyledText, StyledButton, StyledLabel} from './commonStyles';
+import {StyledText, StyledButton, StyledLabel} from '../../commonStyles';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 export const useStyle = makeStyles(theme => ({

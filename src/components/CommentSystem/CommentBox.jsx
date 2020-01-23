@@ -5,7 +5,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import Grid from "@material-ui/core/Grid";
 import {getJson, postJson} from "../../apiHelper";
 import DisplayEachComment from './replySystem'
-import {StyledButton, StyledLabel, StyledText} from './commonStyles'
+import {StyledButton, StyledLabel, StyledText} from '../../commonStyles'
 import Box from "@material-ui/core/Box";
 
 

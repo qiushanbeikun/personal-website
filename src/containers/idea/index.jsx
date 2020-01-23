@@ -14,7 +14,6 @@ import useTheme from "@material-ui/core/styles/useTheme";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import IconButton from "@material-ui/core/IconButton";
 import CardHeader from "@material-ui/core/CardHeader";
-import Avatar from "@material-ui/core/Avatar";
 import CardActions from "@material-ui/core/CardActions";
 import clsx from 'clsx';
 import Collapse from '@material-ui/core/Collapse';
@@ -227,8 +226,6 @@ export default function Idea() {
                     subtitle="盗版用户的未来"
                     longDescription={"Click in"}
                     shortDescription="为什么种子让我们欲罢不能。"/>
-
-
         </Grid>
 
         <Grid item sm={6}>

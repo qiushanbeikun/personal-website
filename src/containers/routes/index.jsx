@@ -15,6 +15,7 @@ import BaiduYun from "../idea/baiduYun";
 import TestPage from "../test";
 import TorrentSearch from "../torrentSearch";
 import CPSC110 from "../tutor/cpsc110";
+import XingYuTu from "../idea/xingYuTu";
 
 export default function Routes() {
   return (
@@ -77,6 +78,10 @@ export default function Routes() {
 
       <Route path="/tutor/cpsc110">
         <CPSC110 />
+      </Route>
+
+      <Route path="/xingyutu">
+        <XingYuTu/>
       </Route>
 
     </Switch>

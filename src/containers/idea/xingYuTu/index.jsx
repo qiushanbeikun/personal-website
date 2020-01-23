@@ -1,9 +1,19 @@
 import React from "react";
+import Container from "@material-ui/core/Container";
+import {StyledLabel} from '../../../commonStyles'
 
 export default function XingYuTu() {
     return (
-        <div>
-            <h1>test</h1>
-        </div>
+        <Container maxWidth={"lg"}>
+          <div>
+            <StyledLabel variant={"h3"}>
+              xingyutu
+            </StyledLabel>
+          </div>
+
+          <div>
+
+          </div>
+        </Container>
     )
 }
