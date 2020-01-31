@@ -72,7 +72,7 @@ export default function CommentBox(props) {
   const getComments = async () => {
     setResult({ loading: true });
     try {
-      const res = await getJson(`post/${postId}/comment`);
+      const res = await getJson(`post/${postId}//getComments`);
       setResult({ loading: false, result: res });
     } catch (e) {
       setResult({ loading: false, result: null, error: 'Failed to fetch comments' });
@@ -105,7 +105,7 @@ export default function CommentBox(props) {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    await postJson('comment',
+    await postJson('postComment`',
       {
         "postId": postId,
         "nickname": name,
