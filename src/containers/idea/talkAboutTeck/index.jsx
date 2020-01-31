@@ -2,29 +2,13 @@ import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import React from "react";
+import {StyledTitle, StyledText, StyledSubtitle, StyledItalicText, PaddingAroundEMainText} from '../../../commonStyles'
 
-const StyledTitle = styled(Typography)`
-  color: aqua;
-  padding: 1em 0;
-`;
-
-const StyledText = styled(Typography)`
-font-variant: {"h5"};
-  color: #eeeeee;
-`;
-
-const StyledSubtitle = styled(Typography)`
-  color: aqua;
-`;
-
-const StyledItalicText = styled(Typography)`
-  color: #eeeeee;
-  font-style: italic;
-`;
 
 
 export default function TalkAboutTech() {
   return (
+    <PaddingAroundEMainText>
     <Container maxWidth={"lg"}>
       <StyledTitle variant={"h3"}>谈科技？</StyledTitle>
 
@@ -168,5 +152,6 @@ export default function TalkAboutTech() {
       </div>
 
     </Container>
+      </PaddingAroundEMainText>
   )
 }

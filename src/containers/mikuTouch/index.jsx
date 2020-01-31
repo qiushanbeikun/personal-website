@@ -13,7 +13,6 @@ const StyledButton = styled(Button)`
     padding-top: 100%;
   }
   && {
-    // background-color: #00ffff77;
     color: #00ffff66;
     width: 100%;
     border-radius: 0;

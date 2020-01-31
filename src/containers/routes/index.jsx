@@ -80,7 +80,7 @@ export default function Routes() {
         <CPSC110 />
       </Route>
 
-      <Route path="/xingyutu">
+      <Route path="/idea/xingyutu">
         <XingYuTu/>
       </Route>
 
