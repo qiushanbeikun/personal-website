@@ -16,6 +16,7 @@ import TestPage from "../test";
 import TorrentSearch from "../torrentSearch";
 import CPSC110 from "../tutor/cpsc110";
 import XingYuTu from "../idea/xingYuTu";
+import MZFCSub from "../MZFCSub";
 
 export default function Routes() {
   return (
@@ -82,6 +83,10 @@ export default function Routes() {
 
       <Route path="/idea/xingyutu">
         <XingYuTu/>
+      </Route>
+
+      <Route path={"/mzfcsub"}>
+        <MZFCSub/>
       </Route>
 
     </Switch>
