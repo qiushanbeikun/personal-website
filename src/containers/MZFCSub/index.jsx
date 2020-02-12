@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import {StyledTitle, StyledText, StyledSubtitle, PaddingAroundEMainText} from "../../commonStyles";
 import Grid from "@material-ui/core/Grid";
 import QSBKAvatar from "../../imageCache/qsbkAvatar.JPG";
+import HadrinAvatar from '../../imageCache/haridinAvatar.jpg';
 import styled from "styled-components";
 
 const StyledImage = styled.img`
@@ -64,7 +65,7 @@ export default function MZFCSub() {
             </Grid>
 
             <Grid item sm={6}>
-              <StyledImage src={QSBKAvatar} alt={"hadrian avatar"}/>
+              <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
               <StyledText>
                 HAdriAn
               </StyledText>
