@@ -20,7 +20,7 @@ export default function NavBar() {
       <StyledAppBar>
         <Link color='inherit' to="/"><Typography variant="h6">Home</Typography></Link>
         <Link color='inherit' to="/projects"><Typography variant="h6">Project</Typography></Link>
-        <Link color='inherit' to="/resume"><Typography variant="h6">Resume</Typography></Link>
+
         <Link color='inherit' to="/idea"><Typography variant="h6">Ideas</Typography></Link>
         <Link color='inherit' to="/interest"><Typography variant="h6">Interests</Typography></Link>
       </StyledAppBar>
