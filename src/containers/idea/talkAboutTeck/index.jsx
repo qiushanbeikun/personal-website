@@ -2,13 +2,13 @@ import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import React from "react";
-import {StyledTitle, StyledText, StyledSubtitle, StyledItalicText, PaddingAroundEMainText} from '../../../commonStyles'
+import {StyledTitle, StyledText, StyledSubtitle, StyledItalicText, PaddingTopAndBottomThreeEm} from '../../../commonStyles'
 
 
 
 export default function TalkAboutTech() {
   return (
-    <PaddingAroundEMainText>
+    <PaddingTopAndBottomThreeEm>
     <Container maxWidth={"lg"}>
       <StyledTitle variant={"h3"}>谈科技？</StyledTitle>
 
@@ -152,6 +152,6 @@ export default function TalkAboutTech() {
       </div>
 
     </Container>
-      </PaddingAroundEMainText>
+      </PaddingTopAndBottomThreeEm>
   )
 }

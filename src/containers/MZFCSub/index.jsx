@@ -1,6 +1,12 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import {StyledTitle, StyledText, StyledSubtitle, PaddingAroundEMainText} from "../../commonStyles";
+import {
+  StyledTitle,
+  StyledText,
+  StyledSubtitle,
+  PaddingTopAndBottomThreeEm,
+  PaddingSurroundTopAndBottomOneEm
+} from "../../commonStyles";
 import Grid from "@material-ui/core/Grid";
 import QSBKAvatar from "../../imageCache/qsbkAvatar.JPG";
 import HadrinAvatar from '../../imageCache/haridinAvatar.jpg';
@@ -18,64 +24,73 @@ export default function MZFCSub() {
     textAlign: "center"
   };
 
-  return(
+  return (
 
     <div style={styles}>
       <Container maxWidth={"lg"}>
         <StyledTitle variant={"h3"}>
-          MZFC Subgroup
+          MiZzrdFrecCenter SubStudio
         </StyledTitle>
         <StyledTitle variant={"h3"}>
           明华菲克 字幕组
         </StyledTitle>
 
-        <PaddingAroundEMainText>
-        <StyledSubtitle>
-          What we offer:
-        </StyledSubtitle>
+        <PaddingTopAndBottomThreeEm>
+          <StyledSubtitle variant={"h4"}>
+            Who we are?
+          </StyledSubtitle>
 
-        <StyledText>
-          Youtube channel translation and re-post.
-        </StyledText>
-        </PaddingAroundEMainText>
+          <StyledText variant={"h6"}>
+            We are a student organized group offering Youtube video translation. We mostly do re-post of videos on
+            bilibili.com.
+          </StyledText>
+        </PaddingTopAndBottomThreeEm>
 
-        <PaddingAroundEMainText>
-        <StyledSubtitle>
-          Our customer:
-        </StyledSubtitle>
+        <PaddingTopAndBottomThreeEm>
+          <StyledSubtitle variant={"h4"}>
+            Our customer:
+          </StyledSubtitle>
 
-        <StyledText>
-          TBD
-        </StyledText>
-        </PaddingAroundEMainText>
+          <StyledText variant={"h6"}>
+            TBD
+          </StyledText>
+        </PaddingTopAndBottomThreeEm>
 
-        <PaddingAroundEMainText>
-          <StyledSubtitle>
+        <PaddingTopAndBottomThreeEm>
+
+
+          <StyledSubtitle variant={"h4"}>
             Group Member
           </StyledSubtitle>
 
-          <PaddingAroundEMainText>
-          <Grid container spacing={2}>
-            <Grid item sm={6}>
+          <PaddingTopAndBottomThreeEm>
+            <Grid container spacing={2}>
+              <Grid item sm={6}>
 
-              <StyledImage src={QSBKAvatar} alt={"qsbk avatar"}/>
-              <StyledText>
-                丘山北鲲
-              </StyledText>
+                <StyledImage src={QSBKAvatar} alt={"qsbk avatar"}/>
+
+                <PaddingSurroundTopAndBottomOneEm>
+                  <StyledText variant={"h6"}>
+                    丘山北鲲
+                  </StyledText>
+                </PaddingSurroundTopAndBottomOneEm>
+
+              </Grid>
+
+              <Grid item sm={6}>
+                <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
+                <PaddingSurroundTopAndBottomOneEm>
+                  <StyledText variant={"h6"}>
+                    HAdriAn
+                  </StyledText>
+                </PaddingSurroundTopAndBottomOneEm>
+              </Grid>
             </Grid>
 
-            <Grid item sm={6}>
-              <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
-              <StyledText>
-                HAdriAn
-              </StyledText>
-            </Grid>
-          </Grid>
-
-          </PaddingAroundEMainText>
+          </PaddingTopAndBottomThreeEm>
 
 
-        </PaddingAroundEMainText>
+        </PaddingTopAndBottomThreeEm>
 
       </Container>
     </div>

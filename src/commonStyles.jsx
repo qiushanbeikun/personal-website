@@ -3,8 +3,16 @@ import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
-export const PaddingAroundEMainText = styled.div`
+export const PaddingTopAndBottomThreeEm = styled.div`
   padding: 3em 0;
+`;
+
+export const PaddingSurroundTopAndBottomOneEm = styled.div`
+  padding: 1em 0;
+`;
+
+export const PaddingSurroundTopAndBottomTwoEm = styled.div`
+  padding: 2em 0;
 `;
 
 export const StyledLabel = styled(Typography)`

@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import {StyledLabel, StyledText, StyledSubtitle, StyledItalicText, PaddingAroundEMainText} from '../../../commonStyles'
+import {StyledLabel, StyledText, StyledSubtitle, StyledItalicText, PaddingTopAndBottomThreeEm} from '../../../commonStyles'
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import PropTypes from 'prop-types'
@@ -56,13 +56,13 @@ const Chapters = [
 
 export default function XingYuTu() {
     return (
-      <PaddingAroundEMainText>
+      <PaddingTopAndBottomThreeEm>
         <Container maxWidth={"lg"}>
-          <PaddingAroundEMainText>
+          <PaddingTopAndBottomThreeEm>
             <StyledLabel variant={"h3"}>
               xingyutu
             </StyledLabel>
-          </PaddingAroundEMainText>
+          </PaddingTopAndBottomThreeEm>
 
           <div>
             <Grid container direction={"column"}>
@@ -80,6 +80,6 @@ export default function XingYuTu() {
             </Grid>
           </div>
         </Container>
-      </PaddingAroundEMainText>
+      </PaddingTopAndBottomThreeEm>
     )
 }
