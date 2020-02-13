@@ -2,7 +2,6 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import {Home} from "../home";
 import {Projects} from "../projects";
-import {Resume} from "../resume";
 import TipsForJava from "../projects/tips_for_java";
 import MikuTouch from "../mikuTouch";
 import CanvasOnTry from "../canvasTryOut";
@@ -31,10 +30,6 @@ export default function Routes() {
 
       <Route path="/projects/tips_for_java">
         <TipsForJava/>
-      </Route>
-
-      <Route path="/resume">
-        <Resume/>
       </Route>
 
       <Route path="/mikuTouch">

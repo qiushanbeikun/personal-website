@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
+export const RedEnphisizeText = styled(Typography)`
+  color: red;
+`;
+
 export const PaddingTopAndBottomThreeEm = styled.div`
   padding: 3em 0;
 `;
