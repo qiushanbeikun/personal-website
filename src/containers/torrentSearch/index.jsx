@@ -33,6 +33,14 @@ function fetchFunction({targetLink}) {
     });
 }
 
+
+function cspSearch(){
+  const countOfSolutions =0;
+  const countOfFailingBranches = 0;
+  console.log("@@@@@@ test");
+}
+
+
 const styles = {
   fontFamily: "sans-serif",
   textAlign: "center"
@@ -82,7 +90,7 @@ export default function TorrentSearch() {
 
       <PaddingTopAndBottomThreeEm class={"main body"} style={styles}>
 
-        <FormControl className={classes.formControl} onSubmit={handleSubmit}>
+        <FormControl className={classes.formControl} >
           <InputLabel id="demo-simple-select-label">Select Type</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -96,7 +104,7 @@ export default function TorrentSearch() {
           </Select>
         </FormControl>
 
-        <StyledButton>
+        <StyledButton >
           TEST
         </StyledButton>
       </PaddingTopAndBottomThreeEm>
