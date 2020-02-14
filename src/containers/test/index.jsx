@@ -88,7 +88,7 @@ export default function TestPage() {
 
     let constraint13 = (isNaN(variables[6]))? true : (variables[6] !== variables[5]);
     let constraint14 = (isNaN(variables[7]))? true : (variables[7] !== variables[5]);
-    let constraint15 = (isNaN(variables[5]))? true : (variables[2] !== variables[6]);
+    let constraint15 = (isNaN(variables[5]))? true : (variables[2] !== variables[5]);
     let constraint16 = (isNaN(variables[5]))? true : (variables[3] !== variables[5]);
 
     let constraint17 = (isNaN(variables[5]))? true : ((variables[5] - variables[4]) % 2 === 1 || (variables[5] - variables[4]) % 2 === -1);
