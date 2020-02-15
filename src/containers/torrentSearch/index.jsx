@@ -7,6 +7,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import {RedEnphisizeText, StyledText} from "../../commonStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -18,26 +19,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function handleSubmit(props) {
-  console.log("test console");
-}
 
 
 function fetchFunction({targetLink}) {
   fetch('https://nyaa.si/?f=0&c=0_0&q=123')
-    .then((response) => {
-      return response.json();
+    .then(function(response) {
+      // When the page is loaded convert it to text
+      return response.text()
     })
-    .then((myJson) => {
-      console.log(myJson);
+    .then(function(html) {
+      // Initialize the DOM parser
+      let parser = new DOMParser();
+
+      // Parse the text
+      let doc = parser.parseFromString(html, "text/html");
+
+      // You can now even select part of that html as you would in the regular DOM
+      // Example:
+      // var docArticle = doc.querySelector('article').innerHTML;
+
+      console.log(doc);
+    })
+    .catch(function(err) {
+      console.log('Failed to fetch page: ', err);
     });
-}
-
-
-function cspSearch(){
-  const countOfSolutions =0;
-  const countOfFailingBranches = 0;
-  console.log("@@@@@@ test");
 }
 
 
@@ -55,8 +60,17 @@ export default function TorrentSearch() {
   const [type, setType] = React.useState('select');
 
   const selectChangeHandler = (event) => {
-    setType(event.target.value)
+    setType(event.target.value);
+    console.log(event.target.value);
   };
+
+
+  const handleSubmit = async (event) =>{
+    event.preventDefault();
+    console.log("run fetch function");
+    fetchFunction('https://nyaa.si/?f=0&c=0_0&q=123');
+  };
+
 
   return (
     <Container maxWidth={"lg"}>
@@ -89,7 +103,6 @@ export default function TorrentSearch() {
       </div>
 
       <PaddingTopAndBottomThreeEm class={"main body"} style={styles}>
-
         <FormControl className={classes.formControl} >
           <InputLabel id="demo-simple-select-label">Select Type</InputLabel>
           <Select
@@ -104,9 +117,10 @@ export default function TorrentSearch() {
           </Select>
         </FormControl>
 
-        <StyledButton >
+        <StyledButton onClick={handleSubmit}>
           TEST
         </StyledButton>
+
       </PaddingTopAndBottomThreeEm>
 
 

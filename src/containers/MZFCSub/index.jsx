@@ -66,7 +66,7 @@ export default function MZFCSub() {
           <PaddingTopAndBottomThreeEm>
 
             <Grid container spacing={2}>
-              <Grid item sm={6}>
+              <Grid item sm={4}>
 
                 <StyledImage src={QSBKAvatar} alt={"qsbk avatar"}/>
 
@@ -78,11 +78,20 @@ export default function MZFCSub() {
 
               </Grid>
 
-              <Grid item sm={6}>
+              <Grid item sm={4}>
                 <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
                 <PaddingSurroundTopAndBottomOneEm>
                   <StyledText variant={"h6"}>
                     HAdriAn
+                  </StyledText>
+                </PaddingSurroundTopAndBottomOneEm>
+              </Grid>
+
+              <Grid item sm={4}>
+                <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
+                <PaddingSurroundTopAndBottomOneEm>
+                  <StyledText variant={"h6"}>
+                    烈云雨皇
                   </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
               </Grid>
@@ -97,8 +106,12 @@ export default function MZFCSub() {
           <StyledSubtitle variant={"h4"}>
             Demo Video
           </StyledSubtitle>
-
-          <h4>here goes the demo :(</h4>
+          <div>
+            <a href={"https://www.bilibili.com/video/av65486363"} target={"_blank"} rel="noopener noreferrer"> demo1 </a>
+          </div>
+          <div>
+            <a href={"https://www.bilibili.com/video/av66211283"} target={"_blank"} rel="noopener noreferrer"> demo2 </a>
+          </div>
         </PaddingTopAndBottomThreeEm>
 
       </Container>

@@ -13,6 +13,7 @@ import Guichu from "../../imageCache/guichu.png"
 import Anime from "../../imageCache/anime.JPG"
 import Tech from "../../imageCache/TECH.jpg"
 import Coding from "../../imageCache/coding.png"
+import MZFC from '../../imageCache/mzfcsubillust.jpeg'
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 
 
@@ -71,7 +72,7 @@ export function Home() {
   return (
     <div>
       <div style={styles}>
-        <Parallax pages={5.8}>
+        <Parallax pages={6.8}>
 
           <ParallaxLayer offset={0.2} speed={0.2}>
             <StyledBigName variant="h2">
@@ -126,7 +127,17 @@ export function Home() {
             <img src={Guichu} alt="op" style={{width: '100%', }}/>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={5} speed={0.2}>
+          <ParallaxLayer offset={5.2} speed={0.2}>
+            <StyledBigName variant={"h3"}>
+              Founder of 明华菲克字幕组
+            </StyledBigName>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={5.5} speed={1}>
+            <img src={MZFC} alt="op" style={{width: '100%', }}/>
+          </ParallaxLayer>
+
+          <ParallaxLayer offset={6} speed={0.2}>
             <Box my={6}>
               <StyledBigName variant={"h4"}>
                 Read more
