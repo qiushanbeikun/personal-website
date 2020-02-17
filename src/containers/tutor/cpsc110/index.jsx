@@ -29,7 +29,7 @@ export default function CPSC110 () {
           <a href={"https://drive.google.com/drive/folders/1Jn7igoTu97PR7EBRoSc7E7erZElYfwda?usp=sharing"} target="_blank" rel="noopener noreferrer">Google Drive</a>
         </StyledText>
         <StyledText variant={"h5"}>
-          Notes from WuCheng Zhang
+          Public notes from WuCheng Zhang
           <a href={"http://blogs.ubc.ca/wucheng/course-review-notes/"} target="_blank" rel="noopener noreferrer">
             UBC Blog Link
           </a>

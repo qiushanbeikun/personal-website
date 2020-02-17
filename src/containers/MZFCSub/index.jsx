@@ -10,6 +10,7 @@ import {
 import Grid from "@material-ui/core/Grid";
 import QSBKAvatar from "../../imageCache/qsbkAvatar.JPG";
 import HadrinAvatar from '../../imageCache/haridinAvatar.jpg';
+import nzxhAvatar from '../../imageCache/nzxhavatar.jpg';
 import styled from "styled-components";
 
 const StyledImage = styled.img`
@@ -17,7 +18,7 @@ const StyledImage = styled.img`
 `;
 
 
-export default function MZFCSub() {
+export default function MZFCStudio() {
 
   const styles = {
     fontFamily: "sans-serif",
@@ -28,8 +29,18 @@ export default function MZFCSub() {
 
     <div style={styles}>
       <Container maxWidth={"lg"}>
+
         <StyledTitle variant={"h3"}>
-          MiZzrdFrecCenter SubStudio
+          MiZardFrecCenter Studio
+        </StyledTitle>
+
+        <StyledTitle variant={"h3"}>
+          明华菲克工作室
+        </StyledTitle>
+
+
+        <StyledTitle variant={"h3"}>
+          MiZzrdFrecCenter SubGroup
         </StyledTitle>
         <StyledTitle variant={"h3"}>
           明华菲克 字幕组
@@ -71,9 +82,13 @@ export default function MZFCSub() {
                 <StyledImage src={QSBKAvatar} alt={"qsbk avatar"}/>
 
                 <PaddingSurroundTopAndBottomOneEm>
-                  <StyledText variant={"h6"}>
+                  <StyledText variant={"h5"}>
                     丘山北鲲
                   </StyledText>
+
+                  <StyledText variant={"h5"}>
+                    Founder
+                  </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
 
               </Grid>
@@ -81,17 +96,24 @@ export default function MZFCSub() {
               <Grid item sm={4}>
                 <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
                 <PaddingSurroundTopAndBottomOneEm>
-                  <StyledText variant={"h6"}>
+                  <StyledText variant={"h5"}>
                     HAdriAn
+                  </StyledText>
+                  <StyledText variant={"h5"}>
+                    Co-Founder
                   </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
               </Grid>
 
               <Grid item sm={4}>
-                <StyledImage src={HadrinAvatar} alt={"hadrian avatar"}/>
+                <StyledImage src={nzxhAvatar} alt={"hadrian avatar"}/>
                 <PaddingSurroundTopAndBottomOneEm>
-                  <StyledText variant={"h6"}>
-                    烈云雨皇
+                  <StyledText variant={"h5"}>
+                    你这小孩
+                  </StyledText>
+
+                  <StyledText variant={"h5"}>
+                    Co-Founder
                   </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
               </Grid>

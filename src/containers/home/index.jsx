@@ -129,7 +129,7 @@ export function Home() {
 
           <ParallaxLayer offset={5.2} speed={0.2}>
             <StyledBigName variant={"h3"}>
-              Founder of 明华菲克字幕组
+              Founder of 明华菲克工作室
             </StyledBigName>
           </ParallaxLayer>
 

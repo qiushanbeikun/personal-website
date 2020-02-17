@@ -15,7 +15,7 @@ import TestPage from "../test";
 import TorrentSearch from "../torrentSearch";
 import CPSC110 from "../tutor/cpsc110";
 import XingYuTu from "../idea/xingYuTu";
-import MZFCSub from "../MZFCSub";
+import MZFCStudio from "../MZFCSub";
 
 export default function Routes() {
   return (
@@ -24,7 +24,7 @@ export default function Routes() {
         <Home/>
       </Route>
 
-      <Route path="/projects" exact>
+     h <Route path="/projects" exact>
         <Projects/>
       </Route>
 
@@ -81,7 +81,7 @@ export default function Routes() {
       </Route>
 
       <Route path={"/mzfcsub"}>
-        <MZFCSub/>
+        <MZFCStudio/>
       </Route>
 
     </Switch>
