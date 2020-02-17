@@ -87,7 +87,7 @@ export default function MZFCStudio() {
                   </StyledText>
 
                   <StyledText variant={"h5"}>
-                    Founder
+                    Founder 企划
                   </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
 
@@ -100,7 +100,7 @@ export default function MZFCStudio() {
                     HAdriAn
                   </StyledText>
                   <StyledText variant={"h5"}>
-                    Co-Founder
+                    Co-Founder 编辑
                   </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
               </Grid>
@@ -113,7 +113,7 @@ export default function MZFCStudio() {
                   </StyledText>
 
                   <StyledText variant={"h5"}>
-                    Co-Founder
+                    Co-Founder 配音
                   </StyledText>
                 </PaddingSurroundTopAndBottomOneEm>
               </Grid>
@@ -126,7 +126,7 @@ export default function MZFCStudio() {
 
         <PaddingTopAndBottomThreeEm>
           <StyledSubtitle variant={"h4"}>
-            Demo Video
+            Demo Subtitle works:
           </StyledSubtitle>
           <div>
             <a href={"https://www.bilibili.com/video/av65486363"} target={"_blank"} rel="noopener noreferrer"> demo1 </a>
