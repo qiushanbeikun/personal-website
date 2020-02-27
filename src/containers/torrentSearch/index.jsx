@@ -7,7 +7,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import {RedEnphisizeText, StyledText} from "../../commonStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import Button from "@material-ui/core/Button";
+import $ from 'jquery';
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -19,58 +19,34 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-
-
 function fetchFunction({targetLink}) {
-  fetch('https://nyaa.si/?f=0&c=0_0&q=123')
-    .then(function(response) {
-      // When the page is loaded convert it to text
-      return response.text()
-    })
-    .then(function(html) {
-      // Initialize the DOM parser
-      let parser = new DOMParser();
+  $.ajax({ url: 'https://nyaa.si/?f=0&c=0_0&q=123', success: function(data) {
+    console.log("start to parse data");
+    console.log(data);
+  } });
 
-      // Parse the text
-      let doc = parser.parseFromString(html, "text/html");
-
-      // You can now even select part of that html as you would in the regular DOM
-      // Example:
-      // var docArticle = doc.querySelector('article').innerHTML;
-
-      console.log(doc);
-    })
-    .catch(function(err) {
-      console.log('Failed to fetch page: ', err);
-    });
 }
-
 
 const styles = {
   fontFamily: "sans-serif",
   textAlign: "center"
 };
 
-
-
 export default function TorrentSearch() {
 
   const classes = useStyles();
-
   const [type, setType] = React.useState('select');
-
   const selectChangeHandler = (event) => {
     setType(event.target.value);
     console.log(event.target.value);
   };
 
-
   const handleSubmit = async (event) =>{
     event.preventDefault();
-    console.log("run fetch function");
+    (type === "select")? console.log("please select a type and search again") :
+    console.log(`run fetch function searching for torrents of:  at target website`);
     fetchFunction('https://nyaa.si/?f=0&c=0_0&q=123');
   };
-
 
   return (
     <Container maxWidth={"lg"}>
@@ -102,13 +78,15 @@ export default function TorrentSearch() {
         </StyledText>
       </div>
 
-      <PaddingTopAndBottomThreeEm class={"main body"} style={styles}>
+      <PaddingTopAndBottomThreeEm className={"main body"} style={styles}>
+
         <FormControl className={classes.formControl} >
           <InputLabel id="demo-simple-select-label">Select Type</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={type}
+            required
             onChange={selectChangeHandler}
           >
             <MenuItem value={'anime'}>アニメ</MenuItem>

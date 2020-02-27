@@ -11,6 +11,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import WebsiteImages from "./jscsshtml.png"
 import Container from "@material-ui/core/Container";
+import miniTone from '../../imageCache/mini-toneiplayer-illustrate-image.png'
 
 const ProjectSummaryMedia = styled.div`
   height: 300px;
@@ -91,6 +92,15 @@ export function Projects() {
               title="Miku Touch"
               image={WebsiteImages}
               to="/mikuTouch"
+            />
+          </Grid>
+
+          <Grid item sm={6}>
+            <ProjectSummary
+              description="A simulator of piano and other instruments"
+              title="Tone-player"
+              image={WebsiteImages}
+              to="https://github.com/qiushanbeikun/tone-player"
             />
           </Grid>
         </Grid>
