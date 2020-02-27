@@ -99,7 +99,7 @@ export function Projects() {
             <ProjectSummary
               description="A simulator of piano and other instruments"
               title="Tone-player"
-              image={WebsiteImages}
+              image={miniTone}
               to="https://github.com/qiushanbeikun/tone-player"
             />
           </Grid>
