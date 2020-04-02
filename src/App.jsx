@@ -8,19 +8,16 @@ import {theme} from "./theme";
 import {ThemeProvider as StyledThemeProvider} from 'styled-components';
 import {ThemeProvider} from '@material-ui/core/styles';
 import styled from 'styled-components';
-import DefaultBackground from "./backg.jpg"
 
-import "./appStyles.css"
 
 
 
 const PageContainer = styled.div`
-  min-height: 106vh;
+  min-height: 108vh;
 `;
 
-/*document.body.style.backgroundImage = DefaultBackground;
-document.body.style.backgroundPosition = "center";
-document.body.style.backgroundAttachment = "fixed";*/
+document.body.style.backgroundColor = "#1d1d1d";
+
 document.title = "Yuekun Feng -- MZFC";
 
 function App() {

@@ -12,7 +12,7 @@ export const PaddingTopAndBottomThreeEm = styled.div`
 `;
 
 export const PaddingSurroundTopAndBottomOneEm = styled.div`
-  padding: 1em 0;
+  padding: 7px 0;
 `;
 
 export const PaddingSurroundTopAndBottomTwoEm = styled.div`
@@ -20,24 +20,24 @@ export const PaddingSurroundTopAndBottomTwoEm = styled.div`
 `;
 
 export const StyledLabel = styled(Typography)`
-  color: #eeeeee;
+  color: #e0e0e0;
 `;
 
 export const StyledText = styled(Typography)`
-  color: #eeeeee;
+  color: #e0e0e0;
 `;
 
 export const StyledTitle = styled(Typography)`
-  color: aqua;
+  color: #a3ccd8;
   padding: 1em 0;
 `;
 
 export const StyledSubtitle = styled(Typography)`
-  color: aqua;
+  color: #a3ccd8;
 `;
 
 export const StyledItalicText = styled(Typography)`
-  color: #eeeeee;
+  color: #e0e0e0;
   font-style: italic;
 `;
 

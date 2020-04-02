@@ -9,12 +9,17 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import PropTypes from 'prop-types'
+import '../../App.css';
 import Guichu from "../../imageCache/guichu.png"
 import Anime from "../../imageCache/anime.JPG"
 import Tech from "../../imageCache/TECH.jpg"
 import Coding from "../../imageCache/coding.png"
 import MZFC from '../../imageCache/mzfcsubillust.jpeg'
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
+import {
+  PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm
+} from "../../commonStyles";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
 
 const StyledBigName = styled(Typography)`
@@ -24,7 +29,11 @@ const StyledBigName = styled(Typography)`
 
 const StyledText = styled(Typography)`
   padding: 10px 0;
-  color: #eeeeee;
+  color: #e0e0e0;
+`;
+const StyledBlueText = styled(Typography)`
+  padding: 10px 0;
+  color: #a3ccd8;
 `;
 
 const StyledCard = styled(Card)`
@@ -43,11 +52,11 @@ const ProjectSummaryMedia = styled.div`
   }
 `;
 
-function ReadCard ({text, image, link}) {
+function ReadCard({text, image, link}) {
   return (
     <StyledCard>
       <CardActionArea href={link} target="_blank" rel="noopener noreferrer">
-        <ProjectSummaryMedia><img alt="project" src={image} /></ProjectSummaryMedia>
+        <ProjectSummaryMedia><img alt="project" src={image}/></ProjectSummaryMedia>
         <CardContent>
           <Typography variant={"h6"}>{text}</Typography>
         </CardContent>
@@ -62,17 +71,151 @@ ReadCard.propTypes = {
   link: PropTypes.string,
 };
 
-export function Home() {
+export const PaddingTopAndBottomFiveEm = styled.div`
+  padding: 25em 0;
+`;
 
-  const styles = {
+const useStyle = makeStyles(theme => ({
+  centerB: {
+    fontSize: "15px",
     fontFamily: "sans-serif",
-    textAlign: "center"
+    textAlign: "center",
+    color: "#a3ccd8"
+  },
+  leftW: {
+    fontSize: "24px",
+    fontFamily: "sans-serif",
+    textAlign: "left",
+    color: "#e0e0e0"
+  },
+  leftB: {
+    fontSize: "24px",
+    fontFamily: "sans-serif",
+    textAlign: "left",
+    color: "#a3ccd8"
+  },
+  rightW: {
+    fontSize: "24px",
+    fontFamily: "sans-serif",
+    textAlign: "right",
+    color: "#e0e0e0"
+  },
+  rightB: {
+    fontSize: "24px",
+    fontFamily: "sans-serif",
+    textAlign: "right",
+    color: "#a3ccd8"
+  }
+}));
+
+export function Home() {
+  const classes = useStyle();
+
+
+
+  const styles2 = {
+    fontFamily: "sans-serif",
+    textAlign: "right"
+  };
+
+  const styles3 = {
+    fontFamily: "sans-serif",
+    textAlign: "left"
   };
 
   return (
+
     <div>
-      <div style={styles}>
-        <Parallax pages={6.8}>
+      <div>
+        <StyledBlueText variant={"h6"} className={classes.centerB}>
+          Breaking news: the website is under another round of prettify, there might be aesthetical inconsistency between pages.
+        </StyledBlueText>
+        <PaddingTopAndBottomFiveEm>
+          <Container maxWidth={"lg"}>
+
+
+
+            <PaddingSurroundTopAndBottomOneEm>
+              <div>
+                <span className={classes.leftW}>你一定能找到隐藏在</span>
+                <span className={classes.leftB}>真相</span>
+                <span className={classes.leftW}>背后的另一个</span>
+                <span className={classes.leftB}>真相</span>
+              </div>
+            </PaddingSurroundTopAndBottomOneEm>
+            <PaddingSurroundTopAndBottomOneEm>
+              <div style={styles3}>
+                <span className={classes.leftW}>Wish you to find the </span>
+                <span className={classes.leftB}>truth </span>
+                <span className={classes.leftW}>hidden behind the </span>
+                <span className={classes.leftB}>truth</span>
+              </div>
+            </PaddingSurroundTopAndBottomOneEm>
+            <PaddingSurroundTopAndBottomOneEm>
+              <div style={styles3}>
+                <span className={classes.leftW}>君なるわ </span>
+                <span className={classes.leftB}>真実 </span>
+                <span className={classes.leftW}>のおぐのさなる </span>
+                <span className={classes.leftB}>真実に</span>
+              </div>
+            </PaddingSurroundTopAndBottomOneEm>
+
+            <div style={styles2}>
+              <StyledBlueText variant={"h5"}>—— 荒川弘《鋼の錬金術師》第6话</StyledBlueText>
+            </div>
+          </Container>
+        </PaddingTopAndBottomFiveEm>
+      </div>
+
+      <hr/>
+
+      <PaddingTopAndBottomThreeEm>
+
+        <Container maxWidth={"lg"}>
+          <Grid container spacing={2}>
+
+            <Grid sm={1}>
+              <div style={styles2}>
+                <StyledText variant={"h5"}>Yuekun</StyledText>
+                <StyledText variant={"h5"}>岳昆</StyledText>
+              </div>
+            </Grid>
+            <Grid sm={1}>
+              <div style={styles2}>
+                <StyledBlueText variant={"h5"}>Feng</StyledBlueText>
+                <StyledBlueText variant={"h5"}>冯</StyledBlueText>
+              </div>
+            </Grid>
+            <Grid sm={1}>
+
+            </Grid>
+
+            <Grid sm={9}>
+              <div style={styles3}>
+                <StyledText variant="h5">
+                  Third year student at University of British Columbia (graduate at 2021)
+                </StyledText>
+
+                <StyledText variant="h5">
+                  アニメ fun
+                </StyledText>
+                <StyledText variant="h5">
+                  Tech fun
+                </StyledText>
+                <StyledText variant="h5">
+                  "OTO MAD content" editor
+                </StyledText>
+                <StyledText variant="h5">
+                  Founder of 明华菲克工作室
+                </StyledText>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+      </PaddingTopAndBottomThreeEm>
+
+
+      {/*<Parallax pages={6.8}>
 
           <ParallaxLayer offset={0.2} speed={0.2}>
             <StyledBigName variant="h2">
@@ -144,19 +287,14 @@ export function Home() {
               </StyledBigName>
               <Container maxWidth={"lg"}>
                 <Grid container spacing={2}>
-                  <Grid item sm={4}>
+                  <Grid item sm={6}>
                     <ReadCard
                       text="Projects"
                       image={BackGround}
                       link="/projects" />
                   </Grid>
-                  <Grid item sm={4}>
-                    <ReadCard
-                      text="Resume"
-                      image={BackGround}
-                      link="/resume" />
-                  </Grid>
-                  <Grid item sm={4}>
+
+                  <Grid item sm={6}>
                     <ReadCard
                       text="More about me"
                       image={BackGround}
@@ -167,8 +305,9 @@ export function Home() {
             </Box>
           </ParallaxLayer>
 
-        </Parallax>
-      </div>
+        </Parallax>*/}
+
+
     </div>
   );
 }
