@@ -72,7 +72,7 @@ ReadCard.propTypes = {
 };
 
 export const PaddingTopAndBottomFiveEm = styled.div`
-  padding: 25em 0;
+  padding: 15em 0;
 `;
 
 const useStyle = makeStyles(theme => ({
@@ -154,8 +154,8 @@ export function Home() {
             <PaddingSurroundTopAndBottomOneEm>
               <div style={styles3}>
                 <span className={classes.leftW}>君なるわ </span>
-                <span className={classes.leftB}>真実 </span>
-                <span className={classes.leftW}>のおぐのさなる </span>
+                <span className={classes.leftB}>真実</span>
+                <span className={classes.leftW}>のおぐのさなる</span>
                 <span className={classes.leftB}>真実に</span>
               </div>
             </PaddingSurroundTopAndBottomOneEm>

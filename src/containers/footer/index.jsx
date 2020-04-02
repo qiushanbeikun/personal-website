@@ -11,8 +11,7 @@ import Box from "@material-ui/core/Box";
 
 const StyledFooter = styled.div`
 && {
-  background-color: ${({theme}) => theme.palette.grey["300"]};
-  box-shadow: 0 35px 15px 38px rgba(0,0,0,0.30), 0 6px 6px rgba(0,0,0,0.22);
+  background-color: ${({theme}) => theme.palette.secondary.main};
   opacity: 0.7;
 }
 `;
@@ -26,6 +25,11 @@ const StyledIconButton = styled(IconButton)`
 
 const StyledText = styled.p`
   padding: 0em 0.5em;
+  color: ${({theme}) => theme.palette.primary};
+`;
+
+const StyledEmail = styled.a`
+  padding: 1em;
 `;
 
 const Footer = () => {
@@ -40,15 +44,14 @@ const Footer = () => {
                 <StyledIconButton href="https://github.com/qiushanbeikun" target="_blank"><GitHubIcon/></StyledIconButton>
                 <StyledIconButton href="https://www.youtube.com/channel/UCB01XZsudptPaZz2bm66mJQ"
                                   target="_blank"><YouTubeIcon/></StyledIconButton>
-                <StyledIconButton href="https://space.bilibili.com/87137436" target="_blank"><img alt="bilibili"
-                                                                                                  width={25} src={Bilibili}/></StyledIconButton>
+                <StyledIconButton href="https://space.bilibili.com/87137436" target="_blank">
+                  <img alt="bilibili" width={25} src={Bilibili}/>
+                </StyledIconButton>
               </Grid>
             </Grid>
             <Grid item sm={6}>
               <Grid container alignItems="center" justify="center">
-                <Link href="mailto:beikuncanada@gmail.com" target="_blank" external>
-                  beikuncanada@gmail.com
-                </Link>
+                <StyledEmail href="mailto:beikuncanada@gmail.com">beikuncanada@gmail.com</StyledEmail>
               </Grid>
             </Grid>
           </Grid>

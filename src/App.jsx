@@ -8,6 +8,7 @@ import {theme} from "./theme";
 import {ThemeProvider as StyledThemeProvider} from 'styled-components';
 import {ThemeProvider} from '@material-ui/core/styles';
 import styled from 'styled-components';
+import {PaddingSurroundTopAndBottomTwoEm} from "./commonStyles";
 
 
 
@@ -15,6 +16,7 @@ import styled from 'styled-components';
 const PageContainer = styled.div`
   min-height: 108vh;
 `;
+
 
 document.body.style.backgroundColor = "#1d1d1d";
 
@@ -29,7 +31,9 @@ function App() {
           <BrowserRouter>
             <PageContainer>
               <NavBar/>
+              <PaddingSurroundTopAndBottomTwoEm>
               <Routes/>
+              </PaddingSurroundTopAndBottomTwoEm>
             </PageContainer>
             <Footer/>
           </BrowserRouter>

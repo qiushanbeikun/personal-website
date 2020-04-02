@@ -1,0 +1,30 @@
+hr {
+    display: block;
+    height: 5px;
+    border: 0;
+    border-top: 1px solid #aaa;
+    margin: 1em 0;
+    padding: 0;
+    width: 80vw;
+    position: relative;
+    left: 10vw;
+}
+
+.header {
+    text-align: center;
+    font-size: 48px;
+}
+
+
+
+span[data-color="super"] {
+    color: #FF6447;
+}
+
+span[data-color="bone"] {
+    color: #FFB951;
+}
+
+span[data-color="craft"] {
+    color: #FFF547;
+}

@@ -6,13 +6,7 @@ import styled from 'styled-components';
 const Link = styled(({ external, ...rest }) => external ? <a {...rest} /> : <MDLink component={RLink} {...rest} />)`
   padding: 1em;
   border-radius: 0.25em;
-
-  &&:hover {
-    text-decoration: none;
-    background-color: ${({ theme }) => theme.palette.grey["400"]};
-    transition: all 0.5s;
-    color: ${({ theme }) => theme.palette.primary.main};
-  }
+  color: #e0e0e0;
 `;
 
 export default Link;
