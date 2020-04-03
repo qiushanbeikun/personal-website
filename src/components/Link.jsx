@@ -7,6 +7,10 @@ const Link = styled(({ external, ...rest }) => external ? <a {...rest} /> : <MDL
   padding: 0em;
   border-radius: 0.25em;
   color: #e0e0e0;
+  &&:hover {
+    text-decoration:none;
+  }
+  
 `;
 
 export default Link;
