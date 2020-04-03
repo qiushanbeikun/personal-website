@@ -16,6 +16,7 @@ import TorrentSearch from "../torrentSearch";
 import CPSC110 from "../tutor/cpsc110";
 import XingYuTu from "../idea/xingYuTu";
 import MZFCStudio from "../MZFCSub";
+import AboutPirating from "../idea/aboutPirating";
 
 export default function Routes() {
   return (
@@ -78,6 +79,10 @@ export default function Routes() {
 
       <Route path="/idea/xingyutu">
         <XingYuTu/>
+      </Route>
+
+      <Route path="/idea/aboutPirating">
+        <AboutPirating />
       </Route>
 
       <Route path={"/mzfcsub"}>

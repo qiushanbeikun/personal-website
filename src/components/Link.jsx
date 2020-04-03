@@ -4,7 +4,7 @@ import { Link as RLink } from "react-router-dom";
 import styled from 'styled-components';
 
 const Link = styled(({ external, ...rest }) => external ? <a {...rest} /> : <MDLink component={RLink} {...rest} />)`
-  padding: 1em;
+  padding: 0em;
   border-radius: 0.25em;
   color: #e0e0e0;
 `;

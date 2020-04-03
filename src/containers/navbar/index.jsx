@@ -16,16 +16,26 @@ const StyledBar = styled(AppBar)`
   color: #FF6447;
   elevation: 0;
 `;
+const OneEmDivider = styled.div`
+  padding: 1em;
+`;
 
 export default function NavBar() {
   return (
-    <StyledBar position="static" elevation="0">
+    <StyledBar position="static">
       <StyledAppBar>
+        <OneEmDivider>
         <Link color='inherit' to="/"><Typography variant="h6">Home</Typography></Link>
+        </OneEmDivider>
+        <OneEmDivider>
         <Link color='inherit' to="/projects"><Typography variant="h6">Project</Typography></Link>
-
+        </OneEmDivider>
+        <OneEmDivider>
         <Link color='inherit' to="/idea"><Typography variant="h6">Ideas</Typography></Link>
+        </OneEmDivider>
+        <OneEmDivider>
         <Link color='inherit' to="/interest"><Typography variant="h6">Interests</Typography></Link>
+        </OneEmDivider>
       </StyledAppBar>
     </StyledBar>
   );

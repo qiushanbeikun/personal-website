@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import Button from "@material-ui/core/Button";
+import BlogGenerator from "../idea/blogGenerator";
+
+
+
 
 export default function TestPage() {
 
@@ -233,9 +237,7 @@ export default function TestPage() {
     // </div>
 
     <div>
-      <Button onClick={handleClick}>
-        test
-      </Button>
+      <BlogGenerator source={"../articles/盗版用户的未来.txt"} />
     </div>
   )
 }

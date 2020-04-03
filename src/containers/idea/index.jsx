@@ -20,6 +20,8 @@ import {red} from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import {PaddingSurroundTopAndBottomOneEm, PaddingSurroundTopAndBottomTwoEm} from "../../commonStyles";
+import Link from "../../components/Link";
 
 const StyledTitle = styled(Typography)`
   padding: 0.5em 0.2em;
@@ -73,6 +75,44 @@ function IdeaSection(props) {
 }
 
 const useStyles = makeStyles(theme => ({
+
+  leftW: {
+    fontSize: "48px",
+    fontFamily: "sans-serif",
+    textAlign: "left",
+    color: "#e0e0e0"
+  },
+  leftB: {
+    fontSize: "48px",
+    fontFamily: "sans-serif",
+    textAlign: "left",
+    color: "#a3ccd8"
+  },
+  RightW: {
+    fontSize: "48px",
+    fontFamily: "sans-serif",
+    textAlign: "right",
+    color: "#e0e0e0"
+  },
+  RightB: {
+    fontSize: "48px",
+    fontFamily: "sans-serif",
+    textAlign: "right",
+    color: "#a3ccd8"
+  },
+  centerW: {
+    fontSize: "24px",
+    fontFamily: "sans-serif",
+    textAlign: "center",
+    position: "center",
+    color: "#e0e0e0"
+  },
+  centerB: {
+    fontSize: "24px",
+    fontFamily: "sans-serif",
+    textAlign: "center",
+    color: "#a3ccd8"
+  },
   card: {
     maxWidth: 1000,
   },
@@ -157,6 +197,10 @@ function EachCard(props) {
   )
 }
 
+function newEachCard(){
+
+}
+
 EachCard.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
@@ -190,10 +234,79 @@ export default function Idea() {
 
   return (
     <Container maxWidth={"lg"}>
-      <StyledTitle variant={"h3"}>Idea</StyledTitle>
-      {/*<div>
-        <IdeaSection title="test1" link="/mikuTouch" image={DefaultImage} description="test description"/>
-      </div>*/}
+      <PaddingSurroundTopAndBottomTwoEm>
+        <div>
+          <span className={classes.leftW}>Idea</span>
+          <span className={classes.leftB}>s</span>
+        </div>
+      </PaddingSurroundTopAndBottomTwoEm>
+      <hr/>
+
+      <PaddingSurroundTopAndBottomTwoEm>
+        <div>
+          <span className={classes.centerB}>真理</span>
+          <span className={classes.centerW}>即无限 </span>
+          <span className={classes.centerW}> The</span>
+          <span className={classes.centerB}>Truth</span>
+          <span className={classes.centerW}>Implies</span>
+          <span className={classes.centerW}>Infinity</span>
+        </div>
+      </PaddingSurroundTopAndBottomTwoEm>
+
+
+
+      <PaddingSurroundTopAndBottomOneEm>
+        <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+          <span className={classes.centerW}>Loading...</span>
+        </Link>
+      </PaddingSurroundTopAndBottomOneEm>
+
+      <PaddingSurroundTopAndBottomTwoEm>
+        <div>
+          <span className={classes.centerW}>虚实即</span>
+          <span className={classes.centerB}>生死 </span>
+          <span className={classes.centerW}> The</span>
+          <span className={classes.centerB}>Truth</span>
+          <span className={classes.centerW}>Implies</span>
+          <span className={classes.centerW}>Infinity</span>
+        </div>
+      </PaddingSurroundTopAndBottomTwoEm>
+
+      <PaddingSurroundTopAndBottomOneEm>
+        <div>
+          <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+            <span className={classes.centerB}>Loading...</span>
+          </Link>
+        </div>
+
+        <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+          <span className={classes.centerW}>Loading...</span>
+        </Link>
+        <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+          <span className={classes.centerW}>Loading...</span>
+        </Link>
+      </PaddingSurroundTopAndBottomOneEm>
+
+      <PaddingSurroundTopAndBottomTwoEm>
+        <div>
+          <span className={classes.centerW}>等</span>
+          <span className={classes.centerB}>价</span>
+          <span className={classes.centerW}>交换 </span>
+          <span className={classes.centerW}>E</span>
+          <span className={classes.centerB}>qui</span>
+          <span className={classes.centerW}>librium</span>
+        </div>
+      </PaddingSurroundTopAndBottomTwoEm>
+
+      <PaddingSurroundTopAndBottomOneEm>
+        <div>
+          <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+            <span className={classes.centerB}>盗版用户的未来</span>
+          </Link>
+        </div>
+      </PaddingSurroundTopAndBottomOneEm>
+
+
 
       <Grid container spacing={4}>
         <Grid item sm={6}>
