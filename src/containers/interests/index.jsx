@@ -3,10 +3,10 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import styled from "styled-components";
-import Honghong from "../../imageCache/honghong.JPG"
-import Rongrong from "../../imageCache/rongrong.JPG"
-import Guichu from "../../imageCache/guichu.png"
-import Ltx from "../../imageCache/ltx.jpg"
+import Honghong from "../../imageFolder/honghong.JPG"
+import Rongrong from "../../imageFolder/rongrong.JPG"
+import Guichu from "../../imageFolder/guichu.png"
+import Ltx from "../../imageFolder/ltx.jpg"
 
 const StyledTitle = styled(Typography)`
   padding: 0.5em 0.2em;

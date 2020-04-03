@@ -8,9 +8,9 @@ import {
   PaddingSurroundTopAndBottomOneEm
 } from "../../commonStyles";
 import Grid from "@material-ui/core/Grid";
-import QSBKAvatar from "../../imageCache/qsbkAvatar.JPG";
-import HadrinAvatar from '../../imageCache/haridinAvatar.jpg';
-import nzxhAvatar from '../../imageCache/nzxhavatar.jpg';
+import QSBKAvatar from "../../imageFolder/qsbkAvatar.JPG";
+import HadrinAvatar from '../../imageFolder/haridinAvatar.jpg';
+import nzxhAvatar from '../../imageFolder/nzxhavatar.jpg';
 import styled from "styled-components";
 
 const StyledImage = styled.img`

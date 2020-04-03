@@ -10,17 +10,17 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import PropTypes from 'prop-types'
 import '../../App.css';
-import Guichu from "../../imageCache/guichu.png"
-import Anime from "../../imageCache/anime.JPG"
-import Tech from "../../imageCache/TECH.jpg"
-import Coding from "../../imageCache/coding.png"
-import MZFC from '../../imageCache/mzfcsubillust.jpeg'
+import Guichu from "../../imageFolder/guichu.png"
+import Anime from "../../imageFolder/anime.JPG"
+import Tech from "../../imageFolder/TECH.jpg"
+import Coding from "../../imageFolder/coding.png"
+import MZFC from '../../imageFolder/mzfcsubillust.jpeg'
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 import {
-  PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm
+  PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm, StyledImage
 } from "../../commonStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import QSBKAvatar from "../../imageCache/qsbkAvatar.JPG";
+import QSBKAvatar from "../../imageFolder/qsbkAvatar.JPG";
 
 
 const StyledBigName = styled(Typography)`
@@ -110,10 +110,7 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-const StyledImage = styled.img`
-  width: 15vw;
-  border-radius: 1em;
-`;
+
 
 export function Home() {
   const classes = useStyle();

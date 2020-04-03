@@ -3,6 +3,16 @@ import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
+export const StyledImage = styled.img`
+  width: 12vw;
+  border-radius: 1em;
+  
+  &&:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+  }
+`;
+
 export const RedEnphisizeText = styled(Typography)`
   color: red;
 `;
