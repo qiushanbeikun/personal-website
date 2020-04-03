@@ -20,6 +20,7 @@ import {
   PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm
 } from "../../commonStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import QSBKAvatar from "../../imageCache/qsbkAvatar.JPG";
 
 
 const StyledBigName = styled(Typography)`
@@ -73,6 +74,7 @@ ReadCard.propTypes = {
 
 export const PaddingTopAndBottomFiveEm = styled.div`
   padding: 15em 0;
+  
 `;
 
 const useStyle = makeStyles(theme => ({
@@ -80,7 +82,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: "15px",
     fontFamily: "sans-serif",
     textAlign: "center",
-    color: "#a3ccd8"
+    color: "red"
   },
   leftW: {
     fontSize: "24px",
@@ -108,9 +110,13 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
+const StyledImage = styled.img`
+  width: 15vw;
+  border-radius: 1em;
+`;
+
 export function Home() {
   const classes = useStyle();
-
 
 
   const styles2 = {
@@ -128,11 +134,11 @@ export function Home() {
     <div>
       <div>
         <StyledBlueText variant={"h6"} className={classes.centerB}>
-          Breaking news: the website is under another round of prettify, there might be aesthetical inconsistency between pages.
+          Breaking news: the website is under another round of prettify, there might be aesthetical inconsistency
+          between pages.
         </StyledBlueText>
         <PaddingTopAndBottomFiveEm>
           <Container maxWidth={"lg"}>
-
 
 
             <PaddingSurroundTopAndBottomOneEm>
@@ -174,26 +180,30 @@ export function Home() {
         <Container maxWidth={"lg"}>
           <Grid container spacing={2}>
 
-            <Grid sm={1}>
+            <Grid item sm={1}>
               <div style={styles2}>
                 <StyledText variant={"h5"}>Yuekun</StyledText>
                 <StyledText variant={"h5"}>岳昆</StyledText>
               </div>
             </Grid>
-            <Grid sm={1}>
+            <Grid item sm={1}>
               <div style={styles2}>
                 <StyledBlueText variant={"h5"}>Feng</StyledBlueText>
                 <StyledBlueText variant={"h5"}>冯</StyledBlueText>
               </div>
             </Grid>
-            <Grid sm={1}>
+            <Grid item sm={1}>
 
             </Grid>
 
-            <Grid sm={9}>
+            <Grid item sm={9}>
               <div style={styles3}>
                 <StyledText variant="h5">
                   Third year student at University of British Columbia (graduate at 2021)
+                </StyledText>
+
+                <StyledText variant="h5">
+                  Major computer science
                 </StyledText>
 
                 <StyledText variant="h5">
@@ -212,101 +222,93 @@ export function Home() {
             </Grid>
           </Grid>
         </Container>
+
       </PaddingTopAndBottomThreeEm>
 
+      <hr/>
 
-      {/*<Parallax pages={6.8}>
+      <PaddingTopAndBottomThreeEm>
+        <Container maxWidth={"lg"}>
+          <Grid container spacing={2}>
+            <Grid item sm={1}>
+              <div style={styles2}>
+                <StyledText variant={"h5"}>丘山</StyledText>
+                <StyledText variant={"h5"}>QiuShan</StyledText>
+              </div>
+            </Grid>
+            <Grid item sm={1}>
+              <div style={styles2}>
+                <StyledBlueText variant={"h5"}>北鲲</StyledBlueText>
+                <StyledBlueText variant={"h5"}>BeiKun</StyledBlueText>
+              </div>
+            </Grid>
+            <Grid item sm={1}>
 
-          <ParallaxLayer offset={0.2} speed={0.2}>
-            <StyledBigName variant="h2">
-              Yuekun Feng
-            </StyledBigName>
-          </ParallaxLayer>
+            </Grid>
+            <Grid item sm={3}>
+              <StyledImage src={QSBKAvatar} alt={"qsbk avatar"}/>
+            </Grid>
 
-          <ParallaxLayer offset={0.5} speed={1}>
-            <img src={BackGround} alt="op" style={{width: '100%', }}/>
-          </ParallaxLayer>
+            <Grid item sm={6}>
+              <StyledBlueText variant={"h5"}>Pen-name and "online" avatar </StyledBlueText>
+            </Grid>
+          </Grid>
+        </Container>
+      </PaddingTopAndBottomThreeEm>
 
-          <ParallaxLayer offset={1.2} speed={0.2}>
-            <StyledText variant="h4">
-              Third year student at University of British Columbia (graduate at 2021).
-            </StyledText>
-            <StyledText variant="h4">
-              Majors in computer science.
-            </StyledText>
-          </ParallaxLayer>
+      <hr/>
 
-          <ParallaxLayer offset={1.5} speed={1}>
-            <img src={Coding} alt="op" style={{width: '100%', }}/>
-          </ParallaxLayer>
+      <PaddingTopAndBottomThreeEm>
+        <Container maxWidth={"lg"}>
+          <Grid container spacing={2}>
+            <Grid item sm={3}>
+              <span className={classes.leftB}>明华菲克</span>
+              <span className={classes.leftW}>工作室</span>
+            </Grid>
+            <Grid item sm={9}>
+              <div>
+                <span className={classes.leftW}>We are an student group focus on critical-thinking video production and Youtube channel importation / translation</span>
+              </div>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item sm={3}>
+              <StyledBlueText variant={"h5"}>Group Member</StyledBlueText>
+            </Grid>
+            <Grid item sm={9}>
+              <StyledText variant={"h5"}>丘山北鲲</StyledText>
+              <StyledText variant={"h5"}>HAdriAn</StyledText>
+              <StyledText variant={"h5"}>你这小孩</StyledText>
+            </Grid>
+          </Grid>
+        </Container>
+      </PaddingTopAndBottomThreeEm>
 
-          <ParallaxLayer offset={2.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>
-              アニメ fun
-            </StyledBigName>
-          </ParallaxLayer>
+      <hr/>
 
-          <ParallaxLayer offset={2.5} speed={1}>
-            <img src={Anime} alt="op" style={{width: '100%', }}/>
-          </ParallaxLayer>
+      <PaddingTopAndBottomThreeEm>
+        <Container maxWidth={"lg"}>
+          <Grid container spacing={2}>
+            <Grid item sm={2}>
+              <div style={styles3}>
+                <StyledText variant={"h5"}>Hobbies</StyledText>
+              </div>
+            </Grid>
 
-          <ParallaxLayer offset={3.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>
-              Tech fun
-            </StyledBigName>
-          </ParallaxLayer>
+            <Grid item sm={1}>
 
-          <ParallaxLayer offset={3.5} speed={1}>
-            <img src={Tech} alt="op" style={{width: '100%', }}/>
-          </ParallaxLayer>
+            </Grid>
 
-          <ParallaxLayer offset={4.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>
-              "OTO MAD content" editor
-            </StyledBigName>
-          </ParallaxLayer>
-
-          <ParallaxLayer offset={4.5} speed={1}>
-            <img src={Guichu} alt="op" style={{width: '100%', }}/>
-          </ParallaxLayer>
-
-          <ParallaxLayer offset={5.2} speed={0.2}>
-            <StyledBigName variant={"h3"}>
-              Founder of 明华菲克工作室
-            </StyledBigName>
-          </ParallaxLayer>
-
-          <ParallaxLayer offset={5.5} speed={1}>
-            <img src={MZFC} alt="op" style={{width: '100%', }}/>
-          </ParallaxLayer>
-
-          <ParallaxLayer offset={6} speed={0.2}>
-            <Box my={6}>
-              <StyledBigName variant={"h4"}>
-                Read more
-              </StyledBigName>
-              <Container maxWidth={"lg"}>
-                <Grid container spacing={2}>
-                  <Grid item sm={6}>
-                    <ReadCard
-                      text="Projects"
-                      image={BackGround}
-                      link="/projects" />
-                  </Grid>
-
-                  <Grid item sm={6}>
-                    <ReadCard
-                      text="More about me"
-                      image={BackGround}
-                      link="/moreInfo" />
-                  </Grid>
-                </Grid>
-              </Container>
-            </Box>
-          </ParallaxLayer>
-
-        </Parallax>*/}
-
+            <Grid item sm={9}>
+              <StyledText variant={"h5"}>Anime</StyledText>
+              <StyledText variant={"h5"}>Comics</StyledText>
+              <StyledText variant={"h5"}>Games</StyledText>
+              <StyledText variant={"h5"}>Musics</StyledText>
+              <StyledText variant={"h5"}>Computer hardware</StyledText>
+            </Grid>
+          </Grid>
+        </Container>
+      </PaddingTopAndBottomThreeEm>
 
     </div>
   );

@@ -22,7 +22,7 @@ const OneEmDivider = styled.div`
 
 export default function NavBar() {
   return (
-    <StyledBar position="static">
+    <StyledBar position="static" elevation={0}>
       <StyledAppBar>
         <OneEmDivider>
         <Link color='inherit' to="/"><Typography variant="h6">Home</Typography></Link>
