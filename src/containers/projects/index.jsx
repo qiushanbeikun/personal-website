@@ -1,15 +1,9 @@
 import React from "react";
-import PropTypes from 'prop-types'
 import Typography from "@material-ui/core/Typography";
 import Calculator from "../../imageFolder/calculator.png"
-import JavaImage from "./unnamed.jpg"
 import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
 import styled from "styled-components";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import WebsiteImages from "./jscsshtml.png"
 import Anno1800Photo from '../../imageFolder/anno1800Photo.png';
 import Container from "@material-ui/core/Container";
 import miniTone from '../../imageFolder/mini-toneiplayer-illustrate-image.png'
@@ -123,16 +117,30 @@ export function Projects() {
       <Grid container spacing={2}>
 
         <Grid item sm={3}>
-          <StyledText variant={"h5"}>
-            Anno 1800 mods editor
-          </StyledText>
-        </Grid>
+        <StyledText variant={"h5"}>
+          Anno 1800 mods editor
+        </StyledText>
+      </Grid>
         <Grid item sm={3}>
           <StyledImage src={Anno1800Photo} alt={"sre's magic calculator"}/>
         </Grid>
         <Grid item sm={6}>
           <StyledText variant={"h6"} paragraph>
             Based on xforce's Anno 1800 mods loader, this tool offers chance to customize your game specs, making the game easier or harder at your own choice.
+          </StyledText>
+        </Grid>
+
+        <Grid item sm={3}>
+          <StyledText variant={"h5"}>
+            CSP tool
+          </StyledText>
+        </Grid>
+        <Grid item sm={3}>
+          <StyledImage src={ReactLogo} alt={"sre's magic calculator"}/>
+        </Grid>
+        <Grid item sm={6}>
+          <StyledText variant={"h6"} paragraph>
+            Inspired by CPSC322 (Intro to AI) assignment, the tool can solve basic numeral CSP with O(nlogn) time and space complexity.
           </StyledText>
         </Grid>
       </Grid>
