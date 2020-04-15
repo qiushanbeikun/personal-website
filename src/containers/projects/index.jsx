@@ -3,13 +3,12 @@ import Typography from "@material-ui/core/Typography";
 import Calculator from "../../imageFolder/calculator.png"
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
-import Card from "@material-ui/core/Card";
 import Anno1800Photo from '../../imageFolder/anno1800Photo.png';
 import Container from "@material-ui/core/Container";
 import miniTone from '../../imageFolder/mini-toneiplayer-illustrate-image.png'
 import ReactLogo from '../../imageFolder/logo512.png'
+import cspLogo from '../../imageFolder/csp.png'
 import {
-  PaddingSurroundTopAndBottomOneEm,
   PaddingTopAndBottomThreeEm,
   StyledImage,
   StyledText
@@ -23,15 +22,6 @@ const ProjectSummaryMedia = styled.div`
     width: 100%;
   }
 `;
-
-const StyledCard = styled(Card)`
-  &:hover img {
-    transform: scale(1.1);
-    transition: all .5s;
-  }
-`;
-
-
 
 const StyledTitle = styled(Typography)`
   padding: 0.5em 0.2em;
@@ -136,7 +126,7 @@ export function Projects() {
           </StyledText>
         </Grid>
         <Grid item sm={3}>
-          <StyledImage src={ReactLogo} alt={"sre's magic calculator"}/>
+          <StyledImage src={cspLogo} alt={"sre's magic calculator"}/>
         </Grid>
         <Grid item sm={6}>
           <StyledText variant={"h6"} paragraph>

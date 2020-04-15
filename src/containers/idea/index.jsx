@@ -22,6 +22,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {PaddingSurroundTopAndBottomOneEm, PaddingSurroundTopAndBottomTwoEm} from "../../commonStyles";
 import Link from "../../components/Link";
+import abstractTop from '../../imageFolder/abs top.jpg';
 
 const StyledTitle = styled(Typography)`
   padding: 0.5em 0.2em;
@@ -197,7 +198,7 @@ function EachCard(props) {
   )
 }
 
-function newEachCard(){
+function newEachCard() {
 
 }
 
@@ -208,6 +209,10 @@ EachCard.propTypes = {
   shortDescription: PropTypes.string.isRequired,
   longDescription: PropTypes.string.isRequired,
 };
+
+const StyledImage = styled.img`
+  width: 100%;
+`;
 
 export default function Idea() {
 
@@ -233,345 +238,363 @@ export default function Idea() {
   };
 
   return (
-    <Container maxWidth={"lg"}>
-      <PaddingSurroundTopAndBottomTwoEm>
-        <div>
-          <span className={classes.leftW}>Idea</span>
-          <span className={classes.leftB}>s</span>
-        </div>
-      </PaddingSurroundTopAndBottomTwoEm>
-      <hr/>
 
-      <PaddingSurroundTopAndBottomTwoEm>
-        <div>
-          <span className={classes.centerB}>真理</span>
-          <span className={classes.centerW}>即无限 </span>
-          <span className={classes.centerW}> The</span>
-          <span className={classes.centerB}>Truth</span>
-          <span className={classes.centerW}>Implies</span>
-          <span className={classes.centerW}>Infinity</span>
-        </div>
-      </PaddingSurroundTopAndBottomTwoEm>
+    <div>
 
 
+      <Container maxWidth={"lg"}>
 
-      <PaddingSurroundTopAndBottomOneEm>
-        <Link color={"inherit"} to={"/idea/talkAboutTech"}>
-          <span className={classes.centerW}>Loading...</span>
-        </Link>
-      </PaddingSurroundTopAndBottomOneEm>
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <span className={classes.leftW}>Idea</span>
+            <span className={classes.leftB}>s</span>
+          </div>
+        </PaddingSurroundTopAndBottomTwoEm>
+        <hr/>
 
-      <PaddingSurroundTopAndBottomTwoEm>
-        <div>
-          <span className={classes.centerW}>虚实即</span>
-          <span className={classes.centerB}>生死 </span>
-          <span className={classes.centerW}> The</span>
-          <span className={classes.centerB}>Truth</span>
-          <span className={classes.centerW}>Implies</span>
-          <span className={classes.centerW}>Infinity</span>
-        </div>
-      </PaddingSurroundTopAndBottomTwoEm>
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <span className={classes.centerB}>真理</span>
+            <span className={classes.centerW}>即无限 </span>
+            <span className={classes.centerW}> The</span>
+            <span className={classes.centerB}>Truth</span>
+            <span className={classes.centerW}>Implies</span>
+            <span className={classes.centerW}>Infinity</span>
+          </div>
+        </PaddingSurroundTopAndBottomTwoEm>
 
-      <PaddingSurroundTopAndBottomOneEm>
-        <div>
+
+        <PaddingSurroundTopAndBottomOneEm>
+
+          <StyledText variant={"h6"} paragraph>我本人目前没有任何宗教信仰，因此也可以被归到无神论者的范畴之内。但是宗教中的创神行为又为我提供了思路，我在14岁的时候独立探索出了“外祖父悖论”，
+            并曾尝试为这一悖论寻求合理的解释。最终落入了“否定时空穿越”以及“唯心创神”的结论。因此我不得不暂停了对于这一悖论的思考。（果然悖论还是悖论呀:\）</StyledText>
+
+          <StyledText variant={"h6"} paragraph>以上是我在哲学方面的萌芽。如今，对于“上帝是否存在”之类杂事的思考仍然是我在睡觉前，马桶上之时的要务。而我目前对于“真理”这一概念的解释为“无限“。
+          当然，原因也很简单，代数数学清晰的告诉了我：在二维以及三维向量空间中，一般等式两边任何一边出现无限量必然要求等式的另一边有无限量存在。然而这样的解释是很不负责的，因为人类从来没能创造无限，
+            数学符号中的无限就像游戏修改器一样，可以随意开挂，但是这样的”量“在本质上是一种模拟。类推下来，甚至我们的语言本质上也是一种模拟。所以，如果想找到所谓的”真理“，我可能需要拜托”语言“的束缚。
+            那么，就先了解一下语言是什么吧。
+          </StyledText>
+
+          <PaddingSurroundTopAndBottomOneEm>
+
+          </PaddingSurroundTopAndBottomOneEm>
+
+
+        </PaddingSurroundTopAndBottomOneEm>
+
+        <StyledImage src={abstractTop} alt={"decoration photo"}/>
+
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <span className={classes.centerW}>虚实即</span>
+            <span className={classes.centerB}>生死 </span>
+            <span className={classes.centerW}> The</span>
+            <span className={classes.centerB}>Truth</span>
+            <span className={classes.centerW}>Implies</span>
+            <span className={classes.centerW}>Infinity</span>
+          </div>
+        </PaddingSurroundTopAndBottomTwoEm>
+
+        <PaddingSurroundTopAndBottomOneEm>
+          <div>
+            <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+              <span className={classes.centerB}>Loading...</span>
+            </Link>
+          </div>
+
           <Link color={"inherit"} to={"/idea/talkAboutTech"}>
-            <span className={classes.centerB}>Loading...</span>
+            <span className={classes.centerW}>Loading...</span>
           </Link>
-        </div>
-
-        <Link color={"inherit"} to={"/idea/talkAboutTech"}>
-          <span className={classes.centerW}>Loading...</span>
-        </Link>
-        <Link color={"inherit"} to={"/idea/talkAboutTech"}>
-          <span className={classes.centerW}>Loading...</span>
-        </Link>
-      </PaddingSurroundTopAndBottomOneEm>
-
-      <PaddingSurroundTopAndBottomTwoEm>
-        <div>
-          <span className={classes.centerW}>等</span>
-          <span className={classes.centerB}>价</span>
-          <span className={classes.centerW}>交换 </span>
-          <span className={classes.centerW}>E</span>
-          <span className={classes.centerB}>qui</span>
-          <span className={classes.centerW}>librium</span>
-        </div>
-      </PaddingSurroundTopAndBottomTwoEm>
-
-      <PaddingSurroundTopAndBottomOneEm>
-        <div>
           <Link color={"inherit"} to={"/idea/talkAboutTech"}>
-            <span className={classes.centerB}>盗版用户的未来</span>
+            <span className={classes.centerW}>Loading...</span>
           </Link>
-        </div>
-      </PaddingSurroundTopAndBottomOneEm>
+        </PaddingSurroundTopAndBottomOneEm>
+
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <span className={classes.centerW}>等</span>
+            <span className={classes.centerB}>价</span>
+            <span className={classes.centerW}>交换 </span>
+            <span className={classes.centerW}>E</span>
+            <span className={classes.centerB}>qui</span>
+            <span className={classes.centerW}>librium</span>
+          </div>
+        </PaddingSurroundTopAndBottomTwoEm>
+
+        <PaddingSurroundTopAndBottomOneEm>
+          <div>
+            <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+              <span className={classes.centerB}>盗版用户的未来</span>
+            </Link>
+          </div>
+        </PaddingSurroundTopAndBottomOneEm>
 
 
-
-      <Grid container spacing={4}>
-        <Grid item sm={6}>
-          <EachCard to="/idea/talkAboutTech"
-                    title="谈科技？"
-                    date="2019/OCT/20 北鲲"
-                    subtitle="谈科技"
-                    longDescription={"None"}
-                    shortDescription="小米MIX ALPHA 发布，作为小米7年老用户，这个产品噱头的水分大于科技的含量。"/>
-
-
-        </Grid>
-
-        <Grid item sm={6}>
-          <EachCard title="你的网盘无法再GKD"
-                    to="/idea/baiduYun"
-                    date="2019/NOV/19 北鲲"
-                    subtitle="你的网盘无法再GKD"
-                    longDescription={"百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"}
-                    shortDescription="我希望百度凉掉，但是有不希望百度凉掉。百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"/>
+        <Grid container spacing={4}>
+          <Grid item sm={6}>
+            <EachCard to="/idea/talkAboutTech"
+                      title="谈科技？"
+                      date="2019/OCT/20 北鲲"
+                      subtitle="谈科技"
+                      longDescription={"None"}
+                      shortDescription="小米MIX ALPHA 发布，作为小米7年老用户，这个产品噱头的水分大于科技的含量。"/>
 
 
-        </Grid>
+          </Grid>
 
-        <Grid item sm={6}>
-          <EachCard title="盗版用户的未来？"
-                    date="2019/NOV/26 北鲲"
-                    subtitle="盗版用户的未来"
-                    longDescription={"Click in"}
-                    shortDescription="为什么种子让我们欲罢不能。"/>
-        </Grid>
+          <Grid item sm={6}>
+            <EachCard title="你的网盘无法再GKD"
+                      to="/idea/baiduYun"
+                      date="2019/NOV/19 北鲲"
+                      subtitle="你的网盘无法再GKD"
+                      longDescription={"百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"}
+                      shortDescription="我希望百度凉掉，但是有不希望百度凉掉。百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"/>
 
-        <Grid item sm={6}>
-          <Card className={classes.card}>
-            <CardActionArea href="/idea/yutuMain" target="_blank" rel="noopener noreferrer">
-              <CardHeader
-                action={
-                  <IconButton aria-label="settings">
-                    <MoreVertIcon/>
-                  </IconButton>
-                }
-                title={"《雨图》大纲     The synopsis of YUTU"}
-                subheader={"持续更新"}
-              />
-              <CardMedia
-                className={classes.media}
-                image={DefaultImage}
-                title={"《雨图》大纲"}
-              />
-            </CardActionArea>
-            <CardContent>
-              <Typography variant="h6" color="textSecondary" component="p">
-                {"YUTU is a novel and the correspond world worldview based on web-fantasy novel ZHIMO"}
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                {/*todo this link is not working*/}
-                <FavoriteIcon href="https://github.com/qiushanbeikun"/>
-              </IconButton>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon/>
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+
+          </Grid>
+
+          <Grid item sm={6}>
+            <EachCard title="盗版用户的未来？"
+                      date="2019/NOV/26 北鲲"
+                      subtitle="盗版用户的未来"
+                      longDescription={"Click in"}
+                      shortDescription="为什么种子让我们欲罢不能。"/>
+          </Grid>
+
+          <Grid item sm={6}>
+            <Card className={classes.card}>
+              <CardActionArea href="/idea/yutuMain" target="_blank" rel="noopener noreferrer">
+                <CardHeader
+                  action={
+                    <IconButton aria-label="settings">
+                      <MoreVertIcon/>
+                    </IconButton>
+                  }
+                  title={"《雨图》大纲     The synopsis of YUTU"}
+                  subheader={"持续更新"}
+                />
+                <CardMedia
+                  className={classes.media}
+                  image={DefaultImage}
+                  title={"《雨图》大纲"}
+                />
+              </CardActionArea>
               <CardContent>
-                <Typography paragraph>Description:</Typography>
-                <Typography paragraph>
-                  小说《雨图》围绕三个主题展开论述：
-                </Typography>
-                <Typography paragraph>
-                  虚实：源于对未知的本能的恐惧，人类在对待圈内的已知和圈外的未知 都无法做到相对勇敢。即使放弃对“圈外”的过分好奇，如何保护“圈内”的一切仍是虚妄。
-                </Typography>
-                <Typography paragraph>
-                  怀疑一切：源于动漫《钢之炼金术师FA》中的台词：“你应该能看到真相背后的真相。”要求故事的情节随着任务探究的深入而出现必要的反转。
-                </Typography>
-                <Typography paragraph>
-                  相对：相对的思想给了人类难以满足的欲望，这些欲望该如何被满足。
-                </Typography>
-                <Typography paragraph>
-                  脱胎于网络小说《执魔》，《雨图》将会在相似的世界体系下构造不同的世界观，以主角的故事对上述两个主题进行探索。
-                </Typography>
-                <Typography paragraph>
-                  The novel YUTU is based on the following three themes:
-                </Typography>
-                <Typography paragraph>
-                  Nakedness: By the instinct fear to the unknown, human are not brave enough to both known-in-circle
-                  and
-                  unknown-exo-circle. Abandoning the excessive curiosity to the exo-circle, how to protect the content
-                  in-circle are reality.
-                </Typography>
-                <Typography paragraph>
-                  Relativity: The ideology of relative gives human insatiable greed.
-                </Typography>
-                <Typography paragraph>
-                  Based on the fantasy e-novel ZHIMO, YUTU will build a different world outlook under similar systems,
-                  exploring the above mentioned themes through the story of the leading role.
-                </Typography>
-                <Typography paragraph>
-                  Please note that only Chinese version of this article is available at the moment, translation will
-                  be
-                  scheduled.
-                </Typography>
-                <Typography paragraph>
-                  In developing wiki page ->
-                </Typography>
-
-
-              </CardContent>
-            </Collapse>
-          </Card>
-        </Grid>
-
-        <Grid item sm={6}>
-          <Card className={classes2.card}>
-            <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
-              <CardHeader
-                action={
-                  <IconButton aria-label="settings">
-                    <MoreVertIcon/>
-                  </IconButton>
-                }
-                title={"《紫图》大纲   The synopsis of ZITU"}
-                subheader={"持续更新"}
-              />
-              <CardMedia
-                className={classes2.media}
-                image={DefaultImage}
-                title={"《紫图》大纲"}
-              />
-            </CardActionArea>
-            <CardContent>
-              <Typography variant="h6" color="textSecondary" component="p">
-                {"ZITU is the novel and a more complex worldview based on ZHIMO and YUTU"}
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                {/*todo this link is not working*/}
-                <FavoriteIcon href="https://github.com/qiushanbeikun"/>
-              </IconButton>
-              <IconButton
-                className={clsx(classes2.expand, {
-                  [classes2.expandOpen]: expanded2,
-                })}
-                onClick={handleExpandClick2}
-                aria-expanded={expanded2}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon/>
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded2} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph>Description:</Typography>
-                <Typography paragraph>
-                  《紫图》是小说《雨图》的外传，对雨图中仍然留有疑点，但是不适合在《雨图》中进行叙述的内容进行补全，其本身仍然可以作为独立的故事出现。
-                </Typography>
-                <Typography paragraph>
-                  《紫图》和《雨图》持有一致的主题，偏向故事性，对主题的探讨主要探讨已经在《雨图》中完成，主要功能为装B，发福利，撒狗粮。
-                </Typography>
-                <Typography paragraph>
-                  ZITU is the external episode of YUTU, filling up the content that are still questionable but not
-                  appropriate to demonstrate inside YUTU. However, the story itself can still be independent.
-                </Typography>
-                <Typography paragraph>
-                  ZITU is more story orientated, but focuses on the same topic with YUTU, the discovery of the theme
-                  has
-                  been finished in YUTU, the designed functions of this novel is to show-off, DLC give away.
-                </Typography>
-                <Typography paragraph>
-                  ZITU and YUTU will share the same wiki page
-                </Typography>
-
-
-              </CardContent>
-            </Collapse>
-          </Card>
-        </Grid>
-
-        <Grid item sm={6}>
-          <Card className={classes3.card}>
-            <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
-              <CardHeader
-                action={
-                  <IconButton aria-label="settings">
-                    <MoreVertIcon/>
-                  </IconButton>
-                }
-                title={"《星雨图》 "}
-                subheader={"很难更新"}
-              />
-              <CardMedia
-                className={classes3.media}
-                image={DefaultImage}
-                title={"《星雨图》"}
-              />
-            </CardActionArea>
-            <CardContent>
-              <Typography variant="h6" color="textSecondary" component="p">
-                {"XINGYUTU is a novel during created during my high school"}
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                {/*todo this link is not working*/}
-                <FavoriteIcon href="https://github.com/qiushanbeikun"/>
-              </IconButton>
-              <IconButton
-                className={clsx(classes3.expand, {
-                  [classes3.expandOpen]: expanded3,
-                })}
-                onClick={handleExpandClick3}
-                aria-expanded={expanded3}
-                aria-label="show more"
-              >
-                <ExpandMoreIcon/>
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded3} timeout="auto" unmountOnExit>
-              <CardContent>
-                <Typography paragraph>Description:</Typography>
-                <Typography paragraph>
-                  高中时期作品，故事发生于一个武侠背景的架空世界。
-                </Typography>
-                <Typography paragraph>
-                  一切源于在十年前发生在武林界的一场浩劫，各大门派损失惨重，然而浩劫的真相却随着主谋人员的相继离世而成为未知之谜。十年间，各方人物蠢蠢欲动。作为公认的“不安定”因素，北辰决定引退江湖并离开烈雨殿，然而真正的江湖却不打算让北辰就这让消失。北辰被迫开始行程，追寻真相背后的真相。
-                </Typography>
-                <Typography paragraph>
-                  随着作者阅历和见识的增长，对于小说深度定位有所思考，故更新速度缓慢，有生之年系列。
-                </Typography>
-                <Typography paragraph>
-                  High school works, happened in a overhead swordplay world.
-                </Typography>
-                <Typography paragraph>
-                  Anything of everything began with a catastrophe happened 10 years age, all the institutions in the
-                  "wuxiajie" suffered great lost. However, the truth of the catastrophe was hided because the one that
-                  know the truth passed away consecutively. In the past 10 years, hostiles hostile. As the publicly
-                  recognized "hazardous", Beichen decided to retire from wuxiajie and left his institution, however,
-                  wuxiajie does not want Beichen to just retire as he will. Beichen is force to start his journey
-                  again
-                  to find the truth behind the truth.
-                </Typography>
-                <Typography paragraph>
-                  Please note that the English version of this novel is neither translated nor scheduled to be
-                  translate.
-                </Typography>
-                <Typography paragraph>
-                  Please note that the English version of this novel is neither translated nor scheduled to be
-                  translate.
+                <Typography variant="h6" color="textSecondary" component="p">
+                  {"YUTU is a novel and the correspond world worldview based on web-fantasy novel ZHIMO"}
                 </Typography>
               </CardContent>
-            </Collapse>
-          </Card>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  {/*todo this link is not working*/}
+                  <FavoriteIcon href="https://github.com/qiushanbeikun"/>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                  })}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon/>
+                </IconButton>
+              </CardActions>
+              <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Description:</Typography>
+                  <Typography paragraph>
+                    小说《雨图》围绕三个主题展开论述：
+                  </Typography>
+                  <Typography paragraph>
+                    虚实：源于对未知的本能的恐惧，人类在对待圈内的已知和圈外的未知 都无法做到相对勇敢。即使放弃对“圈外”的过分好奇，如何保护“圈内”的一切仍是虚妄。
+                  </Typography>
+                  <Typography paragraph>
+                    怀疑一切：源于动漫《钢之炼金术师FA》中的台词：“你应该能看到真相背后的真相。”要求故事的情节随着任务探究的深入而出现必要的反转。
+                  </Typography>
+                  <Typography paragraph>
+                    相对：相对的思想给了人类难以满足的欲望，这些欲望该如何被满足。
+                  </Typography>
+                  <Typography paragraph>
+                    脱胎于网络小说《执魔》，《雨图》将会在相似的世界体系下构造不同的世界观，以主角的故事对上述两个主题进行探索。
+                  </Typography>
+                  <Typography paragraph>
+                    The novel YUTU is based on the following three themes:
+                  </Typography>
+                  <Typography paragraph>
+                    Nakedness: By the instinct fear to the unknown, human are not brave enough to both known-in-circle
+                    and
+                    unknown-exo-circle. Abandoning the excessive curiosity to the exo-circle, how to protect the content
+                    in-circle are reality.
+                  </Typography>
+                  <Typography paragraph>
+                    Relativity: The ideology of relative gives human insatiable greed.
+                  </Typography>
+                  <Typography paragraph>
+                    Based on the fantasy e-novel ZHIMO, YUTU will build a different world outlook under similar systems,
+                    exploring the above mentioned themes through the story of the leading role.
+                  </Typography>
+                  <Typography paragraph>
+                    Please note that only Chinese version of this article is available at the moment, translation will
+                    be
+                    scheduled.
+                  </Typography>
+                  <Typography paragraph>
+                    In developing wiki page ->
+                  </Typography>
+
+
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Grid>
+
+          <Grid item sm={6}>
+            <Card className={classes2.card}>
+              <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
+                <CardHeader
+                  action={
+                    <IconButton aria-label="settings">
+                      <MoreVertIcon/>
+                    </IconButton>
+                  }
+                  title={"《紫图》大纲   The synopsis of ZITU"}
+                  subheader={"持续更新"}
+                />
+                <CardMedia
+                  className={classes2.media}
+                  image={DefaultImage}
+                  title={"《紫图》大纲"}
+                />
+              </CardActionArea>
+              <CardContent>
+                <Typography variant="h6" color="textSecondary" component="p">
+                  {"ZITU is the novel and a more complex worldview based on ZHIMO and YUTU"}
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  {/*todo this link is not working*/}
+                  <FavoriteIcon href="https://github.com/qiushanbeikun"/>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes2.expand, {
+                    [classes2.expandOpen]: expanded2,
+                  })}
+                  onClick={handleExpandClick2}
+                  aria-expanded={expanded2}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon/>
+                </IconButton>
+              </CardActions>
+              <Collapse in={expanded2} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Description:</Typography>
+                  <Typography paragraph>
+                    《紫图》是小说《雨图》的外传，对雨图中仍然留有疑点，但是不适合在《雨图》中进行叙述的内容进行补全，其本身仍然可以作为独立的故事出现。
+                  </Typography>
+                  <Typography paragraph>
+                    《紫图》和《雨图》持有一致的主题，偏向故事性，对主题的探讨主要探讨已经在《雨图》中完成，主要功能为装B，发福利，撒狗粮。
+                  </Typography>
+                  <Typography paragraph>
+                    ZITU is the external episode of YUTU, filling up the content that are still questionable but not
+                    appropriate to demonstrate inside YUTU. However, the story itself can still be independent.
+                  </Typography>
+                  <Typography paragraph>
+                    ZITU is more story orientated, but focuses on the same topic with YUTU, the discovery of the theme
+                    has
+                    been finished in YUTU, the designed functions of this novel is to show-off, DLC give away.
+                  </Typography>
+                  <Typography paragraph>
+                    ZITU and YUTU will share the same wiki page
+                  </Typography>
+
+
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Grid>
+
+          <Grid item sm={6}>
+            <Card className={classes3.card}>
+              <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
+                <CardHeader
+                  action={
+                    <IconButton aria-label="settings">
+                      <MoreVertIcon/>
+                    </IconButton>
+                  }
+                  title={"《星雨图》 "}
+                  subheader={"很难更新"}
+                />
+                <CardMedia
+                  className={classes3.media}
+                  image={DefaultImage}
+                  title={"《星雨图》"}
+                />
+              </CardActionArea>
+              <CardContent>
+                <Typography variant="h6" color="textSecondary" component="p">
+                  {"XINGYUTU is a novel during created during my high school"}
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  {/*todo this link is not working*/}
+                  <FavoriteIcon href="https://github.com/qiushanbeikun"/>
+                </IconButton>
+                <IconButton
+                  className={clsx(classes3.expand, {
+                    [classes3.expandOpen]: expanded3,
+                  })}
+                  onClick={handleExpandClick3}
+                  aria-expanded={expanded3}
+                  aria-label="show more"
+                >
+                  <ExpandMoreIcon/>
+                </IconButton>
+              </CardActions>
+              <Collapse in={expanded3} timeout="auto" unmountOnExit>
+                <CardContent>
+                  <Typography paragraph>Description:</Typography>
+                  <Typography paragraph>
+                    高中时期作品，故事发生于一个武侠背景的架空世界。
+                  </Typography>
+                  <Typography paragraph>
+                    一切源于在十年前发生在武林界的一场浩劫，各大门派损失惨重，然而浩劫的真相却随着主谋人员的相继离世而成为未知之谜。十年间，各方人物蠢蠢欲动。作为公认的“不安定”因素，北辰决定引退江湖并离开烈雨殿，然而真正的江湖却不打算让北辰就这让消失。北辰被迫开始行程，追寻真相背后的真相。
+                  </Typography>
+                  <Typography paragraph>
+                    随着作者阅历和见识的增长，对于小说深度定位有所思考，故更新速度缓慢，有生之年系列。
+                  </Typography>
+                  <Typography paragraph>
+                    High school works, happened in a overhead swordplay world.
+                  </Typography>
+                  <Typography paragraph>
+                    Anything of everything began with a catastrophe happened 10 years age, all the institutions in the
+                    "wuxiajie" suffered great lost. However, the truth of the catastrophe was hided because the one that
+                    know the truth passed away consecutively. In the past 10 years, hostiles hostile. As the publicly
+                    recognized "hazardous", Beichen decided to retire from wuxiajie and left his institution, however,
+                    wuxiajie does not want Beichen to just retire as he will. Beichen is force to start his journey
+                    again
+                    to find the truth behind the truth.
+                  </Typography>
+                  <Typography paragraph>
+                    Please note that the English version of this novel is neither translated nor scheduled to be
+                    translate.
+                  </Typography>
+                  <Typography paragraph>
+                    Please note that the English version of this novel is neither translated nor scheduled to be
+                    translate.
+                  </Typography>
+                </CardContent>
+              </Collapse>
+            </Card>
+          </Grid>
+
+
         </Grid>
-
-
-      </Grid>
-    </Container>
+      </Container>
+    </div>
   )
 }
