@@ -282,7 +282,7 @@ export default function Idea() {
 
         </PaddingSurroundTopAndBottomOneEm>
 
-        <StyledImage src={abstractTop} alt={"decoration photo"}/>
+
 
         <PaddingSurroundTopAndBottomTwoEm>
           <div>
@@ -321,133 +321,89 @@ export default function Idea() {
           </div>
         </PaddingSurroundTopAndBottomTwoEm>
 
-        <PaddingSurroundTopAndBottomOneEm>
+        <PaddingSurroundTopAndBottomTwoEm>
           <div>
             <Link color={"inherit"} to={"/idea/talkAboutTech"}>
-              <span className={classes.centerB}>盗版用户的未来</span>
+              <span className={classes.centerB}>盗版用户的未来 </span>
+              <span className={classes.centerW}> 2019/NOV/26 北鲲</span>
             </Link>
           </div>
-        </PaddingSurroundTopAndBottomOneEm>
+            <StyledText variant={"h6"} paragraph>我们从来没有有意提高自己的版权意识，只是懒得去搞，而资本也会借机粉饰自己的垄断。</StyledText>
+        </PaddingSurroundTopAndBottomTwoEm>
 
 
-        <Grid container spacing={4}>
-          <Grid item sm={6}>
-            <EachCard to="/idea/talkAboutTech"
-                      title="谈科技？"
-                      date="2019/OCT/20 北鲲"
-                      subtitle="谈科技"
-                      longDescription={"None"}
-                      shortDescription="小米MIX ALPHA 发布，作为小米7年老用户，这个产品噱头的水分大于科技的含量。"/>
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <Link color={"inherit"} to={"/idea/talkAboutTech"}>
+              <span className={classes.centerB}>谈科技？</span>
+              <span className={classes.centerW}> 2019/OCT/20 北鲲</span>
+            </Link>
+          </div>
+          <StyledText variant={"h6"} paragraph>小米MIX ALPHA 发布，惊艳，但是却让我怀疑这一次小米无法再引领潮流。</StyledText>
+        </PaddingSurroundTopAndBottomTwoEm>
 
 
-          </Grid>
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <Link color={"inherit"} to={"/idea/baiduYun"}>
+              <span className={classes.centerB}>你的网盘无法再GKD</span>
+              <span className={classes.centerW}> 2019/NOV/19 北鲲</span>
+            </Link>
+          </div>
+          <StyledText variant={"h6"} paragraph>我希望百度凉掉，但是有不希望百度凉掉。百度的产品策略太差，但是百度贴吧作为国内少有的，
+            普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。</StyledText>
+        </PaddingSurroundTopAndBottomTwoEm>
 
-          <Grid item sm={6}>
-            <EachCard title="你的网盘无法再GKD"
-                      to="/idea/baiduYun"
-                      date="2019/NOV/19 北鲲"
-                      subtitle="你的网盘无法再GKD"
-                      longDescription={"百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"}
-                      shortDescription="我希望百度凉掉，但是有不希望百度凉掉。百度的产品策略太差，但是百度贴吧作为国内少有的，普及的，而且大范围完成了用户过滤的平台，又让我有些舍不得这个公司。"/>
-
-
-          </Grid>
-
-          <Grid item sm={6}>
-            <EachCard title="盗版用户的未来？"
-                      date="2019/NOV/26 北鲲"
-                      subtitle="盗版用户的未来"
-                      longDescription={"Click in"}
-                      shortDescription="为什么种子让我们欲罢不能。"/>
-          </Grid>
-
-          <Grid item sm={6}>
-            <Card className={classes.card}>
-              <CardActionArea href="/idea/yutuMain" target="_blank" rel="noopener noreferrer">
-                <CardHeader
-                  action={
-                    <IconButton aria-label="settings">
-                      <MoreVertIcon/>
-                    </IconButton>
-                  }
-                  title={"《雨图》大纲     The synopsis of YUTU"}
-                  subheader={"持续更新"}
-                />
-                <CardMedia
-                  className={classes.media}
-                  image={DefaultImage}
-                  title={"《雨图》大纲"}
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant="h6" color="textSecondary" component="p">
-                  {"YUTU is a novel and the correspond world worldview based on web-fantasy novel ZHIMO"}
-                </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  {/*todo this link is not working*/}
-                  <FavoriteIcon href="https://github.com/qiushanbeikun"/>
-                </IconButton>
-                <IconButton
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: expanded,
-                  })}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
-                  aria-label="show more"
-                >
-                  <ExpandMoreIcon/>
-                </IconButton>
-              </CardActions>
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent>
-                  <Typography paragraph>Description:</Typography>
-                  <Typography paragraph>
-                    小说《雨图》围绕三个主题展开论述：
-                  </Typography>
-                  <Typography paragraph>
-                    虚实：源于对未知的本能的恐惧，人类在对待圈内的已知和圈外的未知 都无法做到相对勇敢。即使放弃对“圈外”的过分好奇，如何保护“圈内”的一切仍是虚妄。
-                  </Typography>
-                  <Typography paragraph>
-                    怀疑一切：源于动漫《钢之炼金术师FA》中的台词：“你应该能看到真相背后的真相。”要求故事的情节随着任务探究的深入而出现必要的反转。
-                  </Typography>
-                  <Typography paragraph>
-                    相对：相对的思想给了人类难以满足的欲望，这些欲望该如何被满足。
-                  </Typography>
-                  <Typography paragraph>
-                    脱胎于网络小说《执魔》，《雨图》将会在相似的世界体系下构造不同的世界观，以主角的故事对上述两个主题进行探索。
-                  </Typography>
-                  <Typography paragraph>
-                    The novel YUTU is based on the following three themes:
-                  </Typography>
-                  <Typography paragraph>
-                    Nakedness: By the instinct fear to the unknown, human are not brave enough to both known-in-circle
-                    and
-                    unknown-exo-circle. Abandoning the excessive curiosity to the exo-circle, how to protect the content
-                    in-circle are reality.
-                  </Typography>
-                  <Typography paragraph>
-                    Relativity: The ideology of relative gives human insatiable greed.
-                  </Typography>
-                  <Typography paragraph>
-                    Based on the fantasy e-novel ZHIMO, YUTU will build a different world outlook under similar systems,
-                    exploring the above mentioned themes through the story of the leading role.
-                  </Typography>
-                  <Typography paragraph>
-                    Please note that only Chinese version of this article is available at the moment, translation will
-                    be
-                    scheduled.
-                  </Typography>
-                  <Typography paragraph>
-                    In developing wiki page ->
-                  </Typography>
+        <PaddingSurroundTopAndBottomTwoEm>
+          <div>
+            <Link color={"inherit"} to={"/idea/baiduYun"}>
+              <span className={classes.centerB}>《雨图》大纲 The synopsis of YUTU</span>
+            </Link>
+          </div>
+          <StyledText variant={"h6"} paragraph>
+            小说《雨图》围绕三个主题展开论述：
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            虚实：源于对未知的本能的恐惧，人类在对待圈内的已知和圈外的未知 都无法做到相对勇敢。即使放弃对“圈外”的过分好奇，如何保护“圈内”的一切仍是虚妄。
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            怀疑一切：源于动漫《钢之炼金术师FA》中的台词：“你应该能看到真相背后的真相。”要求故事的情节随着任务探究的深入而出现必要的反转。
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            相对：相对的思想给了人类难以满足的欲望，这些欲望该如何被满足。
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            脱胎于网络小说《执魔》，《雨图》将会在相似的世界体系下构造不同的世界观，以主角的故事对上述两个主题进行探索。
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            The novel YUTU is based on the following three themes:
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            Nakedness: By the instinct fear to the unknown, human are not brave enough to both known-in-circle
+            and
+            unknown-exo-circle. Abandoning the excessive curiosity to the exo-circle, how to protect the content
+            in-circle are reality.
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            Relativity: The ideology of relative gives human insatiable greed.
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            Based on the fantasy e-novel ZHIMO, YUTU will build a different world outlook under similar systems,
+            exploring the above mentioned themes through the story of the leading role.
+          </StyledText>
+          <StyledText variant={"h6"} paragraph>
+            Please note that only Chinese version of this article is available at the moment, translation will
+            be
+            scheduled.
+          </StyledText>
+        </PaddingSurroundTopAndBottomTwoEm>
 
 
-                </CardContent>
-              </Collapse>
-            </Card>
-          </Grid>
+
+
+
+
+        <Grid container>
 
           <Grid item sm={6}>
             <Card className={classes2.card}>
@@ -518,7 +474,7 @@ export default function Idea() {
 
           <Grid item sm={6}>
             <Card className={classes3.card}>
-              <CardActionArea href="/idea" target="_blank" rel="noopener noreferrer">
+              <CardActionArea href="https://sites.google.com/view/qiushanbeikun/home/idea/%E6%98%9F%E9%9B%A8%E5%9B%BE" target="_blank" rel="noopener noreferrer">
                 <CardHeader
                   action={
                     <IconButton aria-label="settings">
