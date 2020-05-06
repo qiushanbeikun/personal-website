@@ -7,6 +7,10 @@ import Honghong from "../../imageFolder/honghong.JPG"
 import Rongrong from "../../imageFolder/rongrong.JPG"
 import Guichu from "../../imageFolder/guichu.png"
 import Ltx from "../../imageFolder/ltx.jpg"
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import {PaddingSurroundTopAndBottomTwoEm} from "../../commonStyles";
+import Grid from "@material-ui/core/Grid";
+import PenImage from "../../imageFolder/pen.jpg"
 
 const StyledTitle = styled(Typography)`
   padding: 0.5em 0.2em;
@@ -36,11 +40,56 @@ const StyledContainer = styled(Container)`
   }
 `;
 
+const useStyles = makeStyles(theme => ({
+
+
+  leftW: {
+    verticalAlign:"center",
+    fontSize: "80px",
+    fontFamily: "sans-serif",
+    color: "#e0e0e0",
+  },
+  leftB: {
+    verticalAlign:"center",
+    fontSize: "80px",
+    fontFamily: "sans-serif",
+    color: "#a3ccd8"
+  },
+}))
+
+const StyledTitleImage = styled.img`
+  width: 90%;
+`;
+
 export default function Interest(){
+
+  const classes = useStyles();
+
   return (
 
     <StyledContainer maxWidth={"lg"}>
-      <StyledTitle variant={"h3"}> Interests</StyledTitle>
+
+      <PaddingSurroundTopAndBottomTwoEm>
+        <Grid container spacing={6} alignItems={"center"} justify={"center"}>
+          <Grid item sm={3}>
+
+          </Grid>
+          <Grid item sm={3}>
+            <StyledTitleImage src={PenImage} />
+          </Grid>
+          <Grid item sm={6}>
+            <div>
+              <span className={classes.leftW}>Interest</span>
+              <span className={classes.leftB}>s</span>
+            </div>
+          </Grid>
+        </Grid>
+      </PaddingSurroundTopAndBottomTwoEm>
+
+      <PaddingSurroundTopAndBottomTwoEm>
+        <hr/>
+      </PaddingSurroundTopAndBottomTwoEm>
+
 
       <StyledBox class="HongHong">
         <StyledImage src={Honghong} alt="honghong"/>

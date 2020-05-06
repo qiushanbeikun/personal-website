@@ -10,10 +10,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import PropTypes from 'prop-types'
 import '../../App.css';
-import Guichu from "../../imageFolder/guichu.png"
-import Anime from "../../imageFolder/anime.JPG"
-import Tech from "../../imageFolder/TECH.jpg"
-import Coding from "../../imageFolder/coding.png"
+import MZFCIcon from '../../imageFolder/mzfcIcon.png';
 import MZFC from '../../imageFolder/mzfcsubillust.jpeg'
 import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
 import {

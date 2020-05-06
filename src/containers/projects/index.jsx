@@ -8,11 +8,16 @@ import Container from "@material-ui/core/Container";
 import miniTone from '../../imageFolder/mini-toneiplayer-illustrate-image.png'
 import ReactLogo from '../../imageFolder/logo512.png'
 import cspLogo from '../../imageFolder/csp.png'
+import FolderImage from '../../imageFolder/Folder.png'
 import {
+  PaddingSurroundTopAndBottomTwoEm,
   PaddingTopAndBottomThreeEm,
   StyledImage,
   StyledText
 } from "../../commonStyles";
+import LightBubbleImage from "../../imageFolder/light.jpg";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+
 
 const ProjectSummaryMedia = styled.div`
   height: 300px;
@@ -23,20 +28,57 @@ const ProjectSummaryMedia = styled.div`
   }
 `;
 
-const StyledTitle = styled(Typography)`
-  padding: 0.5em 0.2em;
-  color: #dddddd
+const StyledTitleImage = styled.img`
+  width: 90%;
 `;
 
+
+const useStyles = makeStyles(theme => ({
+
+
+  leftW: {
+    verticalAlign:"center",
+    fontSize: "80px",
+    fontFamily: "sans-serif",
+    color: "#e0e0e0",
+  },
+  leftB: {
+    verticalAlign:"center",
+    fontSize: "80px",
+    fontFamily: "sans-serif",
+    color: "#a3ccd8"
+  },
+}))
+
 export function Projects() {
+
+  const classes = useStyles();
+
   return (
     <Container maxWidth={"lg"}>
 
 
-        <PaddingTopAndBottomThreeEm>
-          <StyledTitle variant={"h3"}>Projects</StyledTitle>
-          <hr/>
-        </PaddingTopAndBottomThreeEm>
+      <PaddingSurroundTopAndBottomTwoEm>
+      <Grid container spacing={6} alignItems={"center"} justify={"center"}>
+        <Grid item sm={3}>
+
+        </Grid>
+        <Grid item sm={3}>
+          <StyledTitleImage src={FolderImage} ></StyledTitleImage>
+        </Grid>
+        <Grid item sm={6}>
+          <div>
+            <span className={classes.leftW}>Project</span>
+            <span className={classes.leftB}>s</span>
+          </div>
+        </Grid>
+      </Grid>
+      </PaddingSurroundTopAndBottomTwoEm>
+
+      <PaddingSurroundTopAndBottomTwoEm>
+        <hr/>
+      </PaddingSurroundTopAndBottomTwoEm>
+
 
         <Grid container spacing={2}>
 

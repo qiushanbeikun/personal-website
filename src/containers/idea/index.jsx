@@ -5,9 +5,10 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {red} from '@material-ui/core/colors';
-import {PaddingSurroundTopAndBottomOneEm, PaddingSurroundTopAndBottomTwoEm} from "../../commonStyles";
+import {PaddingSurroundTopAndBottomOneEm, PaddingSurroundTopAndBottomTwoEm, StyledT} from "../../commonStyles";
 import Link from "../../components/Link";
 import LightBubbleImage from "../../imageFolder/light.jpg";
+
 
 const StyledTitle = styled(Typography)`
   padding: 0.5em 0.2em;
@@ -17,6 +18,11 @@ const StyledTitle = styled(Typography)`
 const StyledText = styled(Typography)`
   color: #eeeeee;
 `;
+
+const StyledTitleImage = styled.img`
+  width: 90%;
+`;
+
 
 
 
@@ -115,7 +121,7 @@ export default function Idea() {
 
             </Grid>
             <Grid item sm={3}>
-              <StyledImage src={LightBubbleImage} ></StyledImage>
+              <StyledTitleImage src={LightBubbleImage} ></StyledTitleImage>
             </Grid>
             <Grid item sm={6}>
               <div>

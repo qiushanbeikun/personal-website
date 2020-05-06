@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
+
+
 export const StyledImage = styled.img`
   width: 12vw;
   border-radius: 1em;
