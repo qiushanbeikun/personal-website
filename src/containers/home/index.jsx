@@ -1,9 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
-import BackGround from "../../backg.jpg"
 import {Container} from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -11,8 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import PropTypes from 'prop-types'
 import '../../App.css';
 import MZFCIcon from '../../imageFolder/mzfcIcon.png';
-import MZFC from '../../imageFolder/mzfcsubillust.jpeg'
-import {Parallax, ParallaxLayer} from "react-spring/renderprops-addons";
+
 import {
   PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm, StyledImage
 } from "../../commonStyles";

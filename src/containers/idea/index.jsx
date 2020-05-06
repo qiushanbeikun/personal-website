@@ -5,9 +5,11 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import {red} from '@material-ui/core/colors';
-import {PaddingSurroundTopAndBottomOneEm, PaddingSurroundTopAndBottomTwoEm, StyledT} from "../../commonStyles";
+import {PaddingSurroundTopAndBottomOneEm, PaddingSurroundTopAndBottomTwoEm, PaddingTopAndBottomThreeEm} from "../../commonStyles";
 import Link from "../../components/Link";
 import LightBubbleImage from "../../imageFolder/light.jpg";
+import DifferentPah from '../../imageFolder/different-paths.png';
+import QuotationWords from './Quotation';
 
 
 const StyledTitle = styled(Typography)`
@@ -23,17 +25,11 @@ const StyledTitleImage = styled.img`
   width: 90%;
 `;
 
-
-
-
-
 const StyledGrid = styled(Grid)`
   && {
     padding: 6px;
   }
 `;
-
-
 
 const useStyles = makeStyles(theme => ({
 
@@ -100,6 +96,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
+
 const StyledImage = styled.img`
   width: 100%;
 `;
@@ -121,7 +118,7 @@ export default function Idea() {
 
             </Grid>
             <Grid item sm={3}>
-              <StyledTitleImage src={LightBubbleImage} ></StyledTitleImage>
+              <StyledTitleImage src={LightBubbleImage} />
             </Grid>
             <Grid item sm={6}>
               <div>
@@ -136,7 +133,7 @@ export default function Idea() {
         <PaddingSurroundTopAndBottomTwoEm>
 
         </PaddingSurroundTopAndBottomTwoEm>
-        <hr/>
+
 
         <PaddingSurroundTopAndBottomTwoEm>
           <div>
@@ -147,8 +144,12 @@ export default function Idea() {
             <span className={classes.centerW}>Implies</span>
             <span className={classes.centerW}>Infinity</span>
           </div>
+          <hr/>
         </PaddingSurroundTopAndBottomTwoEm>
 
+        <PaddingSurroundTopAndBottomTwoEm>
+          <StyledImage src={DifferentPah}/>
+        </PaddingSurroundTopAndBottomTwoEm>
 
         <PaddingSurroundTopAndBottomOneEm>
 
@@ -162,8 +163,31 @@ export default function Idea() {
           </StyledText>
 
           <PaddingSurroundTopAndBottomOneEm>
-
+            <div>
+              <span className={classes.centerB}>语言与映射</span>
+            </div>
           </PaddingSurroundTopAndBottomOneEm>
+
+
+          <StyledText variant={"h6"} paragraph>我认为语言的本质是一种映射，但是听我瞎掰之前，我们不妨先看看Wikipedia的定义</StyledText>
+
+
+            <QuotationWords
+              content="A language is a structured system of communication. Language, in a broader sense, is the method of communication that involves the use of – particularly human – languages."
+              from="WIKIPEDIA"
+              link="https://en.wikipedia.org/wiki/Language"/>
+
+
+
+
+
+          <StyledText variant={"h6"} paragraph>上面的这个定义更加强调语言作为交流的工具，但是我这里要强调人类理解语言的过程。既然我把语言理解为”映射“，那就有必要再来了解一下映射的概念</StyledText>
+
+          <QuotationWords
+            content="In mathematics, a mapping, sometimes shortened as map, is a general function between two mathematical objects or structures. It can be thought of as the mathematical abstraction of the process of making a geographical map"
+            from="WIKIPEDIA"
+          />
+
 
 
         </PaddingSurroundTopAndBottomOneEm>
