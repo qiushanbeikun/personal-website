@@ -15,8 +15,7 @@ import styled from "styled-components";
 
 const StyledImage = styled.img`
   width: 20vw;
-`;
-
+`
 
 export default function MZFCStudio() {
 
