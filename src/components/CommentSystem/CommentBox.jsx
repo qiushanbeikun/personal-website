@@ -1,207 +1,175 @@
-import React, {useEffect, useState} from "react";
-import PropTypes from 'prop-types'
-import {TextField} from "@material-ui/core";
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
-import {getJson, postJson} from "../../apiHelper";
-import DisplayEachComment from './replySystem'
-import {StyledButton, StyledLabel, StyledText} from '../../commonStyles'
-import Box from "@material-ui/core/Box";
+import {TextField} from "@material-ui/core";
+import Container from "@material-ui/core/Container";
+import styled from "styled-components";
+import IconButton from '@material-ui/core/IconButton';
+import {PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm} from "../../commonStyles";
 
-
-
-
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import Typography from "@material-ui/core/Typography";
+import ForwardIcon from '@material-ui/icons/Forward';
+import ReplyIcon from '@material-ui/icons/Reply';
 const useStyle = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& label.Mui-focused': {
-      color: 'aqua',
-    },
-    '& .MuiInput-underline:after': {
-      borderBottomColor: 'aqua',
-    },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'white',
-        borderWidth: 2,
-      },
-      '&:hover fieldset': {
-        borderColor: 'aqua',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'aqua',
-      },
-    },
+  Name: {
+    fontSize: "20px",
+    fontFamily: "sans-serif",
+    color: "#777777",
+    textAlign: "bottom",
+
   },
-  margin: {
-    margin: theme.spacing(1),
-  },
-  input: {
-    color: "#eeeeee",
+  Time: {
+    fontSize: "15px",
+    fontFamily: "sans-serif",
+    color: "#777777",
+    textAlign: "bottom",
   },
 }));
 
-// the helper function to parse the sql result to package readable format
 
-
-/*
-* [{ id: 1, parentId: null, ... }, { id: 2, parentId: 1, ... }] -> [{ id: 1, children: [{ id: 2, ... }] }]
-*
-* */
-function parseApiResult (props) {
-  const result = [];
-  return result;
-  // const unsolvedComments = props.valueOf();
-  // while (!unsolvedComments.isEmpty) {
-  //   for (const each of result) {
-  //
-  //   }
-  // }
-}
-
-CommentBox.propType = {
-  postId: PropTypes.string.isRequired,
+const testComments = {
+  'comments': [
+    {
+      'postId': 'baiduYun',
+      'commentId': 1,
+      'parentId': 0,
+      'userName': 'I hate Baidu',
+      'time': '2020 May 1 21:05',
+      'email': 'test@gmail.com',
+      'comment': 'Good job on criticizing baidu.'
+    },
+    {
+      'postId': 'baiduYun',
+      'commentId': 2,
+      'parentId': 1,
+      'userName': 'I hate Baidu',
+      'time': '2020 May 1 21:06',
+      'email': 'test@gmail.com',
+      'comment': 'I hate Baidu, too.'
+    },
+    {
+      'postId': 'baiduYun',
+      'commentId': 3,
+      'parentId': 1,
+      'userName': 'I hate Baidu',
+      'time': '2020 May 1 21:07',
+      'email': 'test@gmail.com',
+      'comment': 'I hate Baidu, three.'
+    }
+  ]
 };
+
+const StyledTextField = styled(TextField)`
+  
+`;
+
+const StyledSection = styled.section`
+  background: #d3d3d3;
+`;
+
+const StyledGrid = styled(Grid)`
+  position: relative;
+  display: flex;
+  left: 2em;
+  top: -110px;
+`;
+
+const StyledSignature = styled.div`
+  display: flex;
+  position: relative;
+  left: 2em;
+  top: -100px;
+  
+`;
+
+const NameTypography = styled(Typography)`
+  font-size: 20px;
+  color: #777777;
+`;
+
+const TimeTypography = styled(Typography)`
+  position: relative;
+  color: #777777;
+  left: 2em;
+`;
+
+
+
+
+const ColorStyle = Object.assign({}, {
+  display: 'flex',
+  width: '8px',
+  height: '100px',
+  position: 'relative',
+  backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`
+});
 
 export default function CommentBox(props) {
   const classes = useStyle();
-  const [result, setResult] = useState({ loading: false, result: null, error: null });
-  const postId = props.postId || '3';
+  const postID = props.postId;
+  // contents to fetch target comments and reply comments
 
-  const getComments = async () => {
-    setResult({ loading: true });
-    try {
-      const res = await getJson(`post/${postId}//getComments`);
-      setResult({ loading: false, result: res });
-    } catch (e) {
-      setResult({ loading: false, result: null, error: 'Failed to fetch comments' });
-    }
-  };
+  // the testComments has assumed that the results have been selected and sorted
+  const comments = testComments;
 
-  useEffect(() => {
-    getComments();
-  }, [props.postId]);
+  const testUserName = 'I hate Baidu';
+  const testTime = '2020 May 1 21:07';
+  const testEmail = 'test@gmail.com';
+  const testCommentContent = 'tt tes test set sst tes teset est ' +
+    'set set setsetsetset set set st set set si hate baidu ' +
+    'test tes teset est set set setsetsetset set set st set set s' +
+    'set set setsetsetset set set st set set si hate baidu ' +
+    'test tes teset est set set setsetsetset set set st set set s' +
+    'set set setsetsetset set set st set set si hate baidu ' +
+    'test tes teset est set set setsetsetset set set st set set s' +
+    'set set setsetsetset set set st set set si hate baidu ' +
+    'test tes teset est set set setsetsetset set set st set set s';
 
-  const processedResult = parseApiResult(result);
-
-  const [name, setName] = useState("");
-
-  const NameChangeHandler = event => {
-    setName(event.target.value);
-  };
-
-  const [email, setEmail] = useState("");
-
-  const EmailChangeHandler = event => {
-    setEmail(event.target.value);
-  };
-
-  const [newComment, setNewComment] = useState("");
-
-  const NewCommentChangeHandler = event => {
-    setNewComment(event.target.value);
-  };
-
-  const submitHandler = async (event) => {
-    event.preventDefault();
-    await postJson('postComment`',
-      {
-        "postId": postId,
-        "nickname": name,
-        "email": email,
-        "content": newComment,
-      });
-
-    // await getComments();
-    setName("");
-    setEmail("");
-    setNewComment("");
-  };
-
+  // reminder, this is just the part to show all the comments, exclude pthe comment input section
   return (
-    <div>
-      <StyledText variant={"h4"}>Comments (beta)</StyledText>
-      <form onSubmit={submitHandler}>
-        <Grid container spacing={3}>
-          <Grid item sm={6}>
-            <TextField
-              InputProps={{
-                className: classes.input
-              }}
-              InputLabelProps={{
-                className: classes.input
-              }}
-              className={classes.root}
-              required
-              label="Name"
-              variant="outlined"
-              margin="normal"
-              value={name}
-              color="#eeeeee"
-              onChange={NameChangeHandler}/>
-          </Grid>
-          <Grid item sm={6}>
-            <TextField
-              InputLabelProps={{
-                className: classes.input
-              }}
-              InputProps={{
-                className: classes.input
-              }}
-              className={classes.root}
-              label="Email (optional)"
-              variant="outlined"
-              margin="normal"
-              value={email}
-              onChange={EmailChangeHandler}/>
-          </Grid>
-        </Grid>
+    <StyledSection>
+      <PaddingTopAndBottomThreeEm>
+        <Container maxWidth={'lg'}>
+          <div>
+            <h1>Comments</h1>
+          </div>
 
-        <TextField
-          InputLabelProps={{
-            className: classes.input
-          }}
-          className={classes.root}
-          InputProps={{
-            className: classes.input
-          }}
-          required
-          label="Leave a comment here"
-          margin="normal"
-          multiline
-          value={newComment}
-          variant="outlined"
-          onChange={NewCommentChangeHandler}/>
-        <StyledButton type="submit">
-          Add a new comment
-        </StyledButton>
-      </form>
-      <div>
-        <DisplayComments input={result}/>
-      </div>
-    </div>
-  )
-}
-
-export function DisplayComments(props) {
-  const existingComments = props.input.result;
-  return (
-    <div>
-      {
-        (existingComments == null)? <StyledText variant={"h5"}>no comments</StyledText>
-          :
-          existingComments.map(each => {
+          {testComments.comments.map((each, i) => {
             return (
               <div>
-                <StyledLabel variant={"h5"}>Name --- {each.nickname} ---</StyledLabel>
-                <StyledLabel variant={"h5"}>
-                  Email --- {(each.email !== "") ? each.email : "Anonymous"} ---</StyledLabel>
-                <StyledText variant={"h5"}>{each.content}</StyledText>
+
+                <div style={ColorStyle}>
+
+                </div>
+
+                <StyledSignature>
+                  <NameTypography>{testUserName + "    "}</NameTypography>
+                  <TimeTypography>{testTime}</TimeTypography>
+                </StyledSignature>
+
+                <StyledGrid container spacing={3}>
+                  <Grid item sm={11}>
+                    <h3>{testCommentContent}</h3>
+                  </Grid>
+
+                  <Grid item sm={1}>
+
+                    <IconButton>
+                      <ForwardIcon/>
+                    </IconButton>
+                    <IconButton>
+                      <ReplyIcon/>
+                    </IconButton>
+                  </Grid>
+                </StyledGrid>
               </div>
             )
-          })
-      }
-    </div>
+          })}
+
+
+        </Container>
+      </PaddingTopAndBottomThreeEm>
+    </StyledSection>
   )
+
 }

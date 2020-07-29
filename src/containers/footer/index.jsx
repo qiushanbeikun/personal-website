@@ -54,14 +54,7 @@ const Footer = () => {
                 <StyledEmail href="mailto:beikuncanada@gmail.com">beikuncanada@gmail.com</StyledEmail>
               </Grid>
             </Grid>
-            <Grid item sm={6}>
-              <StyledText> testtes test test </StyledText>
-              <StyledText> testtes test test </StyledText>
-              <StyledText> testtes test test </StyledText>
-            </Grid>
-            <Grid item sm={6}>
-              <StyledText> testtes test test </StyledText>
-            </Grid>
+
           </Grid>
         </Container>
       </Box>

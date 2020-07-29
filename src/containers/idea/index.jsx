@@ -179,8 +179,6 @@ export default function Idea() {
 
 
 
-
-
           <StyledText variant={"h6"} paragraph>上面的这个定义更加强调语言作为交流的工具，但是我这里要强调人类理解语言的过程。既然我把语言理解为”映射“，那就有必要再来了解一下映射的概念</StyledText>
 
           <QuotationWords

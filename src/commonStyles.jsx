@@ -15,6 +15,16 @@ export const StyledImage = styled.img`
   }
 `;
 
+export const StyledDisplayImage = styled.img`
+  width: 6vw;
+  border-radius: 1em;
+  
+  &&:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+  }
+`;
+
 export const RedEnphisizeText = styled(Typography)`
   color: red;
 `;

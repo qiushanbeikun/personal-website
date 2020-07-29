@@ -8,13 +8,27 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import PropTypes from 'prop-types'
 import '../../App.css';
-import MZFCIcon from '../../imageFolder/mzfcIcon.png';
-
 import {
-  PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm, StyledImage
+  PaddingSurroundTopAndBottomOneEm, PaddingTopAndBottomThreeEm, StyledImage, StyledDisplayImage
 } from "../../commonStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import QSBKAvatar from "../../imageFolder/qsbkAvatar.JPG";
+import jslogo from '../../imageFolder/jslogo.png';
+import tslogo from '../../imageFolder/tslogo.png';
+import javalogo from '../../imageFolder/javalogo.png';
+import cpplogo from '../../imageFolder/c++logo.png';
+
+import jetbrains from '../../imageFolder/ketbrainslogo.png';
+import vscodelogo from '../../imageFolder/vscode.png';
+import photoshoplogo from '../../imageFolder/pslogo.webp';
+import premiere from '../../imageFolder/premiere.png';
+import audition from '../../imageFolder/audition.png';
+import vegas from '../../imageFolder/vegas.png';
+import vocaloid from '../../imageFolder/vocaloid.png';
+import davinci from '../../imageFolder/davinchilogo.png';
+import htmllogo from '../../imageFolder/htmllogo.jpg';
+import csslogo from '../../imageFolder/css-logo.png';
+import MZFCIcon from '../../imageFolder/mzfcIcon.png';
 
 
 const StyledBigName = styled(Typography)`
@@ -71,6 +85,7 @@ export const PaddingTopAndBottomFiveEm = styled.div`
   
 `;
 
+
 const useStyle = makeStyles(theme => ({
   centerB: {
     fontSize: "15px",
@@ -103,7 +118,6 @@ const useStyle = makeStyles(theme => ({
     color: "#a3ccd8"
   }
 }));
-
 
 
 export function Home() {
@@ -190,11 +204,11 @@ export function Home() {
             <Grid item sm={9}>
               <div style={styles3}>
                 <StyledText variant="h5">
-                  Third year student at University of British Columbia (graduate at 2021)
+                  Student at The University of British Columbia
                 </StyledText>
 
                 <StyledText variant="h5">
-                  Major computer science
+                  Major in computer science
                 </StyledText>
 
                 <StyledText variant="h5">
@@ -236,13 +250,66 @@ export function Home() {
             <Grid item sm={1}>
 
             </Grid>
-            <Grid item sm={3}>
-              <StyledImage src={QSBKAvatar} alt={"qsbk avatar"}/>
+            <Grid item sm={9}>
+
+              <PaddingSurroundTopAndBottomOneEm>
+                <StyledText variant={"h5"}>Capable of </StyledText>
+              </PaddingSurroundTopAndBottomOneEm>
+              <Grid container spacing={10}>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={jslogo} alt={'JavaScript'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={tslogo} alt={'TypeScript'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={htmllogo} alt={'HTML'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={csslogo} alt={'CSS'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={javalogo} alt={'Java'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={cpplogo} alt={'C/C++'}/>
+                </Grid>
+              </Grid>
+
+              <Grid container spacing={10}>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={jetbrains} alt={'JetBrains'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={vscodelogo} alt={'Visual Studio Code'}/>
+                </Grid>
+              </Grid>
+
+              <Grid container spacing={10}>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={vegas} alt={'Sony Vegas Pro'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={photoshoplogo} alt={'Adobe Photoshop'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={audition} alt={'Adobe Audition'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={premiere} alt={'Adobe Premiere'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={davinci} alt={'Davinci Resolve'}/>
+                </Grid>
+                <Grid item sm={2}>
+                  <StyledDisplayImage src={vocaloid} alt={'Vocaloid'}/>
+                </Grid>
+              </Grid>
+
+
             </Grid>
 
-            <Grid item sm={6}>
-              <StyledBlueText variant={"h5"}>Pen-name and "online" avatar </StyledBlueText>
-            </Grid>
+
           </Grid>
         </Container>
       </PaddingTopAndBottomThreeEm>
@@ -294,7 +361,7 @@ export function Home() {
               <StyledText variant={"h5"}>Anime</StyledText>
               <StyledText variant={"h5"}>Comics</StyledText>
               <StyledText variant={"h5"}>Games</StyledText>
-              <StyledText variant={"h5"}>Musics</StyledText>
+              <StyledText variant={"h5"}>Music</StyledText>
               <StyledText variant={"h5"}>Computer hardware</StyledText>
             </Grid>
           </Grid>
